@@ -1,3 +1,2 @@
 # sei-project-3
-
-Arjun
+Ineta
