@@ -2,10 +2,5 @@
 
 Ineta
 Arjun
-<<<<<<< HEAD
-Germany Lost!
-mwhahah!😈
-=======
 Aya
 Maurice
->>>>>>> development
