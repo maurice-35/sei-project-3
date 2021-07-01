@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import { dbURI, port } from './config/environment.js'
+import router from './config/router.js'
 
 const app = express()
 
@@ -20,6 +21,7 @@ const startServer = async () => {
     app.use(express.json())
 
     // add router
+    app.use(router)
 
     // event listener
     app.listen(port, () => console.log(`🐶🐱 Express is up and running on ${port}`))
