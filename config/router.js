@@ -1,7 +1,7 @@
 import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
 import { getAllProducts } from '../controllers/products.js'
-import { addItemToBasket, getUserProfile } from '../controllers/users.js'
+import { addItemToBasket, getUserProfile, removeItemFromBasket } from '../controllers/users.js'
 import { secureRoute } from './secureRoute.js'
 
 
@@ -12,6 +12,7 @@ router.route('/products')
 
 router.route('/basket')
   .post(secureRoute, addItemToBasket)
+  .delete(secureRoute, removeItemFromBasket)
 
 router.route('/register')
   .post(registerUser)
