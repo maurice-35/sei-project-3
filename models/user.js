@@ -1,10 +1,17 @@
 import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 
+const basketSchema = new mongoose.Schema({
+  items: { type: mongoose.Schema.ObjectId, ref: 'Product', required: true }
+}, {
+  timestamps: true
+})
+
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxLength: 30 },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  basket: [basketSchema]
 })
 
 // remove the password from the populated owner when it converts to json
