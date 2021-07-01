@@ -1,4 +1,5 @@
 // import model
+import Product from '../models/product.js'
 
 // INDEX ROUTE
 export const getAllProducts = async (_req, res) => {
