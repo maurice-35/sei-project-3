@@ -1,6 +1,9 @@
 import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
 import { getAllProducts } from '../controllers/products.js'
+import { getUserProfile } from '../controllers/users.js'
+import { secureRoute } from './secureRoute.js'
+
 
 const router = express.Router()
 
@@ -12,6 +15,9 @@ router.route('/register')
 
 router.route('/login')
   .post(loginUser)
+
+router.route('/profile')
+  .get(secureRoute, getUserProfile)
 
 
 export default router
