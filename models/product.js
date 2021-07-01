@@ -8,10 +8,10 @@ const productSchema = new mongoose.Schema({
   ingredient: [{ type: String, required: true }],
   image: { type: String, required: true },
   typeAnimal: { type: String, required: true },
-  allergins: [{ type: String, required: true }],
+  allergens: [{ type: String, required: true }],
   storage: { type: String, required: true },
   typeProduct: { type: String, required: true },
-  age: { type: Number, required: true },
+  age: { type: String, required: true },
   price: { type: Number, required: true }
 })
 
