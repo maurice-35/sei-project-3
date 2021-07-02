@@ -7,7 +7,6 @@ export const getAllProducts = async (_req, res) => {
   return res.status(200).json(products)
 }
 //Add product
-
 export const addProduct = async (req, res) => {
   try {
     const productWithOwner = { ...req.body, owner: req.currentUser._id }
@@ -19,14 +18,27 @@ export const addProduct = async (req, res) => {
     return res.status(422).json(err)
   }
 }
+
+//Remove Product
+export const deleteProduct = async (req, res) => {
+  try {
+    const { id } = req.params
+    const productToDelete = await Product.findById(id)
+    if (!productToDelete) throw new Error()
+    if (!productToDelete.owner.equals(req.currentUser._id)) throw new Error('Unauthorized')
+    await productToDelete.remove()
+    return res.sendStatus(204)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: err.message })
+  }
+}
 // ADD COMMENT
 export const addComment = async (req, res) => {
   try {
     const { id } = req.params
     const product = await Product.findById(id)
-
     if (!product) throw new Error('No show found')
-
     const commentToAdd = { ...req.body, owner: req.currentUser._id }
 
     product.comments.push(commentToAdd)
