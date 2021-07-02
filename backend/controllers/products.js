@@ -33,6 +33,20 @@ export const deleteProduct = async (req, res) => {
     return res.status(404).json({ message: err.message })
   }
 }
+
+//Update Product 
+
+export const updateProduct = async (req, res) => {
+  try {
+    const { id } = req.params
+    const productToUpdate = await Product.findByIdAndUpdate(id, req.body, { new: true })
+    if (!productToUpdate) throw new Error()
+    return res.status(200).json(productToUpdate)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: 'Not found' })
+  }
+}
 // ADD COMMENT
 export const addComment = async (req, res) => {
   try {
