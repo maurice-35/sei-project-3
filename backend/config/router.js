@@ -1,6 +1,6 @@
 import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
-import { addComment, deleteComment, getAllProducts } from '../controllers/products.js'
+import { addComment, addProduct, deleteComment, getAllProducts } from '../controllers/products.js'
 import { addItemToBasket, addPet, getUserProfile, removeItemFromBasket, removePet } from '../controllers/users.js'
 import { secureRoute } from './secureRoute.js'
 
@@ -9,6 +9,7 @@ const router = express.Router()
 
 router.route('/products')
   .get(getAllProducts)
+  .post(secureRoute, addProduct)
 
 router.route('/basket')
   .post(secureRoute, addItemToBasket)

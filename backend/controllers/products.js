@@ -6,7 +6,19 @@ export const getAllProducts = async (_req, res) => {
   const products = await Product.find()
   return res.status(200).json(products)
 }
+//Add product
 
+export const addProduct = async (req, res) => {
+  try {
+    const productWithOwner = { ...req.body, owner: req.currentUser._id }
+    const addProduct = await Product.create(productWithOwner)
+    return res.status(201).json(addProduct)
+
+  } catch (err) {
+    console.log(err)
+    return res.status(422).json(err)
+  }
+}
 // ADD COMMENT
 export const addComment = async (req, res) => {
   try {
