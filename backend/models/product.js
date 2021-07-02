@@ -12,12 +12,11 @@ const commentSchema = new mongoose.Schema({
 // productSchema
 const productSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
-  shortDescription: { type: String, required: true, maxlength: 150 },
-  description: { type: String, required: true, maxlength: 300 },
+  shortDescription: { type: String, required: true, maxlength: 500 },
+  description: { type: String, required: true, maxlength: 1000 },
   ingredient: [{ type: String, required: true }],
   image: { type: String, required: true },
   typeAnimal: { type: String, required: true },
-  allergens: [{ type: String, required: true }],
   storage: { type: String, required: true },
   typeProduct: { type: String, required: true },
   age: { type: String, required: true },

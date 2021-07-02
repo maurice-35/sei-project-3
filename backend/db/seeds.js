@@ -16,7 +16,7 @@ const seedDatabase = async () => {
     console.log('👍 DB dropped')
 
     const user = await User.create(userData)
-    console.log('user', user)
+ 
     const productWithOwner = productData.map(prod => {
       return { ...prod, owner: user[0]._id }
     })
