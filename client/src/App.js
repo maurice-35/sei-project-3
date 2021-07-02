@@ -1,16 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
-function App() {
-  React.useEffect(() => {
+
+const App = () => {
+
+  const [product, setProduct] = useState([])
+
+  useEffect(() => {
     const getData = async () => {
-      const res = await fetch('/api/endpoint') // * <-- replace with your endpoint
-      const data = await res.json()
-      console.log(data)
+      try {
+        const { data } = await axios.get('/api/products')
+        setProduct(data)
+      } catch (err) {
+        console.log(err)
+      }
     }
     getData()
-  })
+    console.log('my products', product)
 
-  return <h1>Hello World</h1>
+  }, [])
+  return (
+    <div>
+      <h1>Arjun got the tricks</h1>
+    </div>
+  )
 }
 
 export default App
+
