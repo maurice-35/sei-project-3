@@ -1,7 +1,7 @@
 import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
 import { addComment, deleteComment, getAllProducts } from '../controllers/products.js'
-import { addItemToBasket, getUserProfile, removeItemFromBasket } from '../controllers/users.js'
+import { addItemToBasket, addPet, getUserProfile, removeItemFromBasket, removePet } from '../controllers/users.js'
 import { secureRoute } from './secureRoute.js'
 
 
@@ -28,6 +28,9 @@ router.route('/login')
 
 router.route('/profile')
   .get(secureRoute, getUserProfile)
+  .post(secureRoute, addPet)
+  .delete(secureRoute, removePet)
+
 
 
 export default router

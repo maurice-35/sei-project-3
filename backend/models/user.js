@@ -1,17 +1,30 @@
 import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 
+
+//Basket Schema
 const basketSchema = new mongoose.Schema({
   items: { type: mongoose.Schema.ObjectId, ref: 'Product', required: true }
 }, {
   timestamps: true
 })
 
+//Pet Schema 
+const petSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  image: { type: String, required: true },
+  gender: { type: String, required: true },
+  age: { type: Number, required: true },
+  breed: { type: String, required: true }
+})
+
+//User Schema
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxLength: 30 },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  basket: [basketSchema]
+  basket: [basketSchema],
+  pet: [petSchema]
 })
 
 // remove the password from the populated owner when it converts to json
@@ -22,6 +35,8 @@ userSchema.set('toJSON', {
     return json
   }
 })
+
+petSchema.set('toJSON')
 
 // Virtual field for password
 userSchema

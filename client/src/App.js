@@ -4,19 +4,19 @@ import axios from 'axios'
 
 const App = () => {
 
-  const [product, setProduct] = useState([])
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
     const getData = async () => {
       try {
         const { data } = await axios.get('/api/products')
-        setProduct(data)
+        setProducts(data)
       } catch (err) {
         console.log(err)
       }
     }
     getData()
-    console.log('my products', product)
+    console.log('my products', products)
 
   }, [])
   return (

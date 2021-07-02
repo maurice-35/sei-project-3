@@ -53,3 +53,41 @@ export const removeItemFromBasket = async (req, res) => {
     return res.status(404).json({ message: err })
   }
 }
+
+//Add Pet
+export const addPet = async (req, res) => {
+  try {
+    const user = await User.findById(req.currentUser._id)
+    console.log('USER ->', user)
+    if (!user) throw new Error()
+    const petToAdd = { ...req.body }
+    user.pet.push(petToAdd)
+    await user.save()
+    return res.status(200).json(user)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: 'Not found' })
+  }
+}
+
+//Delete Pet
+export const removePet = async (req, res) => {
+  try {
+    const user = await User.findById(req.currentUser._id)
+    if (!user) throw new Error('User not found')
+
+    const petToRemove = user.pet.id(req.body.petId)
+    console.log('REQ.BODY', req.body)
+
+    if (!petToRemove) throw new Error('Pet not found')
+
+    await petToRemove.remove()
+    await user.save()
+
+    return res.sendStatus(204)
+
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: err })
+  }
+}
