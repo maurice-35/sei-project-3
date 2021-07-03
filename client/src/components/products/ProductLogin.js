@@ -18,6 +18,9 @@ const ProductLogin = () => {
   const [showIngred, setShowIngred] = useState(false)
   const [showStorage, setShowStorage] = useState(false)
 
+  //* Dropdown Animal Type State
+  const [animalType, setAnimalType] = useState([])
+
 
   //* Fetch Products from DB.
   useEffect(() => {
@@ -56,8 +59,18 @@ const ProductLogin = () => {
     setShowStorage(false)
   }
 
-  console.log(products)
+  //? User Input from dog/cat select
+  const handleChange = e => {
+    const userInput = e.target.value
+    const filteredArray = products.filter(prod => userInput === prod.typeAnimal.toLowerCase())
+    if (userInput === 'all') {
+      setAnimalType(products)
+    } else {
+      setAnimalType(filteredArray)
+    }
+    
 
+  }
 
 
 
@@ -65,14 +78,15 @@ const ProductLogin = () => {
     <>
       <form>
         <Form.Group controlId="formBasicSelect" size="small">
-          <Form.Label>Select Norm Type</Form.Label>
+          <Form.Label>Filter type of animal</Form.Label>
           <Form.Control
             as="select"
             size="small"
+            onChange={handleChange}
           >
-            <option value="DICTUM">Dictamen</option>
-            <option value="CONSTANCY">Constancia</option>
-            <option value="COMPLEMENT">Complemento</option>
+            <option value="all">Select type</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
           </Form.Control>
         </Form.Group>
       </form>
@@ -142,7 +156,7 @@ const ProductLogin = () => {
       {/* CARD WRAPPER */}
       <div className="products">
         <div className="wrapper">
-          {products.map(prod =>
+          {(animalType.length > 0 ? animalType : products).map(prod =>
             //* CARD
             <div key={prod._id} className="card">
               <div className="image">
