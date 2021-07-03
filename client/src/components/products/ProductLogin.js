@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
 
 const ProductLogin = () => {
 
@@ -62,6 +63,22 @@ const ProductLogin = () => {
 
   return (
     <>
+      <form>
+        <Form.Group controlId="formBasicSelect" size="small">
+          <Form.Label>Select Norm Type</Form.Label>
+          <Form.Control
+            as="select"
+            size="small"
+          >
+            <option value="DICTUM">Dictamen</option>
+            <option value="CONSTANCY">Constancia</option>
+            <option value="COMPLEMENT">Complemento</option>
+          </Form.Control>
+        </Form.Group>
+      </form>
+
+
+
       {/* MODAL-SIDEBAR */}
       {modalInfo.map(prod =>
         <>
@@ -89,7 +106,7 @@ const ProductLogin = () => {
                   </ul>
                 </div>}
               </div>
-              <hr className="dotted-hr"/>
+              <hr className="dotted-hr" />
               <div className="extra-info">
                 <div className="header-extra">
                   <h2>Storage</h2>
