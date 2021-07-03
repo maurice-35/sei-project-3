@@ -68,14 +68,11 @@ const ProductLogin = () => {
           <Modal key={prod._id} show={show} onHide={handleClose}
             // dialogClassName="my-modal"
             size="lg">
-
             <div className="modal-body-prod">
               <img src={prod.image} alt={prod.name} />
-
               <h1>{prod.name}</h1>
               <p>{prod.shortDescription}</p>
               <p>{prod.description}</p>
-              
               <hr />
               <div className="extra-info">
                 <div className="header-extra">
@@ -103,15 +100,12 @@ const ProductLogin = () => {
                   <p>{prod.storage}</p>
                 </div>}
               </div>
-
-
               <hr />
               <div className="my-modal-footer">
                 <div className="price">
                   <i className="fas fa-tags"></i>
                   <p>£ {prod.price}</p>
                 </div>
-
                 <div className="right-btn">
                   <Button variant="secondary" onClick={handleClose}>
                     Close
@@ -120,18 +114,8 @@ const ProductLogin = () => {
                     <i className="fas fa-shopping-basket"></i>
                   </Button>
                 </div>
-
-
               </div>
-
             </div>
-
-
-
-
-
-
-
           </Modal>
         </>
       )}
