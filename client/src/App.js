@@ -4,7 +4,9 @@ import About from './components/About.js'
 import Login from './components/auth/Login.js'
 import Register from './components/auth/Register.js'
 import Home from './components/Home.js'
-import Navbar from './components/Navbar.js'
+import Navigation from './components/Navigation.js'
+import Cats from './components/products/Cats.js'
+import Dogs from './components/products/Dogs.js'
 import ProductLogin from './components/products/ProductLogin.js'
 import ProductNoLogin from './components/products/ProductNoLogin.js'
 import Profile from './components/Profile.js'
@@ -17,10 +19,12 @@ const App = () => {
   
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navigation />
       <Switch>
         <Route path="/products/nologin" component={ProductNoLogin}/>
-        <Route path="/products/login" component={ProductLogin}/>
+        <Route path="/products" component={ProductLogin}/>
+        <Route path="/cats" component={Cats}/>
+        <Route path="/dogs" component={Dogs}/>
         <Route path="/profile" component={Profile} /> 
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
