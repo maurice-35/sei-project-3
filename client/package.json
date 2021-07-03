@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^5.0.2",
+    "axios": "^0.21.1",
+    "bootstrap": "5.0.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react-hooks": "^4.2.0",
     "http-proxy-middleware": "^1.0.5",
