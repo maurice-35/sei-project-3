@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 
+
 const Login = () => {
   const history = useHistory()
   const [error, setError] = useState(false)
@@ -23,11 +24,11 @@ const Login = () => {
   const handleSubmit = async event => {
     event.preventDefault()
     try {
-      const { data } = await axios.post('/api/products/login', loginData)
+      const { data } = await axios.post('/api/login', loginData)
       console.log(data)
+      console.log(loginData)
       setTokenToLocalStorage(data.token)
       history.push('/products')
-      // console.log(data)
     } catch (err) {
       setError(true)
     }
@@ -39,7 +40,6 @@ const Login = () => {
 
 
   return (
-<<<<<<< HEAD
     <section>
       <div className="container">
         <div className="columns">
@@ -79,11 +79,6 @@ const Login = () => {
         </div>
       </div>
     </section>
-=======
-    <>
-      <h1>Login</h1>
-    </>
->>>>>>> development
   )
 }
 
