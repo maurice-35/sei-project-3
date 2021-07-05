@@ -1,29 +1,40 @@
 //Carousel
 p.text-monospace {
-  color: #3B5360;
+  color: #3b5360;
   font-size: x-large;
   text-align: center;
- margin-right: 10%;
- margin-left: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 div.carousel {
-  background-color: #F8A978;
+  background-color: #f8a978;
 }
- div.mid-hero {
-   background-color: #1F5E84;
-   color: white;
-   padding: 50px 50px 50px 50px;
-   text-align: center;
-   .info-hero {
-     margin: 10px;
-     font-size: 12px;
-     h5 { 
-       text-decoration: overline;
-     }
-   }
- }
+div.mid-hero {
+  background-color: #1f5e84;
+  color: white;
+  padding: 50px 50px 50px 50px;
+  text-align: center;
+  .info-hero {
+    margin: 10px;
+    font-size: 12px;
+    h5 {
+      text-decoration: overline;
+    }
+  }
+}
 div.center {
-  min-width: 30%;
- align-self: center;
+  min-width: 40%;
+  align-self: center;
+}
+
+.banner {
+  background-color: #f8a978;
+  .middle-banner {
+    margin: 0px 100px;
+  }
+}
+
+.p-2 {
+  padding: 0px !important;
 }
