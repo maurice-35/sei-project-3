@@ -10,6 +10,7 @@ import Dogs from './components/products/Dogs.js'
 import ProductLogin from './components/products/ProductLogin.js'
 import ProductNoLogin from './components/products/ProductNoLogin.js'
 import Profile from './components/Profile.js'
+import Footer from './components/Footer.js'
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/about" component={About}/>
         <Route path="/" component={Home} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   )
 }
