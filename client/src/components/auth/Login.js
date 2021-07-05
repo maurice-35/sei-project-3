@@ -39,6 +39,7 @@ const Login = () => {
 
 
   return (
+<<<<<<< HEAD
     <section>
       <div className="container">
         <div className="columns">
@@ -78,6 +79,11 @@ const Login = () => {
         </div>
       </div>
     </section>
+=======
+    <>
+      <h1>Login</h1>
+    </>
+>>>>>>> development
   )
 }
 
