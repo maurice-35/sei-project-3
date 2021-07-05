@@ -1,13 +1,19 @@
 import React from 'react'
 
+import { Navbar } from 'react-bootstrap'
+
 
 
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <p>Created with Love By AAIM</p>
-    </footer>
+  
+    <Navbar collapseOnSelect expand="lg" className="nav-style" fixed="bottom">
+      <div className="footer">
+        Created with love by AAIM
+      </div>
+    </Navbar>
+  
   )
 }
 
