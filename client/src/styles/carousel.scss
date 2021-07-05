@@ -1,0 +1,29 @@
+//Carousel
+p.text-monospace {
+  color: #3B5360;
+  font-size: x-large;
+  text-align: center;
+ margin-right: 10%;
+ margin-left: 10%;
+}
+
+div.carousel {
+  background-color: #F8A978;
+}
+ div.mid-hero {
+   background-color: #1F5E84;
+   color: white;
+   padding: 50px 50px 50px 50px;
+   text-align: center;
+   .info-hero {
+     margin: 10px;
+     font-size: 12px;
+     h5 { 
+       text-decoration: overline;
+     }
+   }
+ }
+div.center {
+  min-width: 30%;
+ align-self: center;
+}

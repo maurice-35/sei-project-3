@@ -17,7 +17,7 @@ const Navigation = () => {
               <NavDropdown title="Our Products" id="basic-nav-dropdown">
                 <Link to="/products"><li className="dropdown-item">Overview <i className="fas fa-paw"></i></li></Link>
                 <hr />
-                <Link to="/cats"><li className="dropdown-item">Cats <i className="fas fa-cat"></i></li></Link>
+                <Link to="/ca3ts"><li className="dropdown-item">Cats <i className="fas fa-cat"></i></li></Link>
                 <Link to="/dogs"><li className="dropdown-item">Dogs <i className="fas fa-dog"></i></li></Link>
               </NavDropdown>
             </li>
