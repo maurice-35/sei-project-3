@@ -16,11 +16,16 @@ div.nav-item {
 .text-style {
   color: #1F5E84;
 }
+
 p.nav-link {
   color: #1F5E84;
   background-color: blanchedalmond;
   margin: 0px 10px 10px 0px;
   border-radius: 10%;
+  text-decoration: none;
+  &:hover {
+    color: pink;
+  }
 }
 
 }
@@ -28,9 +33,9 @@ p.nav-link {
 //Footer
 footer.footer { 
   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-image: url('https://cdn1.vectorstock.com/i/thumb-large/96/90/abstract-colorful-seamless-pattern-in-terrazzo-vector-22679690.jpg');
   color: #1F5E84;
   text-align: center;

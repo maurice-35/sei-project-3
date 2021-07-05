@@ -15,13 +15,13 @@ const Navigation = () => {
             <Link to="/"><p className="navbar-brand" href="#">TandW</p></Link>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item text-decoration-none">
-                <NavDropdown className="text-style" title="Our Products" id="basic-nav-dropdown">
-                  <Link to="/products"><li className="dropdown-item">Overview <i className="fas fa-paw"></i></li></Link>
-                  <Link to="/ca3ts"><li className="dropdown-item">Cats <i className="fas fa-cat"></i></li></Link>
-                  <Link to="/dogs"><li className="dropdown-item">Dogs <i className="fas fa-dog"></i></li></Link>
+                <NavDropdown style={{ color: '#1F5E84', backgroundColor: 'blanchedalmond' }} className="text-style" title="Our Products" id="basic-nav-dropdown">
+                  <Link to="/products"><li className="dropdown-item" style={{ color: '#1F5E84', backgroundColor: 'blanchedalmond' }}>Overview <i className="fas fa-paw"></i></li></Link>
+                  <Link to="/ca3ts"><li className="dropdown-item"style={{ color: '#1F5E84', backgroundColor: 'blanchedalmond' }}>Cats <i className="fas fa-cat"></i></li></Link>
+                  <Link to="/dogs"><li className="dropdown-item"style={{ color: '#1F5E84', backgroundColor: 'blanchedalmond' }}>Dogs <i className="fas fa-dog"></i></li></Link>
                 </NavDropdown>
               </li>
-              <li className="nav-item">
+              <li className="nav-item text-decoration-none">
                 <Link to="/about"><p className="nav-link" href="#">About Us</p></Link>  
               </li>
             </ul>
