@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Overpass&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -111,9 +112,20 @@ form {
   }
 }
 
-
 //! animation
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+//Carousel
+p.text-monospace {
+  color: #3B5360;
+  font-size: x-large;
+  text-align: center;
+ margin-right: 10%;
+ margin-left: 10%;
+}
+
+div.d-flex {
+  background-color: #F8A978;
 }
