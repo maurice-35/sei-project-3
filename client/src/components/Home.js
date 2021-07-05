@@ -1,32 +1,25 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
+import Marquee from 'react-fast-marquee'
 
 const Home = () => {
   return (
     <>
-      <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src="." className="d-block w-100" alt="..."/>
-          </div>
-          <div className="carousel-item">
-            <img src=".." className="d-block w-100" alt="..."/>
-          </div>
-          <div className="carousel-item">
-            <img src=".." className="d-block w-100" alt="..."/>
-          </div>
-        </div>
-      </div>
+      <Marquee className="banner">
+        <div>🐾 Free Worldwide delivery 🐾</div>
+        <div className="middle-banner">🐾 NEW Perky Jerky Dog Treats available! 🐾</div>
+        <div>🐾 Use promocode: TW2021 for 15% off your first order🐾</div>
+      </Marquee>
 
       <div className="d-flex">
         <div className="p-2 w-100 center">
           <h2 className="text-monospace text-center">FOOD DESIGNED FOR YOUR CAT OR DOG</h2>
           <p className="text-monospace text-center">
-          Delivering fresh, tasty meals to your door.
+            Delivering fresh, tasty meals to your door.
           </p>
         </div>
-        <div className="p-2 flex-shrink-1">
-          <img src="https://www.rd.com/wp-content/uploads/2020/05/GettyImages-1147030350-e1589568998232.jpg" className="img-fluid rounded" alt="dog and cat images"/>
+        <div className="flex-shrink-1">
+          <img src="https://www.rd.com/wp-content/uploads/2020/05/GettyImages-1147030350-e1589568998232.jpg" className="img-fluid rounded" alt="dog and cat images" />
         </div>
       </div>
 
@@ -60,7 +53,7 @@ const Home = () => {
         </Carousel.Item>
         <Carousel.Item>
           <div className="d-flex carousel justify-content-md-between align-items-md-center">
-            <img 
+            <img
               className="d-block w-50"
               src="https://media.istockphoto.com/photos/happy-mixed-breed-dog-posing-with-a-kitten-on-his-head-picture-id1210341751?k=6&m=1210341751&s=612x612&w=0&h=G1ZkGiAxhW5PUVpu-NfDnNiKAbLgDTymAVWPyBEmyXk="
               alt="Second slide"
