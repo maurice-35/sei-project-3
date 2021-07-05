@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 export default [
   {
     name: 'Neopolitan Meat',
@@ -266,9 +267,10 @@ export default [
   },
   {
     name: 'Hermione',
-    shortDescription: 'Wellness core simply shreds chicken & Broccoli Wet ',
+    shortDescription: 'Wellness core simply shreds chicken & Broccoli Wet',
+    // eslint-disable-next-line quotes
     description: "Our recipes include 100% of your kitten's daily needs, We ensure our kitten food contains all the necessary proteins and minerals that are essential for the early development of your kitten, Proteins, minerals and vitamins help to build strong muscles, bones and teeth, Individual pouches make mealtime even more convenient!, Developed by PURINA vets and nutritionists to provide your kitten with great tasting food",
-    ingredient: ['Deboned Chicken, Chicken Meal, Potato Starch, Peas, Brewers Dried Yeast, Chicken Fat, Natural Flavour, Citric Acid, Potassium Chloride, Preserved With Mixed Tocopherols, Oil Of Rosemary.'],
+    ingredient: ['Deboned Chicken', 'Chicken Meal', 'Potato Starch', 'Peas', 'Brewers Dried Yeast', 'Chicken Fat', 'Natural Flavour', 'Citric Acid', 'Potassium Chloride', 'Preserved With Mixed Tocopherols', 'Oil Of Rosemary.'],
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'Cat',
     storage: 'Store freeze - dried products in a cool dark place. Best if fed within 30 days after opening.',
@@ -279,7 +281,7 @@ export default [
   {
     name: 'Cosmic Catnip',
     shortDescription: '100% natural herb that stimulates a harmless, playful reaction in most cats!',
-    description: "OurPets Cosmic Catnip has been grown to achieve the strongest, most aromatic catnip ever produced! Give your kitty hours of endless fun with OurPets Cosmic Catnip.",
+    description: 'OurPets Cosmic Catnip has been grown to achieve the strongest, most aromatic catnip ever produced! Give your kitty hours of endless fun with OurPets Cosmic Catnip.',
     ingredient: ['North American grown'],
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'Cat',
@@ -291,7 +293,7 @@ export default [
   {
     name: 'Delectables Squeeze Up',
     shortDescription: 'Squeezable cat treat lets you hand-feed your feline for an interactive and fun feeding experience.',
-    description: "Your feline friend is in for a special, squeezable treat with Hartz Delectables Squeeze Up Variety Pack Lickable Cat Treats, a variety pack with 24 delectable wet cat treats. Each .5-ounce lickable tube is filled with a rich, creamy puree containing real, high-quality protein in one of three flavours cats love—chicken, tuna or seafood. Squeeze Up treats let you hand-feed your kitty for a mealtime bonding experience you’ll both enjoy.",
+    description: 'Your feline friend is in for a special, squeezable treat with Hartz Delectables Squeeze Up Variety Pack Lickable Cat Treats, a variety pack with 24 delectable wet cat treats. Each .5-ounce lickable tube is filled with a rich, creamy puree containing real, high-quality protein in one of three flavours cats love—chicken, tuna or seafood. Squeeze Up treats let you hand-feed your kitty for a mealtime bonding experience you’ll both enjoy.',
     ingredient: ['Water, Tuna, Tapioca Starch, Natural and Artificial Flavour, Guar Gum, Natural Tuna Flavour.'],
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'Cat',
@@ -300,15 +302,4 @@ export default [
     age: 'Kitten',
     price: 13.50
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> c142161355afd903bd7bbe36e4e35b3c35efa67b
-  
-=======
-
-
-
->>>>>>> a696fb14a2c2dae1703607ab52594a457e8106e8
 ]
