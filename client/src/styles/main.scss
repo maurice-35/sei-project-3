@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Overpass&display=swap');
 @import './carousel.scss';
+@import './register.scss';
+
 @import './navbar.scss';
 * {
   box-sizing: border-box;
@@ -114,12 +116,7 @@ body {
 //   }
 // }
 
-.center-height {
-  display: flex;
-  justify-content: center;
-  // width: 100%;
-  margin-top: 60px;
-}
+
 
 //! animation
 @keyframes fadeIn {
