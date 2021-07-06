@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-// import Modal from 'react-bootstrap/Modal'
-// import Button from 'react-bootstrap/Button'
-
 
 
 
 const Cats = () => {
-  const [cat, setCats] = useState([])
-  // const [hasError, setHasError] = useState(false)
-  // const [show, setShow] = useState(false)
+
+  //* Cat Products 
+  const [meal, setMeal] = useState([])
+  const [treats, setTreats] = useState([])
 
 
   //* Fetch catProducts from DB.
@@ -17,9 +15,15 @@ const Cats = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get('/api/products')
-        const catsProducts = data.filter(cat => cat.typeAnimal === 'cat')
+        const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
         console.log(catsProducts)
-        setCats(catsProducts)
+        // setCats(catsProducts)
+        const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treats')
+        const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
+        setTreats(catTreat)
+        setMeal(catMeal)
+        console.log(catTreat)
+        console.log(catMeal)
       } catch (err) {
         // setHasError(true)
         console.log(err)
@@ -27,46 +31,74 @@ const Cats = () => {
       }
     }
     getData()
+
   }, [])
-
-  console.log(cat)
-
-  // //? Select cat
-  // const handleChange = e => {
-  //   const userInput = e.target.value
-  //   const filteredArray = catsProducts.filter(prod => userInput === prod.typeAnimal)
-  //   if (userInput === 'all') {
-  //     setAnimalType(catsProducts)
-  //   } else {
-  //     setAnimalType(filteredArray)
-  //   }
 
 
   return (
-
-    <section className="section">
-      <div className="container">
-        {cat.map(food =>
-          <div key={food._id} className="cat-card">
-            <img src={food.image} alt={food.name} />
-            <div className="cat-card-body">
-              <div className="cat-card-header">
-                <h3>{food.name}</h3>
-              </div>
-              <hr />
-              <div className="cat-card-description">
-                <p>{food.shortDescription}</p>
-                <p>{food.decsription}</p>
-                <p>{food.age}</p>
-              </div>
-            </div>
-            <footer className="cat-card-footer">
-              <i className="fas fa-paw" id={food._id}></i>
-            </footer>
-          </div>
-        )}
+    <>
+      <h1 className="dog-title">Cats Stuff</h1>
+      <div className="product-options">
+        <button>Treats <i className="fas fa-bone"></i></button>
+        <button>Meals <i className="fas fa-drumstick-bite"></i></button>
       </div>
-    </section>
+      <div className="dog-wrapper">
+        <div className="meals-hero">
+          <div className="hero-text">
+            <h3>Check out our curated selection of seasonal meals...</h3>
+          </div>
+          <img src="https://res.cloudinary.com/doe5zwesw/image/upload/v1625585104/cats_nhqogf.jpg" alt="Cat Food" />
+        </div>
+        {/* <h2 className="cat-title">Meals</h2> */}
+        <div className="dog-meal">
+          {meal.map(food =>
+            <div key={food._id} className="dog-card">
+              <img src={food.image} alt={food.name} />
+              <div className="dog-card-body">
+                <div className="dog-card-header">
+                  <h3>{food.name}</h3>
+                </div>
+                <hr />
+                <div className="dog-card-description">
+                  <p>{food.shortDescription}</p>
+                </div>
+              </div>
+              <footer className="dog-card-footer">
+                <i className="fas fa-paw" id={food._id}></i>
+              </footer>
+            </div>
+          )}
+        </div>
+        {/* Treats */}
+        <div className="meals-hero">
+          <div className="hero-text">
+            <h3>The best of the best treaties for your cat!</h3>
+          </div>
+          <img id="img-two" src="https://res.cloudinary.com/doe5zwesw/image/upload/v1625261422/Best-Treats_cmfixd.jpg" alt="Cat Treats" />
+        </div>
+        {/* <h2 className="cat-title">Treats</h2> */}
+        <div className="dog-meal">
+          {treats.map(food =>
+            <div key={food._id} className="dog-card">
+              <img src={food.image} alt={food.name} />
+              <div className="dog-card-body">
+                <div className="dog-card-header">
+                  <h3>{food.name}</h3>
+                </div>
+                <hr />
+                <div className="dog-card-description">
+                  <p>{food.shortDescription}</p>
+                </div>
+              </div>
+              <footer className="dog-card-footer">
+                <i className="fas fa-paw" id={food._id}></i>
+              </footer>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
   )
+
 }
 export default Cats
