@@ -17,12 +17,12 @@ const Navigation = () => {
               <li className="nav-item text-decoration-none">
                 <NavDropdown className="text-style" title="Our Products" id="basic-nav-dropdown">
                   <Link to="/products"><li className="dropdown-item">Overview <i className="fas fa-paw"></i></li></Link>
-                  <Link to="/ca3ts"><li className="dropdown-item">Cats <i className="fas fa-cat"></i></li></Link>
+                  <Link to="/cats"><li className="dropdown-item">Cats <i className="fas fa-cat"></i></li></Link>
                   <Link to="/dogs"><li className="dropdown-item">Dogs <i className="fas fa-dog"></i></li></Link>
                 </NavDropdown>
               </li>
               <li className="nav-item">
-                <Link to="/about"><p className="nav-link" href="#">About Us</p></Link>  
+                <Link to="/about"><p className="nav-link" href="#">About Us</p></Link>
               </li>
             </ul>
             <form className="d-flex">
@@ -33,45 +33,6 @@ const Navigation = () => {
         </div>
       </nav>
     </section>
-    
-
-
-
-
-  /* 
-          // <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          //   <div className="container-fluid">
-      
-          //     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          //       <span className="navbar-toggler-icon"></span>
-          //     </button>
-          //     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          //       <div className="navbar-nav">
-          //         <Link to="/"><p className="nav-link" href="#">Home</p></Link>
-          //         <Link to="/about"><p className="nav-link" href="#">About</p></Link>
-      
-                  <NavDropdown title="Our Products" id="basic-nav-dropdown">
-      
-                    <Link to="/products"><li className="dropdown-item">Overview <i className="fas fa-paw"></i></li></Link>
-                    <hr />
-      
-                    <Link to="/cats"><li className="dropdown-item">Cats <i className="fas fa-cat"></i></li></Link>
-                    <Link to="/dogs"><li className="dropdown-item">Dogs <i className="fas fa-dog"></i></li></Link>
-      
-      
-                  </NavDropdown>
-      
-          //         <div className="d-flex">
-          //           <Link to="/login"><p className="nav-link" href="#">Login</p></Link>
-          //           <Link to="/register"><p className="nav-link" href="#">Register</p></Link>
-          //         </div>
-      
-          //       </div>
-          //     </div>
-          //   </div>
-          // </nav> */
-
-
   )
 }
 
