@@ -23,6 +23,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'adult',
+    onDisplay: true,
     price: 15.99
   },
   {
@@ -83,6 +84,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'senior',
+    onDisplay: true,
     price: 20.99
   },
   {
@@ -95,6 +97,7 @@ export default [
     storage: 'Store in a cool place for 30 days. 3 months if frozen.',
     typeProduct: 'treat',
     age: 'adult',
+    onDisplay: true,
     price: 10.99
   },
   {
@@ -179,6 +182,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'senior',
+    onDisplay: true,
     price: 24.99
   },
   {
@@ -203,6 +207,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'kitten',
+    onDisplay: true,
     price: 20.99
   },
   {
@@ -288,6 +293,7 @@ export default [
     storage: 'To keep catnip fresh, store in a safe, cool, dark place.',
     typeProduct: 'Treats',
     age: 'Kitten',
+    onDisplay: true,
     price: 10.50
   },
   {

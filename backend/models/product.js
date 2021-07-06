@@ -21,6 +21,7 @@ const productSchema = new mongoose.Schema({
   typeProduct: { type: String, required: true },
   age: { type: String, required: true },
   price: { type: Number, required: true },
+  onDisplay: { type: Boolean },
   comments: [commentSchema],
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 })

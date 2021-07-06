@@ -14,8 +14,8 @@ const Navigation = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link className="text-style-color" href="/about">About</Nav.Link>
-            <NavDropdown className="text-style-color"title="Our Products" id="basic-nav-dropdown">
-              <Link to="/overview"><li className="dropdown-item" >Overview <i className="fas fa-paw"></i></li></Link>
+            <NavDropdown className="text-style-color" title="Our Products" id="basic-nav-dropdown">
+              <Link to="/products"><li className="dropdown-item" >Overview <i className="fas fa-paw"></i></li></Link>
               <Link to="/cats"><li className="dropdown-item">Cats <i className="fas fa-cat"></i></li></Link>
               <Link to="/dogs"><li className="dropdown-item">Dogs <i className="fas fa-dog"></i></li></Link>
             </NavDropdown>
@@ -23,18 +23,18 @@ const Navigation = () => {
           <Nav>
             <Nav.Link className="text-style-color" href="/register">Register</Nav.Link>
             <Nav.Link className="text-style-color" eventKey={2} href="/login">
-  Login
+              Login
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    
 
 
 
 
-  
+
+
 
 
   )
