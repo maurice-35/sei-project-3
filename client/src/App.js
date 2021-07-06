@@ -11,6 +11,7 @@ import ProductLogin from './components/products/ProductLogin.js'
 import ProductNoLogin from './components/products/ProductNoLogin.js'
 import Profile from './components/Profile.js'
 import Footer from './components/Footer.js'
+import Overview from './components/products/Overview.js'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
       <Switch>
         <Route path="/products/nologin" component={ProductNoLogin}/>
         <Route path="/products" component={ProductLogin}/>
+        <Route path='/overview' component={Overview}/>
         <Route path="/cats" component={Cats}/>
         <Route path="/dogs" component={Dogs}/>
         <Route path="/profile" component={Profile} /> 
