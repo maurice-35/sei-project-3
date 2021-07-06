@@ -39,8 +39,18 @@ const Dogs = () => {
   return (
     <>
       <h1 className="dog-title">Dogs Stuff</h1>
-      
+      <div className="product-options">
+        <button>Treats <i className="fas fa-bone"></i></button>
+        <button>Meals <i className="fas fa-drumstick-bite"></i></button>
+      </div>
       <div className="dog-wrapper">
+        <div className="meals-hero">
+          <div className="hero-text">
+            <h3>Check out our curated selection of seasonal meals...</h3>
+          </div>
+          <img src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625580058/dog-5504866_o89qw6.jpg" alt="Dog Food" />
+        </div>
+        {/* <h2 className="dog-title">Meals</h2> */}
         <div className="dog-meal">
           {meal.map(food =>
             <div key={food._id} className="dog-card">
@@ -49,6 +59,7 @@ const Dogs = () => {
                 <div className="dog-card-header">
                   <h3>{food.name}</h3>
                 </div>
+                <hr />
                 <div className="dog-card-description">
                   <p>{food.shortDescription}</p>
                 </div>
@@ -59,6 +70,35 @@ const Dogs = () => {
             </div>
           )}
         </div>
+
+        {/* Treats */}
+        <div className="meals-hero">
+          <div className="hero-text">
+            <h3>The best of the best treaties for your doggo!</h3>
+          </div>
+          <img id="img-two" src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625580751/puppy-4484296_1920_tj3rqw.jpg" alt="Dog Treats" />
+        </div>
+        {/* <h2 className="dog-title">Treats</h2> */}
+        <div className="dog-meal">
+          {treats.map(food =>
+            <div key={food._id} className="dog-card">
+              <img src={food.image} alt={food.name} />
+              <div className="dog-card-body">
+                <div className="dog-card-header">
+                  <h3>{food.name}</h3>
+                </div>
+                <hr />
+                <div className="dog-card-description">
+                  <p>{food.shortDescription}</p>
+                </div>
+              </div>
+              <footer className="dog-card-footer">
+                <i className="fas fa-paw" id={food._id}></i>
+              </footer>
+            </div>
+          )}
+        </div>
+
       </div>
     </>
   )

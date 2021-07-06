@@ -6,18 +6,71 @@
   margin-top: 30px;
 }
 
+.product-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  button {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: blanchedalmond;
+    transition: 0.8s;
+    color: rgb(123, 94, 51);
+  }
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+}
+
 .dog-wrapper{
-  margin-top: 100px;
+  margin-top: 40px;
+  .meals-hero{
+    display: flex;
+    justify-content: center;
+    margin: 50px 50px 100px 50px;
+    border-radius: 5px;
+    .hero-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: blanchedalmond;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      h3 {
+        font-family: monospace;
+        padding: 15px;
+        color: rgb(123, 94, 51);
+      }
+    }
+    img {
+      width: 50%;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    @media only screen and (max-width: 500px) {
+      .hero-text {
+        display: none;
+      }
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
   .dog-meal{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
     .dog-card {
       display: flex;
       flex-direction: column;
       width: 300px;
-      height: 430px;
+      height: 450px;
       border: 1px solid blanchedalmond;
       box-shadow: 0 2px 4px 0 #f8a97846;
       border-radius: 10px;
@@ -35,6 +88,9 @@
         font-family: monospace;
         font-size: 1.2rem;
       }
+      p {
+        font-size: 0.9rem;
+      }
       .dog-card-footer {
         font-size: 32px;
         margin: 0 auto;
@@ -50,6 +106,7 @@
     }
   }
 }
+
 
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
