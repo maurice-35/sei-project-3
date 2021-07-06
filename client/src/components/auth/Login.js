@@ -40,54 +40,9 @@ const Login = () => {
     }
   }
 
-  // const handleFocus = () => {
-  //   setError(false)
-  // }
-
-
-
-  // <section>
-  //   <div className="container">
-  //     <div className="columns">
-  //       <form className="box column is-half is-offset-one-quarter" onSubmit={handleSubmit}>
-  //         <div className="field">
-  //           <label className="label">Email</label>
-  //           <div className="control">
-  //             <input
-  //               className={`input ${error ? 'is-danger' : ''}`}
-  //               placeholder="Email"
-  //               onChange={handleChange}
-  //               name="email"
-  //              value={loginData.email}
-  //               onFocus={handleFocus}
-  //             />
-  //           </div>
-  //         </div>
-  //         <div className="field">
-  //           <label className="label">Password</label>
-  //           <div className="control">
-  //             <input
-  //               type="password"
-  //               className={`input ${error ? 'is-danger' : ''}`}
-  //               placeholder="Password"
-  //               onChange={handleChange}
-  //               name="password"
-  //               value={loginData.password}
-  //               onFocus={handleFocus}
-  //             />
-  //           </div>
-  //           {error && <p className="help is-danger">Sorry, username or password not correct!</p>}
-  //         </div>
-  //         <div className="field"><br></br>
-  //           <button type="submit" className="button is-fullwidth is-warning">LogIn!</button>
-  //         </div>
-  //       </form>
-  //     </div>
-  //   </div>
-  // </section>
 
   return (
-    <section>
+    <section clasname='loginpage'>
 
       <h1 className="login">Login To See More!</h1>
       <Container fluid="md" className="center-height animate__slideOutDown">

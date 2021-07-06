@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Overpass&display=swap');
 @import './carousel.scss';
 @import './register.scss';
+@import './overview.scss';
 @import './login.scss';
+<<<<<<< HEAD
 @import './dog.scss';
+=======
+@import './about.scss';
+>>>>>>> development
 @import './navbar.scss';
+
 * {
   box-sizing: border-box;
 }
@@ -11,9 +17,7 @@
 body {
   margin: 0;
   padding: 0;
-  
 }
-
 
 //* Products Page
 .products {
@@ -31,7 +35,7 @@ body {
     margin: 0;
     padding: 0;
     .card {
-      width: 400px;
+      width: 300px;
       height: 500px;
       padding: 15px;
       margin: 15px;
@@ -57,9 +61,8 @@ body {
   }
 }
 
-
 .my-modal {
-  max-width: 700px!important;
+  max-width: 700px !important;
   padding: 10px;
 }
 .modal-body-prod {
@@ -90,7 +93,7 @@ body {
   }
 }
 
-.my-modal-footer{
+.my-modal-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,10 +121,12 @@ body {
 //   }
 // }
 
-
-
 //! animation
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
