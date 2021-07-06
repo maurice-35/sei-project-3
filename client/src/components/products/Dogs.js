@@ -21,13 +21,13 @@ const Dogs = () => {
         const { data } = await axios.get('/api/products')
 
         //* Grabbing all Dog products
-        const dogProducts = data.filter(animal => animal.typeAnimal === 'dog')
+        const dogProducts = data.filter(animal => animal.typeAnimal.toLowerCase() === 'dog')
 
         //* Filter to get treats and save to new array
-        const dogTreats = dogProducts.filter(food => food.typeProduct === 'treat')
+        const dogTreats = dogProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
 
         //* Filter to get meals and save to new array
-        const dogMeal = dogProducts.filter(food => food.typeProduct === 'meal')
+        const dogMeal = dogProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
 
         //* Set products to state
         setProducts(data)

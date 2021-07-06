@@ -7,7 +7,6 @@ import Home from './components/Home.js'
 import Navigation from './components/Navigation.js'
 import Cats from './components/products/Cats.js'
 import Dogs from './components/products/Dogs.js'
-import ProductNoLogin from './components/products/ProductNoLogin.js'
 import Profile from './components/Profile.js'
 import Footer from './components/Footer.js'
 import Overview from './components/products/Overview.js'
@@ -22,7 +21,6 @@ const App = () => {
     <BrowserRouter>
       <Navigation />
       <Switch>
-        <Route path="/products/nologin" component={ProductNoLogin} />
         <Route path="/products" component={Overview} />
         <Route path="/cats" component={Cats} />
         <Route path="/dogs" component={Dogs} />
