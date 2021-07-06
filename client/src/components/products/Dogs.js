@@ -48,7 +48,7 @@ const Dogs = () => {
           <div className="hero-text">
             <h3>Check out our curated selection of seasonal meals...</h3>
           </div>
-          <img src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625580058/dog-5504866_o89qw6.jpg" alt="Dog Food" />
+          <img src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625582635/dog-2210717_cnz3vo.jpg" alt="Dog Food" />
         </div>
         {/* <h2 className="dog-title">Meals</h2> */}
         <div className="dog-meal">
