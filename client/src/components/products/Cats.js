@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import ProductCard from '../Popups/ProductCard'
+import MainModal from '../Popups/MainModal'
 
 
 
@@ -8,6 +10,10 @@ const Cats = () => {
   //* Cat Products 
   const [meal, setMeal] = useState([])
   const [treats, setTreats] = useState([])
+  const [products, setProducts] = useState([])
+  const [modalInfo, setModalInfo] = useState([])
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
 
 
   //* Fetch catProducts from DB.
@@ -16,14 +22,11 @@ const Cats = () => {
       try {
         const { data } = await axios.get('/api/products')
         const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
-        console.log(catsProducts)
-        // setCats(catsProducts)
         const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treats')
         const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
         setTreats(catTreat)
         setMeal(catMeal)
-        console.log(catTreat)
-        console.log(catMeal)
+        setProducts(catsProducts)
       } catch (err) {
         // setHasError(true)
         console.log(err)
@@ -34,9 +37,34 @@ const Cats = () => {
 
   }, [])
 
+  //* Open Modal
+  const openModal = e => {
+    const userInput = e.target.id
+    const filterArray = products.filter(prod => userInput === prod._id)
+    setModalInfo(filterArray)
+    setShow(true)
+  }
+
 
   return (
     <>
+
+      {/* Product Info Modal */}
+
+      {modalInfo.map(info =>
+        <MainModal
+          show={show}
+          handleClose={handleClose}
+          key={info._id}
+          name={info.name}
+          image={info.image}
+          shortDescription={info.shortDescription}
+          description={info.description}
+          ingredient={info.ingredient}
+          storage={info.storage}
+          price={info.price}
+        />)}
+
       <h1 className="dog-title">Cats Stuff</h1>
       <div className="product-options">
         <button>Treats <i className="fas fa-bone"></i></button>
@@ -52,21 +80,14 @@ const Cats = () => {
         {/* <h2 className="cat-title">Meals</h2> */}
         <div className="dog-meal">
           {meal.map(food =>
-            <div key={food._id} className="dog-card">
-              <img src={food.image} alt={food.name} />
-              <div className="dog-card-body">
-                <div className="dog-card-header">
-                  <h3>{food.name}</h3>
-                </div>
-                <hr />
-                <div className="dog-card-description">
-                  <p>{food.shortDescription}</p>
-                </div>
-              </div>
-              <footer className="dog-card-footer">
-                <i className="fas fa-paw" id={food._id}></i>
-              </footer>
-            </div>
+            <ProductCard
+              key={food._id}
+              name={food.name}
+              image={food.image}
+              id={food._id}
+              shortDescription={food.shortDescription}
+              openModal={openModal}
+            />
           )}
         </div>
         {/* Treats */}
@@ -79,21 +100,16 @@ const Cats = () => {
         {/* <h2 className="cat-title">Treats</h2> */}
         <div className="dog-meal">
           {treats.map(food =>
-            <div key={food._id} className="dog-card">
-              <img src={food.image} alt={food.name} />
-              <div className="dog-card-body">
-                <div className="dog-card-header">
-                  <h3>{food.name}</h3>
-                </div>
-                <hr />
-                <div className="dog-card-description">
-                  <p>{food.shortDescription}</p>
-                </div>
-              </div>
-              <footer className="dog-card-footer">
-                <i className="fas fa-paw" id={food._id}></i>
-              </footer>
-            </div>
+
+            <ProductCard
+              key={food._id}
+              name={food.name}
+              image={food.image}
+              id={food._id}
+              shortDescription={food.shortDescription}
+              openModal={openModal}
+            />
+
           )}
         </div>
       </div>

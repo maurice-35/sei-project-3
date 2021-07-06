@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-
+import MainModal from '../Popups/MainModal'
+import ProductCard from '../Popups/ProductCard'
 
 
 const Overview = () => {
   //* Cat and Dog State
   const [catProducts, setCatProducts] = useState([])
   const [dogProducts, setDogProducts] = useState([])
+  const [products, setProducts] = useState([])
+  const [modalInfo, setModalInfo] = useState([])
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
 
 
   //* Fetch Products from DB.
@@ -18,7 +23,7 @@ const Overview = () => {
 
         // displayed data 
         const onDisplay = data.filter(item => item.onDisplay)
-        console.log(onDisplay)
+        setProducts(onDisplay)
         // cat data
         const catItems = onDisplay.filter(animal => animal.typeAnimal.toLowerCase() === 'cat')
         setCatProducts(catItems)
@@ -34,12 +39,37 @@ const Overview = () => {
     getData()
   }, [])
 
-  console.log('CAT ->', catProducts)
-  console.log('DOG ->', dogProducts)
+  //* Open Modal
+  const openModal = e => {
+    const userInput = e.target.id
+    const filterArray = products.filter(prod => userInput === prod._id)
+    setModalInfo(filterArray)
+    setShow(true)
+  }
+
+
 
 
   return (
     <>
+
+      {/* Product Info Modal */}
+
+      {modalInfo.map(info =>
+        <MainModal
+          show={show}
+          handleClose={handleClose}
+          key={info._id}
+          name={info.name}
+          image={info.image}
+          shortDescription={info.shortDescription}
+          description={info.description}
+          ingredient={info.ingredient}
+          storage={info.storage}
+          price={info.price}
+        />)}
+
+
       <h1 className="title text-monospace">Our Products</h1>
 
       <div className="dog-wrapper">
@@ -59,21 +89,14 @@ const Overview = () => {
       <div className="dog-wrapper">
         <div className="dog-meal">
           {catProducts.map(food =>
-            <div key={food._id} className="dog-card">
-              <img src={food.image} alt={food.name} />
-              <div className="dog-card-body">
-                <div className="dog-card-header">
-                  <h3>{food.name}</h3>
-                </div>
-                <hr />
-                <div className="dog-card-description">
-                  <p>{food.shortDescription}</p>
-                </div>
-              </div>
-              <footer className="dog-card-footer">
-                <i className="fas fa-paw" id={food._id}></i>
-              </footer>
-            </div>
+            <ProductCard
+              key={food._id}
+              name={food.name}
+              image={food.image}
+              id={food._id}
+              shortDescription={food.shortDescription}
+              openModal={openModal}
+            />
           )}
         </div>
       </div>
@@ -97,21 +120,14 @@ const Overview = () => {
       <div className="dog-wrapper">
         <div className="dog-meal">
           {dogProducts.map(food =>
-            <div key={food._id} className="dog-card">
-              <img src={food.image} alt={food.name} />
-              <div className="dog-card-body">
-                <div className="dog-card-header">
-                  <h3>{food.name}</h3>
-                </div>
-                <hr />
-                <div className="dog-card-description">
-                  <p>{food.shortDescription}</p>
-                </div>
-              </div>
-              <footer className="dog-card-footer">
-                <i className="fas fa-paw" id={food._id}></i>
-              </footer>
-            </div>
+            <ProductCard
+              key={food._id}
+              name={food.name}
+              image={food.image}
+              id={food._id}
+              shortDescription={food.shortDescription}
+              openModal={openModal}
+            />
           )}
         </div>
       </div>
