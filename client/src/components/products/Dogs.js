@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import MainModal from '../Popups/MainModal'
 
 const Dogs = () => {
 
-  //* Dog Products 
+  //* Dog Products
+  const [products, setProducts] = useState([])
   const [meal, setMeal] = useState([])
   const [treats, setTreats] = useState([])
+  const [modalInfo, setModalInfo] = useState([])
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+
 
   //* Fetch Dog Products lol
   useEffect(() => {
@@ -15,14 +21,16 @@ const Dogs = () => {
         const { data } = await axios.get('/api/products')
 
         //* Grabbing all Dog products
-        const dogProducts = data.filter(animal => animal.typeAnimal === 'dog')
+        const dogProducts = data.filter(animal => animal.typeAnimal.toLowerCase() === 'dog')
 
         //* Filter to get treats and save to new array
-        const dogTreats = dogProducts.filter(food => food.typeProduct === 'treat')
+        const dogTreats = dogProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
 
         //* Filter to get meals and save to new array
-        const dogMeal = dogProducts.filter(food => food.typeProduct === 'meal')
+        const dogMeal = dogProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
 
+        //* Set products to state
+        setProducts(data)
         setTreats(dogTreats)
         setMeal(dogMeal)
       } catch (err) {
@@ -30,14 +38,36 @@ const Dogs = () => {
       }
     }
     getData()
-
   }, [])
 
-  console.log(meal)
-  console.log(treats)
+  //* Open Modal
+  const openModal = e => {
+    const userInput = e.target.id
+    const filterArray = products.filter(prod => userInput === prod._id)
+    setModalInfo(filterArray)
+    setShow(true)
+  }
+
+  console.log(modalInfo)
 
   return (
     <>
+      {/* Product Info Modal */}
+
+      {modalInfo.map(info =>
+        <MainModal
+          show={show}
+          handleClose={handleClose}
+          key={info._id}
+          name={info.name}
+          image={info.image}
+          shortDescription={info.shortDescription}
+          description={info.description}
+          ingredient={info.ingredient}
+          storage={info.storage}
+          price={info.price}
+        />)}
+
       <h1 className="dog-title">Dogs Stuff</h1>
       <div className="product-options">
         <button>Treats <i className="fas fa-bone"></i></button>
@@ -48,7 +78,7 @@ const Dogs = () => {
           <div className="hero-text">
             <h3>Check out our curated selection of seasonal meals...</h3>
           </div>
-          <img src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625580058/dog-5504866_o89qw6.jpg" alt="Dog Food" />
+          <img src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625582635/dog-2210717_cnz3vo.jpg" alt="Dog Food" />
         </div>
         {/* <h2 className="dog-title">Meals</h2> */}
         <div className="dog-meal">
@@ -65,7 +95,7 @@ const Dogs = () => {
                 </div>
               </div>
               <footer className="dog-card-footer">
-                <i className="fas fa-paw" id={food._id}></i>
+                <i className="fas fa-paw" onClick={openModal} id={food._id}></i>
               </footer>
             </div>
           )}
@@ -93,7 +123,7 @@ const Dogs = () => {
                 </div>
               </div>
               <footer className="dog-card-footer">
-                <i className="fas fa-paw" id={food._id}></i>
+                <i className="fas fa-paw" onClick={openModal} id={food._id}></i>
               </footer>
             </div>
           )}
@@ -105,41 +135,3 @@ const Dogs = () => {
 }
 
 export default Dogs
-
-
-{/* <>
-      <h1>Dogs Stuff</h1>
-      <div className="dog-wrapper">
-        <div className="main-dog">
-          {meal.map(food =>
-            <Card key={food._id} style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={food.image} />
-              <Card.Body>
-                <Card.Title>{food.name}</Card.Title>
-                <Card.Text>
-                  {food.shortDescription}
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          )}
-        </div>
-      </div>
-    </> */}
-
-// <Container >
-//     <Row className="justify-content-center">
-//       {meal.map(food =>
-//         <Card key={food._id} style={{ width: '18rem' }} className="m-3">
-//           <Card.Img variant="top" src={food.image} />
-//           <Card.Body>
-//             <Card.Title>{food.name}</Card.Title>
-//             <Card.Text>
-//               {food.shortDescription}
-//             </Card.Text>
-//             <Button variant="primary">Go somewhere</Button>
-//           </Card.Body>
-//         </Card>
-//       )}
-//     </Row>
-//   </Container>
