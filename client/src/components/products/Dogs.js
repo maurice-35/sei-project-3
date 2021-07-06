@@ -67,6 +67,7 @@ const Dogs = () => {
           ingredient={info.ingredient}
           storage={info.storage}
           price={info.price}
+          id={info._id}
         />)}
 
       <h1 className="dog-title">Dogs Stuff</h1>
