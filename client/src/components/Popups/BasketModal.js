@@ -1,60 +1,29 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Modal, Image, Nav } from 'react-bootstrap'
-import axios from 'axios'
+
 
 
 
 const BasketModal = () => {
   const [smShow, setSmShow] = useState(false)
-
-  const [basketInfo, setBasketInfo] = useState([])
-  //Delete item from basket
-  const [itemToDelete, setItemToDelete] = useState({
-    basket: '',
-  })
-
-  const handleBasketChange = async () => {
-    setSmShow(true)
-    try {
-      const { data } = await axios.get('/api/profile', { headers: { Authorization: `Bearer ${window.localStorage.getItem('token')}` } })
-
-      const filterNull = data.basket.filter(info => info.name)
-      console.log('FILTERNULL', filterNull)
-
-      setBasketInfo(filterNull)
-    } catch (err) {
-      console.log(err)
-    }
-  }
+  const [ basketInfo, setBasketInfo] = useState([])
   
-
-  //Handle Basket Item delete
+  const handleBasketChange = () => {
+    setSmShow(true)
+    const items = localStorage.getItem('item')
+    setBasketInfo(JSON.parse(items))
+  }
   const handleDelete = (e) => {
     const userInput = e.target.id
-    const itemDelete = { ...itemToDelete, basket: userInput }
-    setItemToDelete(itemDelete)
+    const getItem = JSON.parse(localStorage.getItem('item'))
+    const newLocalStore = getItem.filter(ite =>  ite.basket !== userInput)
+    console.log(newLocalStore)
   }
-  console.log('outside useEffect', itemToDelete)
 
-  useEffect(() => {
-    const sendData = async () => {
-      try {
-        await axios.delete(
-          '/api/basket',
-          itemToDelete,
-          {
-            headers: { Authorization: `Bearer ${window.localStorage.getItem('token')}` },
-          }
-        )
-     
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    sendData()
+  
+  
 
-  }, [itemToDelete])
-
+ 
   return (
     <>
       <Nav.Item><span>()</span></Nav.Item>
