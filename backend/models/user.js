@@ -4,7 +4,9 @@ import bcrypt from 'bcrypt'
 
 //Basket Schema
 const basketSchema = new mongoose.Schema({
-  items: { type: mongoose.Schema.ObjectId, ref: 'Product' }
+  items: { type: mongoose.Schema.ObjectId, ref: 'Product' },
+  price: { type: Number },
+  name: { type: String }
 }, {
   timestamps: true
 })
@@ -15,7 +17,7 @@ const petSchema = new mongoose.Schema({
   image: { type: String },
   gender: { type: String },
   age: { type: Number },
-  breed: { type: String  }
+  breed: { type: String }
 })
 
 //User Schema

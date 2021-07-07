@@ -49,8 +49,6 @@ const Dogs = () => {
     setShow(true)
   }
 
-  console.log(modalInfo)
-
   return (
     <>
       {/* Product Info Modal */}

@@ -61,6 +61,7 @@ const Cats = () => {
           description={info.description}
           ingredient={info.ingredient}
           storage={info.storage}
+          id={info._id}
           price={info.price}
         />)}
 
