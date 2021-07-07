@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
+// import { getTokenFromLocalStorage } from '../tokens/token'
 
 const MainModal = ({ id, image, name, shortDescription, description, ingredient, storage, price, show, handleClose }) => {
   //* Show Modal Lists - Ingredients & Storage
   const [showIngred, setShowIngred] = useState(false)
   const [showStorage, setShowStorage] = useState(false)
+
+  //* Basket Item
+  const [basketItem, setBasketItem] = useState({
+    basket: '',
+  })
 
   //? Open Ingredients List 
   const handleShowIngred = () => {
@@ -27,7 +34,29 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
     setShowStorage(false)
   }
 
+  //* Add to basket
+  const addToBasket = e => {
+    const getUserData = { ...basketItem, basket: e.target.id }
+    setBasketItem(getUserData)
+  }
 
+  useEffect(() => {
+    const sendData = async () => {
+      try {
+        await axios.post(
+          '/api/basket',
+          basketItem,
+          {
+            headers: { Authorization: `Bearer ${window.localStorage.getItem('token')}` },
+          }
+        )
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    sendData()
+
+  }, [basketItem])
 
   return (
     <>
@@ -57,7 +86,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
           <hr className="dotted-hr" />
           <div className="extra-info">
             <div className="header-extra">
-              
+
               {!showStorage && <h2 onClick={handleShowStorage}>Storage +</h2>}
               {showStorage && <h2 onClick={handleCloseStorage}>Storage -</h2>}
             </div>
@@ -75,9 +104,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
-              <Button variant="primary" onClick={handleClose}>
-                <i className="fas fa-shopping-basket"></i>
-              </Button>
+              <i className="fas fa-shopping-basket" id={id} onClick={addToBasket}></i>
             </div>
           </div>
         </div>
