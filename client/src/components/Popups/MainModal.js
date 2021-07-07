@@ -35,6 +35,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   //* Add to basket
   const addToBasket = e => {
     getItem()
+    console.log(basketItem)
     const newBasketItem = [ ...basketItem, e.target.name ]
     setBasketItem(newBasketItem)
     localStorage.setItem('item', JSON.stringify(newBasketItem))

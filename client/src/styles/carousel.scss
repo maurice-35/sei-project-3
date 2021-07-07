@@ -1,5 +1,5 @@
 //Carousel
-p.text-monospace {
+h2.text-monospace, p.text-monospace {
   color: #3b5360;
   font-size: x-large;
   text-align: center;
@@ -10,19 +10,20 @@ p.text-monospace {
 div.carousel {
   background-color: #f8a978;
 }
+
+div.top-hero {
+  background: #f8a978;
+}
 div.mid-hero {
   background-color: #1f5e84;
   color: white;
-  padding: 50px 50px 50px 50px;
   text-align: center;
   .info-hero {
     margin: 10px;
     font-size: 12px;
-    h5 {
-      text-decoration: overline;
-    }
   }
 }
+
 div.center {
   min-width: 40%;
   align-self: center;
@@ -34,3 +35,13 @@ div.center {
     margin: 0px 100px;
   }
 }
+
+
+span.carousel-control-next-icon {
+  background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/02-arrow/angle-circle-arrow-right.png');
+}
+
+span.carousel-control-prev-icon {
+  background-image: url('https://fullylocal.app/assets/img/icon/img_right_arrow_demo.png');
+}
+
