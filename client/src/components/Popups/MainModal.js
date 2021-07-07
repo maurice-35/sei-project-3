@@ -12,6 +12,8 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   //* Basket Item
   const [basketItem, setBasketItem] = useState({
     basket: '',
+    name: '',
+    price: '',
   })
 
   //? Open Ingredients List 
@@ -36,11 +38,17 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
 
   //* Add to basket
   const addToBasket = e => {
-    console.log(e.target.id)
-    console.log(e.target.value)
-    const getUserData = { ...basketItem, basket: e.target.id }
+    console.log('ITEM ID', e.target.id)
+    console.log('ITEM PRICE', e.target.value)
+    console.log('ITEM NAME', e.target.name)
+
+    const priceToNumber = parseFloat(e.target.value)
+
+    const getUserData = { ...basketItem, basket: e.target.id, name: e.target.name, price: priceToNumber }
     setBasketItem(getUserData)
   }
+  console.log('BASKET', basketItem)
+
 
   useEffect(() => {
     const sendData = async () => {
@@ -106,7 +114,10 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
-              <button value={name} id={id} onClick={addToBasket}>Buy Now</button>
+              <button id={id} name={name} value={price} onClick={addToBasket}>
+                {/* <i className="fas fa-shopping-basket" ></i> */}
+                buy me
+              </button>
             </div>
           </div>
         </div>

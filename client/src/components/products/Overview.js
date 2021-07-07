@@ -19,7 +19,6 @@ const Overview = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get('/api/products')
-        console.log('DATA ->', data)
 
         // displayed data 
         const onDisplay = data.filter(item => item.onDisplay)
@@ -66,6 +65,7 @@ const Overview = () => {
           description={info.description}
           ingredient={info.ingredient}
           storage={info.storage}
+          id={info._id}
           price={info.price}
         />)}
 
