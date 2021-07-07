@@ -91,3 +91,28 @@ export const removePet = async (req, res) => {
     return res.status(404).json({ message: err })
   }
 }
+
+//Get basket on user profile
+
+export const getBasket = async (req, res) =>{
+  try {
+    const user = await User.findById(req.currentUser._id)
+    const getUserBasket = user.basket
+    console.log(getUserBasket)
+  } catch (err){
+    console.log(err)
+    return res.status(404).json({ message: 'not found' })
+  }
+}
+//Delete basket
+export const deleteBasket = async (req, res) => {
+  try {
+    const { basketId } = req.params
+    const user = await User.findById(req.currentUser._id)
+    const itemToDelete = user.basket.findOneAndDelete({ _id: basketId })
+    console.log(itemToDelete)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: err })
+  }
+}

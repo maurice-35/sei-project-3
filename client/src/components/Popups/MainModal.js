@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react'
+
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 // import { getTokenFromLocalStorage } from '../tokens/token'
@@ -10,11 +10,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   const [showStorage, setShowStorage] = useState(false)
 
   //* Basket Item
-  const [basketItem, setBasketItem] = useState({
-    basket: '',
-    name: '',
-    price: '',
-  })
+  const [basketItem, setBasketItem] = useState([])
 
   //? Open Ingredients List 
   const handleShowIngred = () => {
@@ -35,38 +31,23 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   const handleCloseStorage = () => {
     setShowStorage(false)
   }
-
+ 
   //* Add to basket
   const addToBasket = e => {
-    console.log('ITEM ID', e.target.id)
-    console.log('ITEM PRICE', e.target.value)
-    console.log('ITEM NAME', e.target.name)
-
-    const priceToNumber = parseFloat(e.target.value)
-
-    const getUserData = { ...basketItem, basket: e.target.id, name: e.target.name, price: priceToNumber }
-    setBasketItem(getUserData)
+    getItem()
+    const newBasketItem = [ ...basketItem, e.target.name ]
+    setBasketItem(newBasketItem)
+    localStorage.setItem('item', JSON.stringify(newBasketItem))
+    
   }
-  console.log('BASKET', basketItem)
 
+  const getItem = () => {
+    const items = localStorage.getItem('item')
+    setBasketItem(JSON.parse(items))
+  }
+ 
+  console.log(basketItem)
 
-  useEffect(() => {
-    const sendData = async () => {
-      try {
-        await axios.post(
-          '/api/basket',
-          basketItem,
-          {
-            headers: { Authorization: `Bearer ${window.localStorage.getItem('token')}` },
-          }
-        )
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    sendData()
-
-  }, [basketItem])
 
   return (
     <>
