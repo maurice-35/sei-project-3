@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import MainModal from '../Popups/MainModal'
+import ProductCard from '../Popups/ProductCard'
 
 const Dogs = () => {
 
@@ -66,6 +67,7 @@ const Dogs = () => {
           ingredient={info.ingredient}
           storage={info.storage}
           price={info.price}
+          id={info._id}
         />)}
 
       <h1 className="dog-title">Dogs Stuff</h1>
@@ -83,21 +85,14 @@ const Dogs = () => {
         {/* <h2 className="dog-title">Meals</h2> */}
         <div className="dog-meal">
           {meal.map(food =>
-            <div key={food._id} className="dog-card">
-              <img src={food.image} alt={food.name} />
-              <div className="dog-card-body">
-                <div className="dog-card-header">
-                  <h3>{food.name}</h3>
-                </div>
-                <hr />
-                <div className="dog-card-description">
-                  <p>{food.shortDescription}</p>
-                </div>
-              </div>
-              <footer className="dog-card-footer">
-                <i className="fas fa-paw" onClick={openModal} id={food._id}></i>
-              </footer>
-            </div>
+            <ProductCard
+              key={food._id}
+              name={food.name}
+              image={food.image}
+              id={food._id}
+              shortDescription={food.shortDescription}
+              openModal={openModal}
+            />
           )}
         </div>
 
@@ -111,21 +106,14 @@ const Dogs = () => {
         {/* <h2 className="dog-title">Treats</h2> */}
         <div className="dog-meal">
           {treats.map(food =>
-            <div key={food._id} className="dog-card">
-              <img src={food.image} alt={food.name} />
-              <div className="dog-card-body">
-                <div className="dog-card-header">
-                  <h3>{food.name}</h3>
-                </div>
-                <hr />
-                <div className="dog-card-description">
-                  <p>{food.shortDescription}</p>
-                </div>
-              </div>
-              <footer className="dog-card-footer">
-                <i className="fas fa-paw" onClick={openModal} id={food._id}></i>
-              </footer>
-            </div>
+            <ProductCard
+              key={food._id}
+              name={food.name}
+              image={food.image}
+              id={food._id}
+              shortDescription={food.shortDescription}
+              openModal={openModal}
+            />
           )}
         </div>
 
