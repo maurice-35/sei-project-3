@@ -25,7 +25,6 @@ const Cats = () => {
         console.log(catTreat)
         console.log(catMeal)
       } catch (err) {
-        // setHasError(true)
         console.log(err)
 
       }
