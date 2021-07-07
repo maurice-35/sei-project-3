@@ -8,7 +8,7 @@ import { getPayload } from './auth/helpers/auth'
 
 
 const Navigation = () => {
- 
+
   const history = useHistory()
 
   //Remove Token from Local Storage and Display HoemPage

@@ -36,6 +36,8 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
 
   //* Add to basket
   const addToBasket = e => {
+    console.log(e.target.id)
+    console.log(e.target.value)
     const getUserData = { ...basketItem, basket: e.target.id }
     setBasketItem(getUserData)
   }
@@ -104,7 +106,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
-              <i className="fas fa-shopping-basket" id={id} onClick={addToBasket}></i>
+              <button value={name} id={id} onClick={addToBasket}>Buy Now</button>
             </div>
           </div>
         </div>

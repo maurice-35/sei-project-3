@@ -49,7 +49,7 @@ const Dogs = () => {
     setShow(true)
   }
 
-  console.log(modalInfo)
+  console.log('modal-info',modalInfo)
 
   return (
     <>
