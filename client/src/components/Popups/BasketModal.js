@@ -17,7 +17,7 @@ const BasketModal = () => {
       const filterNull = data.basket.filter(info => info.name)
       console.log('FILTERNULL', filterNull)
 
-      setBasketInfo(data.basket)
+      setBasketInfo(filterNull)
     } catch (err) {
       console.log(err)
     }
@@ -40,7 +40,11 @@ const BasketModal = () => {
             Your Shopping Cart
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>Products will go in here</Modal.Body>
+        <Modal.Body>Products will go in here
+          <ul>
+            {basketInfo.map(info => <li key={info._id}>{info.name}</li>)}
+          </ul>
+        </Modal.Body>
       </Modal>
     </>
   )
