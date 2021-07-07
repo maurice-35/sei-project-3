@@ -1,29 +1,29 @@
 import React, { useState } from 'react'
 import { Modal, Image, Nav } from 'react-bootstrap'
-import axios from 'axios'
+
 
 
 
 const BasketModal = () => {
   const [smShow, setSmShow] = useState(false)
-
-  const [basketInfo, setBasketInfo] = useState([])
-
-  const handleBasketChange = async () => {
+  const [ basketInfo, setBasketInfo] = useState([])
+  
+  const handleBasketChange = () => {
     setSmShow(true)
-    try {
-      const { data } = await axios.get('/api/profile', { headers: { Authorization: `Bearer ${window.localStorage.getItem('token')}` } })
-
-      const filterNull = data.basket.filter(info => info.name)
-      console.log('FILTERNULL', filterNull)
-
-      setBasketInfo(data.basket)
-    } catch (err) {
-      console.log(err)
-    }
+    const items = localStorage.getItem('item')
+    setBasketInfo(JSON.parse(items))
   }
-  console.log(basketInfo)
+  const handleDelete = (e) => {
+    const userInput = e.target.id
+    const getItem = JSON.parse(localStorage.getItem('item'))
+    const newLocalStore = getItem.filter(ite =>  ite.basket !== userInput)
+    console.log(newLocalStore)
+  }
 
+  
+  
+
+ 
   return (
     <>
       <Nav.Item><span>()</span></Nav.Item>
@@ -40,7 +40,15 @@ const BasketModal = () => {
             Your Shopping Cart
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>Products will go in here</Modal.Body>
+        <Modal.Body>Products will go in here
+          <ul>
+            {basketInfo.map(info => 
+              <div  key={info._id}>
+                <li>{info.name} - £{info.price}</li>
+                <button id={info._id} onClick={handleDelete}>x</button>
+              </div>)}
+          </ul>
+        </Modal.Body>
       </Modal>
     </>
   )
