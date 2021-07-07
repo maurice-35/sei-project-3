@@ -28,7 +28,6 @@ const Cats = () => {
         setMeal(catMeal)
         setProducts(catsProducts)
       } catch (err) {
-        // setHasError(true)
         console.log(err)
 
       }
@@ -62,6 +61,7 @@ const Cats = () => {
           description={info.description}
           ingredient={info.ingredient}
           storage={info.storage}
+          id={info._id}
           price={info.price}
         />)}
 
