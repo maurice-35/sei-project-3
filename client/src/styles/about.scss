@@ -67,6 +67,38 @@
     }
   }
 }
+.burt.card {
+  background-color: #f8a978;
+  text-align: center;
+  border: 2px solid blanchedalmond;
+  img {
+    border: 2px solid blanchedalmond;
+  }
+  p {
+    border: 2px solid blanchedalmond;
+    border-radius: 2px;
+    max-width: fit-content;
+    margin: 15px auto;
+    padding: 10px;
+  }
+}
+
+.luna.card {
+  text-align: center;
+  background-image: url('https://res.cloudinary.com/dhrxw6zhp/image/upload/v1625753698/Screenshot_2021-07-08_at_15.14.43_bs2w9t.png');
+  border: 2px solid blanchedalmond;
+
+  img {
+    border: 2px solid blanchedalmond;
+  }
+  p {
+    border: 2px solid blanchedalmond;
+    border-radius: 2px;
+    max-width: fit-content;
+    margin: 15px auto;
+    padding: 10px;
+  }
+}
 
 .memorial-title {
   background-color: #1f5e84;

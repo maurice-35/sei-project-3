@@ -19,7 +19,7 @@ const Profile = () => {
   return (
     <div>
       {pet.map(myPet => {
-        return   <div key={myPet.id}>
+        return   <div key={myPet._id}>
           <h1>{myPet.name}</h1>
           <p>{myPet.gender}</p>
           <p>{myPet.age}</p>
