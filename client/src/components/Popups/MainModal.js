@@ -35,21 +35,16 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
 
   //* Add to basket
   const saveEventIDToLocalStorage = e => {
-    // const getItemFromLocalStorage = JSON.parse(localStorage.getItem('item'))
-    // console.log('item from ls', localStorageItem)
-    const newID = nextId()
-    const newLocalStorageItems = [...localStorageItem, { name: e.target.name, price: e.target.value, id: e.target.id, itemId: newID }]
-    // console.log('newLocalStorageItems', newLocalStorageItems)
-    // console.log(localStorageItem)
-    setLocalStorageItem(newLocalStorageItems)
-    // localStorage.setItem('item', JSON.stringify(newLocalStorageItems))
-    // getItem()
+    if (!window.localStorage.getItem('token')) {
+      console.log('your are not logged in')
+    } else { 
+      const newID = nextId()
+      const newLocalStorageItems = [...localStorageItem, { name: e.target.name, price: e.target.value, id: e.target.id, itemId: newID }]
+      setLocalStorageItem(newLocalStorageItems)
+    }
+
   }
 
-  // const getItem = () => {
-  //   const item = localStorage.getItem('EventID')
-  //   console.log('ITEM', JSON.parse(item))
-  // }
 
 
 
