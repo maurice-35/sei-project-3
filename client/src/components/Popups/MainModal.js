@@ -4,6 +4,8 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import useLocalStorage from '../hooks/useLocalStorage'
 import { useHistory } from 'react-router'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 // import { getTokenFromLocalStorage } from '../tokens/token'
 
@@ -36,7 +38,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   }
 
   //* Add to basket
-  const saveEventIDToLocalStorage = e => {
+  const saveEventIDToLocalStorage = e => { 
     if (!window.localStorage.getItem('token')) {
       console.log('your are not logged in')
       history.push('/login')
@@ -44,8 +46,8 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
       const newID = nextId()
       const newLocalStorageItems = [...localStorageItem, { name: e.target.name, price: e.target.value, id: e.target.id, itemId: newID }]
       setLocalStorageItem(newLocalStorageItems)
+      toast.success('Item has been added to the basket')
     }
-
   }
 
 
@@ -53,6 +55,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
 
   return (
     <>
+      <ToastContainer />
       <Modal key={id} show={show} onHide={handleClose}
         // dialogClassName="my-modal"
         size="lg">
