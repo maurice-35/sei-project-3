@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Form, Col, Button } from 'react-bootstrap'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from './auth/helpers/auth'
+// import  ImageUploader  from 'react-images-upload'
 
 const ProfileForm = () => {
   // eslint-disable-next-line no-unused-vars
@@ -57,6 +58,7 @@ const ProfileForm = () => {
             </Col>
           </Form.Group>
           <Form.File onChange={handleChange} name="image" value={petData.image} id="pet-form" label="Pet photo upload" />
+          {/* <ImageUploader /> */}
           <Form.Group controlId="formGridAbout">
             <Col xs={4}>
               <Form.Label>Breed</Form.Label>
