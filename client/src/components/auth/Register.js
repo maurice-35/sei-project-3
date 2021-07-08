@@ -49,7 +49,7 @@ const Register = () => {
 
 
   return (
-    <>
+    <div className="container">
 
       <h1 className="register">Register With Us!</h1>
       <Container fluid="md" className="center-height animate__slideOutDown">
@@ -86,7 +86,7 @@ const Register = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   )
 }
 
