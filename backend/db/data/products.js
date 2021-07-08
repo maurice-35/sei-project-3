@@ -8,9 +8,9 @@ export default [
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'Dog',
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
-    typeProduct: 'Main Meal',
+    typeProduct: 'meal',
     age: 'adult',
-    price: 25.99
+    price: 18.99
   },
   {
     name: 'Scooby\'s Stew',
@@ -24,7 +24,7 @@ export default [
     typeProduct: 'meal',
     age: 'adult',
     onDisplay: true,
-    price: 15.99
+    price: 16.99
   },
   {
     name: 'Meatballs alla Maggie',
@@ -72,7 +72,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'puppy',
-    price: 18.99
+    price: 15.99
   },
   {
     name: 'Senior\'s Delight',
@@ -85,7 +85,7 @@ export default [
     typeProduct: 'meal',
     age: 'senior',
     onDisplay: true,
-    price: 20.99
+    price: 15.99
   },
   {
     name: 'Doggy Steak',
@@ -97,7 +97,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'senior',
-    price: 29.99
+    price: 20.99
   },
   {
     name: 'Perky Jerky',
@@ -122,7 +122,7 @@ export default [
     storage: 'Can store for up to 3 months, in a sealed container.',
     typeProduct: 'treat',
     age: 'puppy',
-    price: 5.99
+    price: 8.99
   },
   {
     name: 'Pawteasers',
@@ -133,7 +133,7 @@ export default [
     typeAnimal: 'dog',
     storage: 'Can store for up to 3 months, in a sealed container.',
     typeProduct: 'treat',
-    age: 'seniors',
+    age: 'senior',
     price: 10.99
   },
   {
@@ -145,8 +145,8 @@ export default [
     typeAnimal: 'dog',
     storage: 'Can store for up to 3 months, in a sealed container.',
     typeProduct: 'treat',
-    age: 'adults',
-    price: 5.99
+    age: 'adult',
+    price: 7.99
   },
   {
     name: 'Peanut Treats',
@@ -158,7 +158,7 @@ export default [
     storage: 'Can store for up to 3 months, in a sealed container.',
     typeProduct: 'treat',
     age: 'pupppy',
-    price: 5.99
+    price: 7.99
   },
   {
     name: 'Dogwieser',
@@ -169,8 +169,8 @@ export default [
     typeAnimal: 'dog',
     storage: 'Can store for up to 3 months, in a sealed container.',
     typeProduct: 'treat',
-    age: 'adults',
-    price: 10.99
+    age: 'adult',
+    price: 8.99
   },
   {
     name: 'Buffy Beef',
@@ -182,7 +182,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'adult',
-    price: 22.99
+    price: 18.99
   },
   {
     name: 'Chow Meow Chicken',
@@ -195,7 +195,7 @@ export default [
     typeProduct: 'meal',
     age: 'senior',
     onDisplay: true,
-    price: 24.99
+    price: 20.99
   },
   {
     name: 'Fish & Chips',
@@ -207,7 +207,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'kitten',
-    price: 20.99
+    price: 15.99
   },
   {
     name: 'Silky Salmon',
@@ -220,7 +220,7 @@ export default [
     typeProduct: 'meal',
     age: 'kitten',
     onDisplay: true,
-    price: 20.99
+    price: 16.99
   },
   {
     name: 'Rabbit Rumble ',
@@ -232,7 +232,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'adult',
-    price: 22.99
+    price: 18.99
   },
   {
     name: 'Vegeterian Delight',
@@ -244,7 +244,7 @@ export default [
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
     age: 'senior',
-    price: 24.99
+    price: 18.99
   },
   {
     name: 'Cranberry',
@@ -254,8 +254,8 @@ export default [
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'cat',
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
-    typeProduct: 'Treats',
-    age: 'Kitten',
+    typeProduct: 'treat',
+    age: 'kitten',
     price: 10.99
   },
   {
@@ -266,8 +266,8 @@ export default [
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'cat',
     storage: 'Store freeze - dried products in a cool dark place. Best if fed within 30 days after opening.',
-    typeProduct: 'Treats',
-    age: 'Kitten',
+    typeProduct: 'treat',
+    age: 'senior',
     price: 9.99
   },
   {
@@ -278,8 +278,8 @@ export default [
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'cat',
     storage: 'Delivered in packs. Store freeze - dried products in a cool dark place. Best if fed within 30 days after opening.',
-    typeProduct: 'Treats',
-    age: 'Kitten',
+    typeProduct: 'treat',
+    age: 'kitten',
     price: 14.99
   },
   {
@@ -291,8 +291,8 @@ export default [
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'Cat',
     storage: 'Store freeze - dried products in a cool dark place. Best if fed within 30 days after opening.',
-    typeProduct: 'Treats',
-    age: 'Kitten',
+    typeProduct: 'treat',
+    age: 'adult',
     price: 14.99
   },
   {
@@ -303,8 +303,8 @@ export default [
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'Cat',
     storage: 'To keep catnip fresh, store in a safe, cool, dark place.',
-    typeProduct: 'Treats',
-    age: 'Kitten',
+    typeProduct: 'treat',
+    age: 'senior',
     onDisplay: true,
     price: 10.50
   },
@@ -316,8 +316,8 @@ export default [
     image: 'https://i1.wp.com/themaplecuttingboard.com/wp-content/uploads/2019/10/Homemade-Dog-Food.jpeg?fit=640%2C521&ssl=1',
     typeAnimal: 'Cat',
     storage: 'To keep catnip fresh, store in a safe, cool, dark place.',
-    typeProduct: 'Treats',
-    age: 'Kitten',
+    typeProduct: 'treat',
+    age: 'adult',
     price: 13.50
   }
 ]

@@ -22,7 +22,7 @@ const Cats = () => {
       try {
         const { data } = await axios.get('/api/products')
         const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
-        const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treats')
+        const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
         const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
         setTreats(catTreat)
         setMeal(catMeal)
@@ -63,8 +63,8 @@ const Cats = () => {
           storage={info.storage}
           id={info._id}
           price={info.price}
-          // localStorageItem={localStorageItem}
-          // setLocalStorageItem={setLocalStorageItem}
+        // localStorageItem={localStorageItem}
+        // setLocalStorageItem={setLocalStorageItem}
         />)}
 
       <h1 className="dog-title">Cats Stuff</h1>

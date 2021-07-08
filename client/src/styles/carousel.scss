@@ -1,5 +1,6 @@
 //Carousel
-h2.text-monospace, p.text-monospace {
+h2.text-monospace,
+p.text-monospace {
   color: #3b5360;
   font-size: x-large;
   text-align: center;
@@ -36,7 +37,6 @@ div.center {
   }
 }
 
-
 span.carousel-control-next-icon {
   background-image: url('https://uxwing.com/wp-content/themes/uxwing/download/02-arrow/angle-circle-arrow-right.png');
 }
@@ -44,4 +44,3 @@ span.carousel-control-next-icon {
 span.carousel-control-prev-icon {
   background-image: url('https://fullylocal.app/assets/img/icon/img_right_arrow_demo.png');
 }
-
