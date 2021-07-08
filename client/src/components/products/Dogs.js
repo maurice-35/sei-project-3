@@ -67,8 +67,8 @@ const Dogs = () => {
           storage={info.storage}
           price={info.price}
           id={info._id}
-          // localStorageItem={localStorageItem}
-          // setLocalStorageItem={setLocalStorageItem}
+        // localStorageItem={localStorageItem}
+        // setLocalStorageItem={setLocalStorageItem}
         />)}
 
       <h1 className="dog-title">Dogs Stuff</h1>
