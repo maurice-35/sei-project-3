@@ -53,7 +53,7 @@ const BasketModal = () => {
       setBasketInfo(blank)
       setSmShow(false)
       history.push('/thanks')
-      toast.success('Success! We are processing your order now 🐶')
+      toast.success('Success! Your order is being processed! 🐶')
     }    
   }
 
