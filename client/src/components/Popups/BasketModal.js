@@ -7,14 +7,17 @@ import { Modal, Image, Nav } from 'react-bootstrap'
 const BasketModal = () => {
   const [smShow, setSmShow] = useState(false)
   const [basketInfo, setBasketInfo] = useState([])
+  const [subTotal, setSubtotal] = useState([])
 
   const handleBasketChange = () => {
     setSmShow(true)
     const items = localStorage.getItem('items')
+    const parseThem = JSON.parse(items)
+    const getNumbers = parseThem.map(ite => parseFloat(ite.price))
+    const subTotalArray = getNumbers.reduce((a,b) => a + b ,0)
+    setSubtotal(subTotalArray.toFixed(2))
     setBasketInfo(JSON.parse(items))
   }
-
-  console.log(basketInfo)
 
   const handleDelete = (e) => {
     const userInput = e.target.id
@@ -27,6 +30,9 @@ const BasketModal = () => {
     window.localStorage.setItem('items',JSON.stringify(newLocalStore))
   }
 
+  const checkout = () => {
+    console.log('cleared')
+  }
 
 
 
@@ -60,9 +66,14 @@ const BasketModal = () => {
               <hr />
             </>
           )}
+          <div className="totals">
+            <p>subtotal: <span className="subtotal">{subTotal}</span></p>
+            <p>vat: 20%</p>
+            <p>total: <span className="totalAmount">{(subTotal / 100) * (20 + 100)}</span></p>
+          </div>
         </Modal.Body>
         <Modal.Footer>
-          <button className="checkout">
+          <button onClick={checkout} className="checkout">
             Checkout
           </button>
         </Modal.Footer>
