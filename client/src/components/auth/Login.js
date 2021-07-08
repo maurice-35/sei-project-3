@@ -7,6 +7,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const Login = () => {
@@ -35,6 +37,7 @@ const Login = () => {
       console.log(loginData)
       setTokenToLocalStorage(data.token)
       history.push('/products')
+      toast.success('Welcome Back! 😻')
     } catch (err) {
       setError(true)
     }
@@ -42,30 +45,33 @@ const Login = () => {
 
 
   return (
-    <section className='loginpage'>
+    <>
+      <ToastContainer />
+      <section className='loginpage'>
 
-      <h1 className="login">Login To See More!</h1>
-      <Container fluid="md" className="center-height animate__slideOutDown">
-        <Row className="justify-content-md-center">
-          <Col >
-            <Form onSubmit={handleSubmit} className='login-form'>
+        <h1 className="login">Login To See More!</h1>
+        <Container fluid="md" className="center-height animate__slideOutDown">
+          <Row className="justify-content-md-center">
+            <Col >
+              <Form onSubmit={handleSubmit} className='login-form'>
 
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control name="email" type="email" placeholder="Enter email" value={loginData.email} onChange={handleChange} />
-                {errors.email && <Form.Text className="text-danger">{errors.email.message}</Form.Text>}
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control name="password" type="password" placeholder="Password" value={loginData.password} onChange={handleChange} />
-                {errors.password && <Form.Text className="text-danger">{errors.password.message}</Form.Text>}
-              </Form.Group>
-              <button type="submit" className="button is-fullwidth is-warning">LogIn!</button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control name="email" type="email" placeholder="Enter email" value={loginData.email} onChange={handleChange} />
+                  {errors.email && <Form.Text className="text-danger">{errors.email.message}</Form.Text>}
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control name="password" type="password" placeholder="Password" value={loginData.password} onChange={handleChange} />
+                  {errors.password && <Form.Text className="text-danger">{errors.password.message}</Form.Text>}
+                </Form.Group>
+                <button type="submit" className="button is-fullwidth is-warning">LogIn!</button>
+              </Form>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+    </>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Modal, Image, Nav } from 'react-bootstrap'
 import { useHistory } from 'react-router'
 import { ToastContainer, toast } from 'react-toastify'
@@ -17,44 +17,45 @@ const BasketModal = () => {
   const handleBasketChange = () => {
     setSmShow(true)
     const items = localStorage.getItem('items')
-    setBasketInfo(JSON.parse(items))
-    calculateTotal()
+    if (!items) {
+      setBasketInfo([])
+    } else {
+      setBasketInfo(JSON.parse(items))
+    }
   }
 
   //* Delete item from basket
   const handleDelete = (e) => {
     const userInput = e.target.id
-    const getItem = JSON.parse(localStorage.getItem('items'))
-    const newLocalStore = getItem.filter(ite => ite.itemId !== userInput)
+    const newLocalStore = basketInfo.filter(ite => ite.itemId !== userInput)
     setBasketInfo(newLocalStore)
     window.localStorage.setItem('items',JSON.stringify(newLocalStore))
-    calculateTotal()
     toast.warning('Item has been removed')
-    
   }
 
 
   //* Calculcate Totals
-  const calculateTotal = () => {
-    const items = localStorage.getItem('items')
-    const parseThem = JSON.parse(items)
-    const getNumbers = parseThem.map(ite => parseFloat(ite.price))
+  useEffect(() => {
+    const getNumbers = basketInfo.map(ite => parseFloat(ite.price))
     const subTotalArray = getNumbers.reduce((a,b) => a + b ,0)
     setSubtotal(subTotalArray.toFixed(2))
-  }
+  }, [basketInfo])
+
+
 
   //* Purchase and clear all items in basket
   const checkout = () => {
     const blank = []
-    window.localStorage.setItem('items',JSON.stringify(blank))
-    setBasketInfo(blank)
-    calculateTotal()
-    setSmShow(false)
-    history.push('/thanks')
+    if (basketInfo.length === 0) {
+      toast.warning('oops you have nothing in your basket..')
+    } else {
+      window.localStorage.setItem('items',JSON.stringify(blank))
+      setBasketInfo(blank)
+      setSmShow(false)
+      history.push('/thanks')
+      toast.success('Success! We are processing your order now 🐶')
+    }    
   }
-
-
-
 
   return (
     <>
@@ -87,9 +88,9 @@ const BasketModal = () => {
             </>
           )}
           <div className="totals">
-            <p>subtotal: <span className="subtotal">{subTotal}</span></p>
+            <p>subtotal: <span className="subtotal">{((subTotal / 100) * (100 - 20)).toFixed(2)}</span></p>
             <p>vat: 20%</p>
-            <p>total: <span className="totalAmount">{((subTotal / 100) * (20 + 100)).toFixed(2)}</span></p>
+            <p>total: <span className="totalAmount">{subTotal}</span></p>
           </div>
         </Modal.Body>
         <Modal.Footer>

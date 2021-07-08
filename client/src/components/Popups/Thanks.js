@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom'
 
 
 const Thanks = () => {
-  
+
 
   return (
     <>
-      <h1>Thanks For Shopping!</h1>
-      <Link to="/products"><p>Click here to shop more</p></Link>
+      <div className="thanks">
+        <div className="thank-msg">
+          <h1>Thanks For Shopping!</h1>
+          <Link to="/products"><p>Continue Shopping</p></Link>
+        </div>
+      </div>
+
     </>
   )
 }

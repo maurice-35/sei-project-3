@@ -46,7 +46,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
       const newID = nextId()
       const newLocalStorageItems = [...localStorageItem, { name: e.target.name, price: e.target.value, id: e.target.id, itemId: newID }]
       setLocalStorageItem(newLocalStorageItems)
-      toast.success('Item has been added to the basket')
+      toast.success('Item has been added to the basket ✅')
     }
   }
 
