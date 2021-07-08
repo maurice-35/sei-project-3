@@ -42,7 +42,7 @@ const Login = () => {
 
 
   return (
-    <section clasname='loginpage'>
+    <section className='loginpage'>
 
       <h1 className="login">Login To See More!</h1>
       <Container fluid="md" className="center-height animate__slideOutDown">
