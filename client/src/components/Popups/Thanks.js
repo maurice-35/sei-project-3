@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Thanks = () => {
+  
+
   return (
     <>
       <h1>Thanks For Shopping!</h1>
