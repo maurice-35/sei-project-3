@@ -3,6 +3,7 @@ import nextId from 'react-id-generator'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import useLocalStorage from '../hooks/useLocalStorage'
+import { useHistory } from 'react-router'
 
 // import { getTokenFromLocalStorage } from '../tokens/token'
 
@@ -11,6 +12,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   const [showIngred, setShowIngred] = useState(false)
   const [showStorage, setShowStorage] = useState(false)
   const [localStorageItem, setLocalStorageItem] = useLocalStorage('items',[])
+  const history = useHistory()
 
 
   //? Open Ingredients List 
@@ -37,6 +39,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   const saveEventIDToLocalStorage = e => {
     if (!window.localStorage.getItem('token')) {
       console.log('your are not logged in')
+      history.push('/login')
     } else { 
       const newID = nextId()
       const newLocalStorageItems = [...localStorageItem, { name: e.target.name, price: e.target.value, id: e.target.id, itemId: newID }]
