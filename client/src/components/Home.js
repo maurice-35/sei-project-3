@@ -51,17 +51,18 @@ const Home = () => {
               src="https://res.cloudinary.com/inetab/image/upload/v1625677526/dog%20carousel%201.jpg"
               alt="First slide"
             />
-            <p className="text-monospace"><q>Woof Woof! Tasty dog food indeed!</q> - Burt</p>
+            <p className="text-monospace"><q>Tails & Whiskers is the best dog and cat food company in whole of UK! Couldnt recommend it more</q> - Sarah Jay</p>
           </div>
         </Carousel.Item>
         <Carousel.Item>
           <div className="d-flex carousel justify-content-md-between align-items-md-center">
             <img
               className="d-block w-50"
-              src="https://media.istockphoto.com/photos/happy-mixed-breed-dog-posing-with-a-kitten-on-his-head-picture-id1210341751?k=6&m=1210341751&s=612x612&w=0&h=G1ZkGiAxhW5PUVpu-NfDnNiKAbLgDTymAVWPyBEmyXk="
+              src="https://res.cloudinary.com/inetab/image/upload/v1625750523/0003_35_u9ozus.jpg"
               alt="Second slide"
             />
-            <p className="text-monospace"><q>Tails & Whiskers is the best dog and cat food company in whole of UK! Couldnt recommend it more</q> - Sarah Jay</p>
+            <p className="text-monospace"><q>Woof Woof! Tasty dog food indeed!</q> - Burt</p>
+           
           </div>
         </Carousel.Item>
         <Carousel.Item>
