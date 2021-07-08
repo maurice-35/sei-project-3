@@ -9,27 +9,38 @@ const BasketModal = () => {
   const [basketInfo, setBasketInfo] = useState([])
   const [subTotal, setSubtotal] = useState([])
 
+  //* Show items in basket
   const handleBasketChange = () => {
     setSmShow(true)
+    const items = localStorage.getItem('items')
+    setBasketInfo(JSON.parse(items))
+    calculateTotal()
+  }
+
+  //* Delete item from basket
+  const handleDelete = (e) => {
+    const userInput = e.target.id
+    console.log(userInput)
+    const getItem = JSON.parse(localStorage.getItem('items'))
+    console.log('before',getItem)
+    const newLocalStore = getItem.filter(ite => ite.itemId !== userInput)
+    setBasketInfo(newLocalStore)
+    window.localStorage.setItem('items',JSON.stringify(newLocalStore))
+    calculateTotal()
+    
+  }
+
+
+  //* Calculcate Totals
+  const calculateTotal = () => {
     const items = localStorage.getItem('items')
     const parseThem = JSON.parse(items)
     const getNumbers = parseThem.map(ite => parseFloat(ite.price))
     const subTotalArray = getNumbers.reduce((a,b) => a + b ,0)
     setSubtotal(subTotalArray.toFixed(2))
-    setBasketInfo(JSON.parse(items))
   }
 
-  const handleDelete = (e) => {
-    const userInput = e.target.id
-    console.log(userInput)
-    const getItem = JSON.parse(localStorage.getItem('items'))
-    // console.log(index)
-    console.log('before',getItem)
-    const newLocalStore = getItem.filter(ite => ite.itemId !== userInput)
-    setBasketInfo(newLocalStore)
-    window.localStorage.setItem('items',JSON.stringify(newLocalStore))
-  }
-
+  //* Purchase and clear all items in basket
   const checkout = () => {
     console.log('cleared')
   }
@@ -69,7 +80,7 @@ const BasketModal = () => {
           <div className="totals">
             <p>subtotal: <span className="subtotal">{subTotal}</span></p>
             <p>vat: 20%</p>
-            <p>total: <span className="totalAmount">{(subTotal / 100) * (20 + 100)}</span></p>
+            <p>total: <span className="totalAmount">{((subTotal / 100) * (20 + 100)).toFixed(2)}</span></p>
           </div>
         </Modal.Body>
         <Modal.Footer>
