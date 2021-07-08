@@ -25,15 +25,7 @@ const Cats = () => {
 
         //* Grabbing all cat products
         const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
-<<<<<<< HEAD
-
-        //* Filter to get treats and save to new array
-        const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treats')
-
-        //* Filter to get meals and save to new array
-=======
         const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
->>>>>>> 0d1590ddc7ce63fcbdc00098313e2175ef3b8fed
         const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
         
         //* Set products to state
