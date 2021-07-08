@@ -20,10 +20,19 @@ const Cats = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+        //* Fetching data
         const { data } = await axios.get('/api/products')
+
+        //* Grabbing all cat products
         const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
+
+        //* Filter to get treats and save to new array
         const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treats')
+
+        //* Filter to get meals and save to new array
         const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
+        
+        //* Set products to state
         setTreats(catTreat)
         setMeal(catMeal)
         setProducts(catsProducts)
