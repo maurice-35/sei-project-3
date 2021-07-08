@@ -10,18 +10,21 @@ const BasketModal = () => {
 
   const handleBasketChange = () => {
     setSmShow(true)
-    const items = localStorage.getItem('item')
+    const items = localStorage.getItem('items')
     setBasketInfo(JSON.parse(items))
   }
+
+  console.log(basketInfo)
+
   const handleDelete = (e) => {
     const userInput = e.target.id
-    console.log('id', userInput)
-    const getItem = JSON.parse(localStorage.getItem('item'))
-    const index = getItem.map(ite => ite.indexOf(ite.id))
-    console.log(index)
+    console.log(userInput)
+    const getItem = JSON.parse(localStorage.getItem('items'))
+    // console.log(index)
     console.log('before',getItem)
-    const newLocalStore = getItem.filter(ite => ite.id !== userInput)
-    console.log('afetr', newLocalStore)
+    const newLocalStore = getItem.filter(ite => ite.itemId !== userInput)
+    setBasketInfo(newLocalStore)
+    window.localStorage.setItem('items',JSON.stringify(newLocalStore))
   }
 
 
@@ -52,7 +55,7 @@ const BasketModal = () => {
                   <p>{info.name}</p>
                   <i className="fas fa-tags">  {info.price}</i>
                 </div>
-                <button id={info.id} onClick={handleDelete}>x</button>
+                <button id={info.itemId} onClick={handleDelete}>x</button>
               </div>
               <hr />
             </>

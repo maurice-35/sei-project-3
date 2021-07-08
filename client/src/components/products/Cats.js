@@ -12,7 +12,6 @@ const Cats = () => {
   const [treats, setTreats] = useState([])
   const [products, setProducts] = useState([])
   const [modalInfo, setModalInfo] = useState([])
-  const [localStorageItem, setLocalStorageItem] = useState([])
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
 
@@ -64,8 +63,8 @@ const Cats = () => {
           storage={info.storage}
           id={info._id}
           price={info.price}
-          localStorageItem={localStorageItem}
-          setLocalStorageItem={setLocalStorageItem}
+          // localStorageItem={localStorageItem}
+          // setLocalStorageItem={setLocalStorageItem}
         />)}
 
       <h1 className="dog-title">Cats Stuff</h1>
