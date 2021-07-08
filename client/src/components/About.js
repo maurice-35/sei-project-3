@@ -41,7 +41,11 @@ const About = () => {
           <img className="image-border" variant="top" src="https://res.cloudinary.com/inetab/image/upload/v1625571367/burtimage.jpg" />
           <h3>Burt</h3>
           <p>
-            Something Something about burt hers a good sausage
+            The lovely baby burt, he is such a good sausage!
+
+            <div>
+              - From Ineta
+            </div>
           </p>
         </Card>
 
@@ -53,7 +57,7 @@ const About = () => {
             Forever in our thoughs and hearts, rest in peace. <br />
             Loved and remembered by all 🤍 <br />
             <div>
-              From Aya 💗
+              - From Aya 💗
             </div>
           </p>
         </Card>

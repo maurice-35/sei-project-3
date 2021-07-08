@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Modal, Image, Nav } from 'react-bootstrap'
 import { useHistory } from 'react-router'
+import { ToastContainer, toast } from 'react-toastify'
 
 
 
@@ -28,6 +29,7 @@ const BasketModal = () => {
     setBasketInfo(newLocalStore)
     window.localStorage.setItem('items',JSON.stringify(newLocalStore))
     calculateTotal()
+    toast.warning('Item has been removed')
     
   }
 
@@ -56,6 +58,7 @@ const BasketModal = () => {
 
   return (
     <>
+      <ToastContainer />
       <Nav.Item><span>()</span></Nav.Item>
       <Nav.Link onClick={handleBasketChange}><i className="fas fa-shopping-bag"></i></Nav.Link>
       <Modal
