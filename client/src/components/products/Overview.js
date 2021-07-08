@@ -10,6 +10,7 @@ const Overview = () => {
   const [dogProducts, setDogProducts] = useState([])
   const [products, setProducts] = useState([])
   const [modalInfo, setModalInfo] = useState([])
+  const [localStorageItem, setLocalStorageItem] = useState([])
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
 
@@ -67,6 +68,8 @@ const Overview = () => {
           storage={info.storage}
           id={info._id}
           price={info.price}
+          localStorageItem={localStorageItem}
+          setLocalStorageItem={setLocalStorageItem}
         />)}
 
 

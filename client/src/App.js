@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import About from './components/About.js'
 import Login from './components/auth/Login.js'
@@ -13,7 +13,7 @@ import Overview from './components/products/Overview.js'
 
 
 const App = () => {
-
+  const [localStorageItem, setLocalStorageItem] = useState([])
 
 
 
@@ -21,9 +21,30 @@ const App = () => {
     <BrowserRouter>
       <Navigation />
       <Switch>
-        <Route path="/products" component={Overview} />
-        <Route path="/cats" component={Cats} />
-        <Route path="/dogs" component={Dogs} />
+        <Route
+          path="/products"
+          render={(props) => (
+            <Overview {...props}
+              localStorageItem={localStorageItem}
+              setLocalStorageItem={setLocalStorageItem}
+            />
+          )}
+        />
+        <Route path="/cats" render={(props) => (
+          <Cats {...props}
+            localStorageItem={localStorageItem}
+            setLocalStorageItem={setLocalStorageItem}
+          />
+        )} />
+        <Route
+          path="/dogs"
+          render={(props) => (
+            <Dogs {...props}
+              localStorageItem={localStorageItem}
+              setLocalStorageItem={setLocalStorageItem}
+            />
+          )}
+        />
         <Route path="/profile" component={Profile} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />

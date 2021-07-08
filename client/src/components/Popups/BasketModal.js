@@ -6,8 +6,8 @@ import { Modal, Image, Nav } from 'react-bootstrap'
 
 const BasketModal = () => {
   const [smShow, setSmShow] = useState(false)
-  const [ basketInfo, setBasketInfo] = useState([])
-  
+  const [basketInfo, setBasketInfo] = useState([])
+
   const handleBasketChange = () => {
     setSmShow(true)
     const items = localStorage.getItem('item')
@@ -15,15 +15,19 @@ const BasketModal = () => {
   }
   const handleDelete = (e) => {
     const userInput = e.target.id
+    console.log('id', userInput)
     const getItem = JSON.parse(localStorage.getItem('item'))
-    const newLocalStore = getItem.filter(ite =>  ite.basket !== userInput)
-    console.log(newLocalStore)
+    const index = getItem.map(ite => ite.indexOf(ite.id))
+    console.log(index)
+    console.log('before',getItem)
+    const newLocalStore = getItem.filter(ite => ite.id !== userInput)
+    console.log('afetr', newLocalStore)
   }
 
-  
-  
 
- 
+
+
+
   return (
     <>
       <Nav.Item><span>()</span></Nav.Item>
@@ -40,15 +44,25 @@ const BasketModal = () => {
             Your Shopping Cart
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>Products will go in here
-          <ul>
-            {basketInfo.map(info => 
-              <div  key={info._id}>
-                <li>{info.name} - £{info.price}</li>
-                <button id={info._id} onClick={handleDelete}>x</button>
-              </div>)}
-          </ul>
+        <Modal.Body>
+          {basketInfo.map(info =>
+            <>
+              <div key={info.id} className="basket-item">
+                <div className="item-info">
+                  <p>{info.name}</p>
+                  <i className="fas fa-tags">  {info.price}</i>
+                </div>
+                <button id={info.id} onClick={handleDelete}>x</button>
+              </div>
+              <hr />
+            </>
+          )}
         </Modal.Body>
+        <Modal.Footer>
+          <button className="checkout">
+            Checkout
+          </button>
+        </Modal.Footer>
       </Modal>
     </>
   )

@@ -3,7 +3,7 @@ import axios from 'axios'
 import MainModal from '../Popups/MainModal'
 import ProductCard from '../Popups/ProductCard'
 
-const Dogs = () => {
+const Dogs = ({ localStorageItem, setLocalStorageItem }) => {
 
   //* Dog Products
   const [products, setProducts] = useState([])
@@ -11,6 +11,7 @@ const Dogs = () => {
   const [treats, setTreats] = useState([])
   const [modalInfo, setModalInfo] = useState([])
   const [show, setShow] = useState(false)
+  // const [localStorageItem, setLocalStorageItem] = useState([])
   const handleClose = () => setShow(false)
 
 
@@ -66,6 +67,8 @@ const Dogs = () => {
           storage={info.storage}
           price={info.price}
           id={info._id}
+          localStorageItem={localStorageItem}
+          setLocalStorageItem={setLocalStorageItem}
         />)}
 
       <h1 className="dog-title">Dogs Stuff</h1>
