@@ -58,6 +58,7 @@
         display: none;
       }
       img {
+        display: block;
         width: 100%;
         border-radius: 5px;
       }
@@ -106,6 +107,24 @@
         }
       }
     }
+    @media only screen and (max-width: 500px) {
+      .dog-card {
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+  .toTop {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+    color: #1f5e84;
+    transition: 0.7s;
+  }
+  .toTop:hover {
+    transform: scale(1.1);
   }
 }
 
