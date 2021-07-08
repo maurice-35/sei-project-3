@@ -5,6 +5,7 @@
     "react-animated-css": "^1.2.1",
     "react-bootstrap": "^1.6.1",
     "react-fast-marquee": "^1.2.1",
+    "react-id-generator": "^3.0.1",
     "react-router-dom": "^5.2.0"
   }
 }

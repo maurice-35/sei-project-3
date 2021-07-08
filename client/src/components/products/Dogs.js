@@ -11,6 +11,7 @@ const Dogs = () => {
   const [treats, setTreats] = useState([])
   const [modalInfo, setModalInfo] = useState([])
   const [show, setShow] = useState(false)
+  // const [localStorageItem, setLocalStorageItem] = useState([])
   const handleClose = () => setShow(false)
 
 
@@ -66,6 +67,8 @@ const Dogs = () => {
           storage={info.storage}
           price={info.price}
           id={info._id}
+          // localStorageItem={localStorageItem}
+          // setLocalStorageItem={setLocalStorageItem}
         />)}
 
       <h1 className="dog-title">Dogs Stuff</h1>

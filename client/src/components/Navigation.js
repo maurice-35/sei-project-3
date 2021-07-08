@@ -7,8 +7,9 @@ import { getPayload } from './auth/helpers/auth'
 
 
 
+
 const Navigation = () => {
- 
+
   const history = useHistory()
 
   //Remove Token from Local Storage and Display HoemPage
@@ -29,7 +30,7 @@ const Navigation = () => {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" className="nav-style" >
+      <Navbar collapseOnSelect expand="lg" className="nav-style">
         <Navbar.Brand href="/" ><Image src="https://res.cloudinary.com/inetab/image/upload/c_scale,q_100,r_0,w_60/a_0/v1625566335/logo_size_vfeyuq.jpg" roundedCircle/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -53,7 +54,7 @@ const Navigation = () => {
             }
           </Nav>
         </Navbar.Collapse>
-      </Navbar> 
+      </Navbar>
     </>
   )
 

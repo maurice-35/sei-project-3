@@ -67,6 +67,8 @@ const Overview = () => {
           storage={info.storage}
           id={info._id}
           price={info.price}
+          // localStorageItem={localStorageItem}
+          // setLocalStorageItem={setLocalStorageItem}
         />)}
 
 

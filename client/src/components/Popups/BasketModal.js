@@ -6,24 +6,37 @@ import { Modal, Image, Nav } from 'react-bootstrap'
 
 const BasketModal = () => {
   const [smShow, setSmShow] = useState(false)
-  const [ basketInfo, setBasketInfo] = useState([])
-  
+  const [basketInfo, setBasketInfo] = useState([])
+  const [subTotal, setSubtotal] = useState([])
+
   const handleBasketChange = () => {
     setSmShow(true)
-    const items = localStorage.getItem('item')
+    const items = localStorage.getItem('items')
+    const parseThem = JSON.parse(items)
+    const getNumbers = parseThem.map(ite => parseFloat(ite.price))
+    const subTotalArray = getNumbers.reduce((a,b) => a + b ,0)
+    setSubtotal(subTotalArray.toFixed(2))
     setBasketInfo(JSON.parse(items))
   }
+
   const handleDelete = (e) => {
     const userInput = e.target.id
-    const getItem = JSON.parse(localStorage.getItem('item'))
-    const newLocalStore = getItem.filter(ite =>  ite.basket !== userInput)
-    console.log(newLocalStore)
+    console.log(userInput)
+    const getItem = JSON.parse(localStorage.getItem('items'))
+    // console.log(index)
+    console.log('before',getItem)
+    const newLocalStore = getItem.filter(ite => ite.itemId !== userInput)
+    setBasketInfo(newLocalStore)
+    window.localStorage.setItem('items',JSON.stringify(newLocalStore))
   }
 
-  
-  
+  const checkout = () => {
+    console.log('cleared')
+  }
 
- 
+
+
+
   return (
     <>
       <Nav.Item><span>()</span></Nav.Item>
@@ -40,15 +53,30 @@ const BasketModal = () => {
             Your Shopping Cart
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>Products will go in here
-          <ul>
-            {basketInfo.map(info => 
-              <div  key={info._id}>
-                <li>{info.name} - £{info.price}</li>
-                <button id={info._id} onClick={handleDelete}>x</button>
-              </div>)}
-          </ul>
+        <Modal.Body>
+          {basketInfo.map(info =>
+            <>
+              <div key={info.id} className="basket-item">
+                <div className="item-info">
+                  <p>{info.name}</p>
+                  <i className="fas fa-tags">  {info.price}</i>
+                </div>
+                <button id={info.itemId} onClick={handleDelete}>x</button>
+              </div>
+              <hr />
+            </>
+          )}
+          <div className="totals">
+            <p>subtotal: <span className="subtotal">{subTotal}</span></p>
+            <p>vat: 20%</p>
+            <p>total: <span className="totalAmount">{(subTotal / 100) * (20 + 100)}</span></p>
+          </div>
         </Modal.Body>
+        <Modal.Footer>
+          <button onClick={checkout} className="checkout">
+            Checkout
+          </button>
+        </Modal.Footer>
       </Modal>
     </>
   )

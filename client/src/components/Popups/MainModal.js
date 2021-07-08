@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
-
+import nextId from 'react-id-generator'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
+import useLocalStorage from '../hooks/useLocalStorage'
+
 // import { getTokenFromLocalStorage } from '../tokens/token'
 
 const MainModal = ({ id, image, name, shortDescription, description, ingredient, storage, price, show, handleClose }) => {
   //* Show Modal Lists - Ingredients & Storage
   const [showIngred, setShowIngred] = useState(false)
   const [showStorage, setShowStorage] = useState(false)
+  const [localStorageItem, setLocalStorageItem] = useLocalStorage('items',[])
 
-  //* Basket Item
-  const [basketItem, setBasketItem] = useState([])
 
   //? Open Ingredients List 
   const handleShowIngred = () => {
@@ -31,22 +32,25 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   const handleCloseStorage = () => {
     setShowStorage(false)
   }
- 
+
   //* Add to basket
-  const addToBasket = e => {
-    getItem()
-    const newBasketItem = [ ...basketItem, e.target.name ]
-    setBasketItem(newBasketItem)
-    localStorage.setItem('item', JSON.stringify(newBasketItem))
-    
+  const saveEventIDToLocalStorage = e => {
+    // const getItemFromLocalStorage = JSON.parse(localStorage.getItem('item'))
+    // console.log('item from ls', localStorageItem)
+    const newID = nextId()
+    const newLocalStorageItems = [...localStorageItem, { name: e.target.name, price: e.target.value, id: e.target.id, itemId: newID }]
+    // console.log('newLocalStorageItems', newLocalStorageItems)
+    // console.log(localStorageItem)
+    setLocalStorageItem(newLocalStorageItems)
+    // localStorage.setItem('item', JSON.stringify(newLocalStorageItems))
+    // getItem()
   }
 
-  const getItem = () => {
-    const items = localStorage.getItem('item')
-    setBasketItem(JSON.parse(items))
-  }
- 
-  console.log(basketItem)
+  // const getItem = () => {
+  //   const item = localStorage.getItem('EventID')
+  //   console.log('ITEM', JSON.parse(item))
+  // }
+
 
 
   return (
@@ -95,7 +99,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
-              <button id={id} name={name} value={price} onClick={addToBasket}>
+              <button id={id} name={name} value={price} onClick={saveEventIDToLocalStorage}>
                 {/* <i className="fas fa-shopping-basket" ></i> */}
                 buy me
               </button>

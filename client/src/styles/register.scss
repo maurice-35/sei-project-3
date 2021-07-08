@@ -10,12 +10,17 @@ $main-font: 'Montserrat';
   margin-top: 60px;
   animation: drop 1s ease-in;
 }
-
+div.container {
+height: 100vh;
 .register {
   font-family: '$main-font';
   text-align: center;
   margin-top: 50px;
 }
+}
+  
+
+
 
 .register-form {
   display: flex;

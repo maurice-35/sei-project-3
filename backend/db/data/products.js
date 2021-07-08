@@ -43,7 +43,7 @@ export default [
     shortDescription: 'Our best selling 100% Vegan Chilli made only with plant based protein ',
     description: 'Chili, for a dog!? Yep, you read that right. We created this fun recipe over a bowl of chilli! We love how different this recipe is, utilizing both cheese and pasta, not something you see often in dog food recipes. You’ll definitely want to do your research before trying this one out, and it shouldn’t be your go-to meal for your pup. But it’s the perfect meal to treat your pup with from time to time, and a fun meal to share with your pup, since you can easily make a side-by-side version for yourself.',
     ingredient: ['carrots', 'unsalted butter', 'chickpeas', 'tofu', 'corn', 'tomato puree', 'veggie broth', 'brown rice'],
-    image: 'https://res.cloudinary.com/inetab/image/upload/v1625593277/chilli%20sin%20carne.jpg',
+    image: 'https://res.cloudinary.com/inetab/image/upload/a_auto_right,c_fit,h_400,w_600/a_0/v1625593277/chilli%20sin%20carne.jpg',
     typeAnimal: 'dog',
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
