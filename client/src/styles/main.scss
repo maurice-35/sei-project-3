@@ -149,14 +149,17 @@ body {
       margin-top: -400px;
     }
     a {
-      font-weight: bold;
       text-decoration: none;
+    }
+    #continue {
+      font-weight: bold;
+      text-decoration: none !important;
       color: #1F5E84;
-      font-size: 2rem;
+      font-size: 1.7rem;
       transition: 0.7s !important;
     }
-    a:hover {
-      transform: scale(1.5) !important;
+    #continue:hover {
+      transform: scale(1.1) !important;
     }
   }
 }
