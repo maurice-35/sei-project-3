@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Modal, Image, Nav } from 'react-bootstrap'
+import { useHistory } from 'react-router'
 
 
 
@@ -8,6 +9,7 @@ const BasketModal = () => {
   const [smShow, setSmShow] = useState(false)
   const [basketInfo, setBasketInfo] = useState([])
   const [subTotal, setSubtotal] = useState([])
+  const history = useHistory()
 
   //* Show items in basket
   const handleBasketChange = () => {
@@ -44,6 +46,8 @@ const BasketModal = () => {
     window.localStorage.setItem('items',JSON.stringify(blank))
     setBasketInfo(blank)
     calculateTotal()
+    setSmShow(false)
+    history.push('/thanks')
   }
 
 

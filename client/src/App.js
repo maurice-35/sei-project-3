@@ -10,6 +10,7 @@ import Dogs from './components/products/Dogs.js'
 import Profile from './components/Profile.js'
 import Footer from './components/Footer.js'
 import Overview from './components/products/Overview.js'
+import Thanks from './components/Popups/Thanks.js'
 // import useLocalStorage from './components/hooks/useLocalStorage.js'
 
 
@@ -23,6 +24,7 @@ const App = () => {
     <BrowserRouter>
       <Navigation />
       <Switch>
+        <Route path="/thanks" component={Thanks}/>
         <Route
           path="/products"
           // render={(props) => (
