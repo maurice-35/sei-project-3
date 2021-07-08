@@ -14,45 +14,16 @@ import Overview from './components/products/Overview.js'
 
 
 const App = () => {
-  // const [localStorageItem, setLocalStorageItem] = useLocalStorage('items',[])
-
-  // console.log('ls state from app',localStorageItem)
+ 
 
 
   return (
     <BrowserRouter>
       <Navigation />
       <Switch>
-        <Route
-          path="/products"
-          // render={(props) => (
-          //   <Overview {...props}
-          //     localStorageItem={localStorageItem}
-          //     setLocalStorageItem={setLocalStorageItem}
-          //   />
-          // )}
-          component={Overview}
-        />
-        <Route
-          path="/cats"
-          // render={(props) => (
-          //   <Cats {...props}
-          //     localStorageItem={localStorageItem}
-          //     setLocalStorageItem={setLocalStorageItem}
-          //   />
-          // )}
-          component={Cats}
-        />
-        <Route
-          path="/dogs"
-          // render={(props) => (
-          //   <Dogs {...props}
-          //     localStorageItem={localStorageItem}
-          //     setLocalStorageItem={setLocalStorageItem}
-          //   />
-          // )}
-          component={Dogs}
-        />
+        <Route path="/products" component={Overview}/>
+        <Route path="/cats"component={Cats}/>
+        <Route path="/dogs"component={Dogs}/>
         <Route path="/profile" component={Profile} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />

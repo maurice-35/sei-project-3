@@ -50,7 +50,11 @@ const Navigation = () => {
                 <Nav.Link className="text-style-color" eventKey={2} href="/login">Login</Nav.Link>
               </>
               :
-              <Nav.Link className="text-style-color" onClick={handleLogout}>Log Out</Nav.Link>
+              <>
+                <Nav.Link href="/profile" className="text-style-color">Profile</Nav.Link>
+                <Nav.Link className="text-style-color" onClick={handleLogout}>Log Out</Nav.Link>
+               
+              </>
             }
           </Nav>
         </Navbar.Collapse>
