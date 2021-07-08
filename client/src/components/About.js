@@ -6,44 +6,55 @@ const About = () => {
     <>
       <div className="background d-flex justify-content-between">
         <div className="about-info">
-          <h1 className="font-monospace">About Us</h1>
-          <p className="font-monospace">We decided to create a e-commerce website that sells dog and cat products such as food, treats and toys. </p>
+          <h1 className="font-monospace">🐾 About Us 🐾</h1>
+          <p className="font-monospace para-1">A great team of 4, who love cats and dogs!</p>
+          <p className="font-monospace para-2">We are a small e-commerce business that sells dog and cat products such as food, treats and toys. </p>
+          <p className="font-monospace para-3"> Our products include human-quality meat and vegetables, gently cooked to create simple and tasty meals. All created with love and the right balance of vitamins and minerals for all ages.</p>
+
+          <div className="store-info">
+            <p className="font-monospace para-4">We’re online..... <br /> Monday to Friday: 9am - 8pm <br /> Weekends and bank holidays: 9am - 6pm.</p>
+            <p className="font-monospace para-4">Store location: 123 High Street Kensington, London, W8 AAIM <br />
+              Store number: 0208 1234 5678</p>
+          </div>
+
         </div>
-        <div className="">
-          <h2 className="font-monospace center">Build using MERN Stack</h2>
-          <h3>by AAIM</h3>
+        <div className="code-team d-flex">
+          <h2 className="font-monospace">Built using MERN Stack</h2>
+          <h5 className="font-monospace">(Mongo, Express, React, Node)</h5>
           <img variant="top" src="https://res.cloudinary.com/inetab/image/upload/v1625566544/mern-stack.png" />
-          <div>
-            <p>Arjun <i className="fas fa-hand-point-right"></i><Card.Link className="font-monospace" href="https://github.com/arjunDoel96"><i className="fab fa-github-square"></i></Card.Link></p>
-            <p>Aya <i className="fas fa-hand-point-right"></i><Card.Link href="https://www.linkedin.com/in/aya-mallah/"><i className="fab fa-linkedin"></i></Card.Link></p>
-            <p>Ineta <i className="fas fa-hand-point-right"></i><Card.Link href="https://github.com/inetabliu"><i className="fab fa-github-square"></i></Card.Link></p>
-            <p>Maurice <i className="fas fa-hand-point-right"></i><Card.Link href="https://github.com/maurice-35"><i className="fab fa-github-square"></i></Card.Link></p>
+          <h3>Created by AAIM...</h3>
+
+          <div className="team">
+            <p className="font-monospace">Arjun <i className="fas fa-hand-point-right"></i><Card.Link className="font-monospace" href="https://github.com/arjunDoel96"><i className="fab fa-github-square icon"></i></Card.Link></p>
+            <p className="font-monospace">Aya <i className="fas fa-hand-point-right"></i><Card.Link href="https://www.linkedin.com/in/aya-mallah/"><i className="fab fa-linkedin icon"></i></Card.Link></p>
+            <p className="font-monospace">Ineta <i className="fas fa-hand-point-right"></i><Card.Link href="https://github.com/inetabliu"><i className="fab fa-github-square icon"></i></Card.Link></p>
+            <p className="font-monospace">Maurice <i className="fas fa-hand-point-right"></i><Card.Link href="https://github.com/maurice-35"><i className="fab fa-github-square icon"></i></Card.Link></p>
           </div>
         </div>
       </div>
 
 
-      {/* {Animal Image cards} */}
-      <div className="">
-        <h1>Website inspired by</h1>
-      </div>
+      <h1 className="font-monospace memorial-title">Website inspired by</h1>
 
       <CardGroup>
-        <Card className="">
+        <Card className="burt">
           <img className="image-border" variant="top" src="https://res.cloudinary.com/inetab/image/upload/v1625571367/burtimage.jpg" />
-          <Card.Title>Burt</Card.Title>
-          <Card.Text>
+          <h3>Burt</h3>
+          <p>
             Something Something about burt hers a good sausage
-          </Card.Text>
+          </p>
         </Card>
 
-        <Card className="">
+        <Card className="luna">
           <img className="image-border" variant="top" src="https://i.pinimg.com/originals/a9/fb/1d/a9fb1d9cfc3d1630bf7610f871728aeb.jpg" />
-          <Card.Title>Luna</Card.Title>
+          <h3>Luna</h3>
           <p>
             Thinking of you... <span>LUNA</span> <br />
             Forever in our thoughs and hearts, rest in peace. <br />
-            Loved and remembered by all 🤍
+            Loved and remembered by all 🤍 <br />
+            <div>
+              From Aya 💗
+            </div>
           </p>
         </Card>
       </CardGroup >
