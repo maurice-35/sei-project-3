@@ -20,9 +20,7 @@ const BasketModal = () => {
   //* Delete item from basket
   const handleDelete = (e) => {
     const userInput = e.target.id
-    console.log(userInput)
     const getItem = JSON.parse(localStorage.getItem('items'))
-    console.log('before',getItem)
     const newLocalStore = getItem.filter(ite => ite.itemId !== userInput)
     setBasketInfo(newLocalStore)
     window.localStorage.setItem('items',JSON.stringify(newLocalStore))
@@ -42,7 +40,10 @@ const BasketModal = () => {
 
   //* Purchase and clear all items in basket
   const checkout = () => {
-    console.log('cleared')
+    const blank = []
+    window.localStorage.setItem('items',JSON.stringify(blank))
+    setBasketInfo(blank)
+    calculateTotal()
   }
 
 
