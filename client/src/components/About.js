@@ -38,7 +38,7 @@ const About = () => {
 
       <CardGroup>
         <Card className="burt">
-          <img className="image-border" variant="top" src="https://res.cloudinary.com/inetab/image/upload/v1625571367/burtimage.jpg" />
+          <img className="image-border animate__animated animate__zoomIn" variant="top" src="https://res.cloudinary.com/inetab/image/upload/v1625571367/burtimage.jpg" />
           <h3>Burt</h3>
           <p>
             The lovely baby burt, he is such a good sausage!
@@ -50,7 +50,7 @@ const About = () => {
         </Card>
 
         <Card className="luna">
-          <img className="image-border" variant="top" src="https://i.pinimg.com/originals/a9/fb/1d/a9fb1d9cfc3d1630bf7610f871728aeb.jpg" />
+          <img className="image-border animate__animated animate__zoomIn" variant="top" src="https://i.pinimg.com/originals/a9/fb/1d/a9fb1d9cfc3d1630bf7610f871728aeb.jpg" />
           <h3>Luna</h3>
           <p>
             Thinking of you... <span>LUNA</span> <br />

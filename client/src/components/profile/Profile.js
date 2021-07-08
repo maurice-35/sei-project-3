@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { getTokenFromLocalStorage } from './auth/helpers/auth'
+import { getTokenFromLocalStorage } from '../auth/helpers/auth'
+
 
 const Profile = () => {
   const [pet, setPet] = useState([])
@@ -18,12 +19,13 @@ const Profile = () => {
  
   return (
     <div>
+      <h1>Your personal pet profile</h1>
       {pet.map(myPet => {
-        return   <div key={myPet._id}>
-          <h1>{myPet.name}</h1>
-          <p>{myPet.gender}</p>
-          <p>{myPet.age}</p>
-          <p>{myPet.breed}</p>
+        return <div key={myPet._id}>
+          <h1 className="animate__animated animate__flipInX" >Pet name - <span>{myPet.name}</span></h1>
+          <p>Gender - <span>{myPet.gender}</span></p>
+          <p>age - <span>{myPet.age}</span></p>
+          <p>Breed - <span>{myPet.breed}</span></p>
         </div>
       })}
       

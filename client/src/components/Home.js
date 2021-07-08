@@ -18,7 +18,7 @@ const Home = () => {
             Delivering fresh, tasty meals to your door.
           </p>
         </div>
-        <div className="flex-shrink-1">
+        <div className="flex-shrink-1 animate__animated animate__zoomIn">
           <img src="https://www.rd.com/wp-content/uploads/2020/05/GettyImages-1147030350-e1589568998232.jpg" className="img-fluid rounded" alt="dog and cat images" />
         </div>
       </div>
