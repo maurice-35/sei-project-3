@@ -1,7 +1,7 @@
 import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
 import { addComment, addProduct, deleteComment, deleteProduct, getAllProducts, updateProduct } from '../controllers/products.js'
-import { addItemToBasket, addPet, deleteBasket, getBasket, getUserProfile, removeItemFromBasket, removePet } from '../controllers/users.js'
+import { addItemToBasket, addPet, deleteBasket, getBasket, getUserProfile, removeItemFromBasket, removePet, getPetProfile } from '../controllers/users.js'
 import { secureRoute } from './secureRoute.js'
 
 
@@ -36,6 +36,9 @@ router.route('/profile')
   .get(secureRoute, getUserProfile)
   .post(secureRoute, addPet)
   .delete(secureRoute, removePet)
+
+router.route('/profile/pets')
+  .get(secureRoute, getPetProfile)
 
 router.route('/profile/basket')
   .get(secureRoute, getBasket)

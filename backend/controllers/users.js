@@ -92,6 +92,19 @@ export const removePet = async (req, res) => {
   }
 }
 
+//Get Pet Profile
+export const getPetProfile = async (req, res) =>{
+  try {
+    const user = await User.findById(req.currentUser._id)
+    const getUserPet = user.pet
+    console.log(getUserPet)
+    return res.status(200).json(getUserPet)
+  } catch (err){
+    console.log(err)
+    return res.status(404).json({ message: 'not found' })
+  }
+}
+
 //Get basket on user profile
 
 export const getBasket = async (req, res) =>{
