@@ -51,7 +51,8 @@ const Navigation = () => {
               </>
               :
               <>
-                <Nav.Link href="/profile" className="text-style-color">Profile</Nav.Link>
+                <Nav.Link href="/pet" className="text-style-color">My Pet</Nav.Link>
+                <Nav.Link href="/profile" className="text-style-color">Add Pet</Nav.Link>
                 <Nav.Link className="text-style-color" onClick={handleLogout}>Log Out</Nav.Link>
                
               </>

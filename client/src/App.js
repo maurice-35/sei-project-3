@@ -7,10 +7,11 @@ import Home from './components/Home.js'
 import Navigation from './components/Navigation.js'
 import Cats from './components/products/Cats.js'
 import Dogs from './components/products/Dogs.js'
-import Profile from './components/Profile.js'
+import ProfileForm from './components/ProfileForm.js'
 import Footer from './components/Footer.js'
 import Overview from './components/products/Overview.js'
 import Thanks from './components/Popups/Thanks.js'
+import Profile from './components/Profile.js'
 // import useLocalStorage from './components/hooks/useLocalStorage.js'
 
 
@@ -26,7 +27,8 @@ const App = () => {
         <Route path="/products" component={Overview}/>
         <Route path="/cats"component={Cats}/>
         <Route path="/dogs"component={Dogs}/>
-        <Route path="/profile" component={Profile} />
+        <Route path="/pet" component={Profile} />
+        <Route path="/profile" component={ProfileForm} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/about" component={About} />
