@@ -5,6 +5,7 @@ import { getTokenFromLocalStorage } from '../auth/helpers/auth'
 
 const Profile = () => {
   const [pet, setPet] = useState([])
+ 
 
   useEffect(() => {
     const getData = async () => {
@@ -15,13 +16,16 @@ const Profile = () => {
     }
     getData()
   }, [])
-  console.log('my pet', pet)
+
  
   return (
     <>
       <h1 className="pet-title text-monospace">PETS PETS PETS!</h1>
       <div className="background-color">
         <div className="form-container">
+          
+          <h1>No pets to display yet</h1>
+          
           {pet.map(myPet => {
             return <div key={myPet._id}>
               <p className="animate__animated animate__flipInX text-monospace" ><span className="fw-bold text-decoration-underline">{myPet.name}</span></p>

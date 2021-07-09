@@ -21,7 +21,7 @@ const About = () => {
         <div className="code-team d-flex">
           <h2 className="font-monospace">Built using MERN Stack</h2>
           <h5 className="font-monospace">(Mongo, Express, React, Node)</h5>
-          <img variant="top" src="https://res.cloudinary.com/inetab/image/upload/v1625566544/mern-stack.png" />
+          <img variant="top" className="img-fuild"src="https://res.cloudinary.com/inetab/image/upload/v1625566544/mern-stack.png" />
           <h3>Created by AAIM...</h3>
 
           <div className="team">

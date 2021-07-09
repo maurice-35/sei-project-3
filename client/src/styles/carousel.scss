@@ -1,3 +1,4 @@
+
 //Carousel
 h2.text-monospace,
 p.text-monospace {
@@ -23,6 +24,10 @@ div.mid-hero {
     margin: 10px;
     font-size: 12px;
   }
+}
+
+img.d-block {
+  object-fit: contain;
 }
 
 div.center {

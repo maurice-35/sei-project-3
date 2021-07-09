@@ -43,7 +43,7 @@ export default [
     shortDescription: 'Our best selling 100% Vegan Chilli made only with plant based protein ',
     description: 'Chili, for a dog!? Yep, you read that right. We created this fun recipe over a bowl of chilli! We love how different this recipe is, utilizing both cheese and pasta, not something you see often in dog food recipes. You’ll definitely want to do your research before trying this one out, and it shouldn’t be your go-to meal for your pup. But it’s the perfect meal to treat your pup with from time to time, and a fun meal to share with your pup, since you can easily make a side-by-side version for yourself.',
     ingredient: ['carrots', 'unsalted butter', 'chickpeas', 'tofu', 'corn', 'tomato puree', 'veggie broth', 'brown rice'],
-    image: 'https://res.cloudinary.com/inetab/image/upload/a_auto_right,c_fit,h_400,w_600/a_0/v1625593277/chilli%20sin%20carne.jpg',
+    image: 'https://res.cloudinary.com/inetab/image/upload/a_90/v1625593277/chilli%20sin%20carne.jpg',
     typeAnimal: 'dog',
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
     typeProduct: 'meal',
@@ -319,5 +319,71 @@ export default [
     typeProduct: 'treat',
     age: 'adult',
     price: 13.50
+  },
+
+  {
+    name: 'Kitten-treat-croutons',
+    shortDescription: 'An irresistible mix of catnip and tuna!',
+    description: 'This simple and delicious kitten Treats will knock your kitten’s paws off!! It’s hard to win a cat’s love…but these might just work. They’ll go nuts for these easy tuna and catnip croutons -purrrfect!',
+    ingredient: ['tuna', 'coconut flour', 'olive oil', 'dried catnip', 'egg', 'water'],
+    image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625464372/cat-treat-croutons_urkntu.jpg',
+    typeAnimal: 'cat',
+    storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
+    typeProduct: 'treats',
+    age: 'kitten',
+    price: 10.99
+  },
+
+  {
+    name: 'Whiskas Milk Kitten Treats',
+    shortDescription: 'Irresistible treats for growing cats between 2 and 12 months, with extra milk and calcium to support healthy bone development.',
+    description: 'Whiskas Milk Kitten Treats are designed to support important bone development in young cats. These delicious snacks feature a crunchy outer shell and soft milky core with a high calcium content. This makes the treats extra tasty, while also promoting bone growth.These calcium-rich kitten snacks are perfect for feeding between meals or as a reward during play, keeping your kitten healthy and developing a strong bond between you.',
+    ingredient: ['Grains', 'meat and meat by-products', 'oils and fat', 'milk and milk by-products (incl. 1.8% milk powder, containing 14% skimmed milk)', 'minerals.'],
+    // image: 'https://i.imgur.com/7Xrv0kh.jpg?1',
+    image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625465865/whiskas_pxyums.jpg',
+    typeAnimal: 'cat',
+    storage: 'Please store in a cool and dry place. Use within four weeks of opening.',
+    typeProduct: 'treats',
+    age: 'kitten',
+    price: 9.99
+  },
+
+  {
+    name: 'Tuna and Catnip Cat Treat Croutons',
+    shortDescription: 'They are made with natural ingredients and kittens loved them and we all know how fussy kittens can be!',
+    description: 'Whiskas Milk Kitten Treats are designed to support important bone development in young cats. These delicious snacks feature a crunchy outer shell and soft milky core with a high calcium content. This makes the treats extra tasty, while also promoting bone growth.These calcium-rich kitten snacks are perfect for feeding between meals or as a reward during play, keeping your kitten healthy and developing a strong bond between you.',
+    ingredient: ['1 5 ounce bag or can tuna', '1 cup coconut flour ', '1 tablespoon extra light olive oil', '1 tablespoon dried catnip', '1 egg', '1-2 tablespoons water.'],
+    image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625466847/croutons_n1csoe.jpg',
+    typeAnimal: 'cat',
+    storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
+    typeProduct: 'treats',
+    age: 'kitten',
+    price: 10.99
+  },
+
+  {
+    name: 'Kitten Birthday Treat',
+    shortDescription: 'A great treat for your pets Birthday or gift for a family pet!',
+    description: 'Our sealed cat hampers are a great choice for your pets Birthday. You will receive 1 small or medium hamper complete with red ribbon bow and personalised name tag.',
+    ingredient: ['Whiskas Tuna tasty filled pockets', 'Whiskas Chicken tasty filled pockets', 'Felix Mixed Grill Goody bag treats', 'Dreamies Tuna filled pockets.'],
+    image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625470190/birthday-treats_tz8fnf.jpg',
+    typeAnimal: 'cat',
+    storage: 'Your treats will come in a SEALED BAG inside the box for freshness. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
+    typeProduct: 'treats',
+    age: 'kitten',
+    price: 7.99
+  },
+
+  {
+    name: 'Tasty-jellies',
+    shortDescription: "It's packed with healthy goodness, no added cereals and will satisfy 100% of your cat's daily needs, when served according to the feeding guidelines.",
+    description: 'Naturally Delicious with tasty chunks and vegetables, flavoured with aromatic herbs, are perfectly steam cooked chunks in a tasty jelly, your cat will love! Naturally they look, smell and taste delicious, just like food you might have cooked yourself! Each chunk is 100% steam cooked, at just the right temperature and served in an irresistibly tasty jelly.',
+    ingredient: ['Meat and animal byproducts', 'grains', 'vegetable protein extracts', 'vegetable byproducts', 'milk and milk byproducts', 'oils and fats', 'minerals', 'yeast', 'sugar.'],
+    image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625209920/Tasty_jellies_pz4a60.png',
+    typeAnimal: 'cat',
+    storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
+    typeProduct: 'treats',
+    age: 'kitten',
+    price: 9.99
   }
 ]

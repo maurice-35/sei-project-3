@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { Form, Col, Button } from 'react-bootstrap'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../auth/helpers/auth'
 import { useHistory } from 'react-router'
-// import  ImageUploader  from 'react-images-upload'
+
 
 const ProfileForm = () => {
   // eslint-disable-next-line no-unused-vars
@@ -75,9 +76,9 @@ const ProfileForm = () => {
                 <Form.Control onChange={handleUpload} name="age" value={petData.age}/>
               </Col>
             </Form.Group>
-            <Form.File onChange={handleChange} name="image" value={petData.image} id="pet-form" label="Pet photo upload" />
-            <Button onClick={handleUpload}>Upload Image</Button>
-            {/* <ImageUploader /> */}
+            {/* <Form.File onChange={handleChange} name="image" value={petData.image} id="pet-form" label="Pet photo upload" />
+            <Button onClick={handleUpload}>Upload Image</Button> */}
+          
             <Form.Group controlId="formGridAbout">
             
             </Form.Group>
