@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ProductCard from '../Popups/ProductCard'
 import MainModal from '../Popups/MainModal'
-// import { Link } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 
 
@@ -53,7 +53,7 @@ const Cats = () => {
 
   return (
     <>
-      <div className="cat-page">
+      <div id="top" className="cat-page">
         {/* Product Info Modal */}
         {modalInfo.map(info =>
           <MainModal
@@ -74,8 +74,27 @@ const Cats = () => {
 
         <h1 className="dog-title">Cats Stuff</h1>
         <div className="product-options">
-          <button>Treats <i className="fas fa-bone"></i></button>
-          <button>Meals <i className="fas fa-drumstick-bite"></i></button>
+          <Link
+            to="treats"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            offset={0}
+            duration={500}
+          >
+            <button>Treats <i className="fas fa-bone"></i></button>
+          </Link>
+
+          <Link
+            to="meals"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            offset={0}
+            duration={500}
+          >
+            <button>Meals <i className="fas fa-drumstick-bite"></i></button>
+          </Link>
         </div>
         <div className="dog-wrapper">
           <div className="meals-hero">
@@ -85,7 +104,7 @@ const Cats = () => {
             <img src="https://res.cloudinary.com/doe5zwesw/image/upload/v1625585104/cats_nhqogf.jpg" alt="Cat Food" />
           </div>
           {/* <h2 className="cat-title">Meals</h2> */}
-          <div className="dog-meal">
+          <div id="meals" className="dog-meal">
             {meal.map(food =>
               <ProductCard
                 key={food._id}
@@ -104,7 +123,18 @@ const Cats = () => {
             </div>
             <img id="img-two" src="https://res.cloudinary.com/doe5zwesw/image/upload/v1625261422/Best-Treats_cmfixd.jpg" alt="Cat Treats" />
           </div>
-          {/* <h2 className="cat-title">Treats</h2> */}
+          <div id="treats" className="toTop">
+            <Link
+              to="top"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              offset={50}
+              duration={500}
+            >
+              <i className="fas fa-arrow-circle-up"></i>
+            </Link>
+          </div>
           <div className="dog-meal">
             {treats.map(food =>
 

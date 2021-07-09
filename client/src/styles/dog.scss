@@ -125,6 +125,9 @@
     font-size: 3rem;
     color: #1f5e84;
     transition: 0.7s;
+    a {
+      color: #1f5e84;
+    }
   }
   .toTop:hover {
     transform: scale(1.1);
