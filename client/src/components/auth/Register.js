@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
+import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -90,6 +91,13 @@ const Register = () => {
             </Col>
           </Row>
         </Container>
+        <div className="login">
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Please login instead!</Form.Label>
+            {/* <Nav.Link className="text-style-color" eventKey={2} href="/login"> <button className="Log">Login</button></Nav.Link> */}
+            <Link to="/login">Login!</Link>
+          </Form.Group>
+        </div>
       </div>
     </>
   )
