@@ -5,20 +5,20 @@ $main-font: 'Montserrat';
 .registerPage {
   background: url("https://res.cloudinary.com/doe5zwesw/image/upload/v1625518706/Cat_Dog_gbpdab.jpg");
   padding: 20px 0 20px 0;
-  height: 100%;
   background-size: cover; 
   color: rgb(74, 102, 74);
   margin-top: 20px;
   height: 100vh;
   background-image: no repeat;
   text-align: center;
+  display: flex-wrap;
 }
 
 .center-height {
   display: flex;
   justify-content: center;
   // width: 100%;
-  margin-top: 60px;
+  margin-top: 100px;
   animation: drop 1s ease-in;
 }
 div.container {
@@ -26,9 +26,12 @@ height: 100vh;
 .register {
   font-family: '$main-font';
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
   color: rgb(74, 102, 74);
+  align-items: center;
+  justify-content: center;
 }
+
 }
   
 
@@ -63,6 +66,7 @@ div.login {
   height: 15vh;
   font-family: '$main-font';
   text-align: center;
+  justify-content: baseline;
   
   
   
@@ -82,11 +86,12 @@ div.option {
 
 div.login {
   color: rgb(74, 102, 74);
-  display: flex;
+  
 }
 
 #option {
   font-size: medium;
+  color: white;
 }
 
 .Log:hover {

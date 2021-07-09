@@ -94,21 +94,23 @@ const Register = () => {
               </Form>
             </Col>
           </Row>
+          <Container fluid="md" className="center-height animate__slideOutDown">
+            <div className="option">
+              <h1 id="option">Or</h1>
+              <Container fluid="md" className="center-height animate__slideOutDown">
+                {/* login */}
+                <div className="login">
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Please login instead!</Form.Label>
+                    <Nav.Link className="text-style-color" eventKey={2} href="/login"> <button className="Log">Login</button></Nav.Link>
+                  </Form.Group>
+                </div>
+              </Container>
+            </div>
+          </Container>
+
         </Container>
-        <Container fluid="md" className="center-height animate__slideOutDown">
-          <div className="option">
-            <h1 id="option">Or</h1>
-          </div>
-        </Container>
-        <Container fluid="md" className="center-height animate__slideOutDown">
-          {/* login */}
-          <div className="login">
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Please login instead!</Form.Label>
-              <Nav.Link className="text-style-color" eventKey={2} href="/login"> <button className="Log">Login</button></Nav.Link>
-            </Form.Group>
-          </div>
-        </Container>
+
       </section>
     </>
   )
