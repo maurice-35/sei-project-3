@@ -47,7 +47,7 @@ const Login = () => {
   return (
     <>
       <ToastContainer />
-      <section className='loginpage'>
+      <section className="loginPage">
 
         <h1 className="login">Login To See More!</h1>
         <Container fluid="md" className="center-height animate__slideOutDown">

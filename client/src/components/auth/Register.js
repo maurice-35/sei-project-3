@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import axios from 'axios'
@@ -5,9 +6,9 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
-import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Nav from 'react-bootstrap/Nav'
 
 const Register = () => {
   const history = useHistory()
@@ -26,6 +27,8 @@ const Register = () => {
     password: '',
     passwordConfirmation: '',
   })
+
+  // const [newSubmitForm, setNewSubmitForm] = useState([])
 
   //*Get userInput
   const handleUserData = e => {
@@ -47,15 +50,16 @@ const Register = () => {
       console.log(err)
       setErrors(err.response.data.errors)
     }
-  }
 
+  }
 
 
 
   return (
     <>
       <ToastContainer />
-      <div className="container">
+      <section className="registerPage">
+
         <h1 className="register">Register With Us!</h1>
         <Container fluid="md" className="center-height animate__slideOutDown">
           <Row className="justify-content-md-center">
@@ -91,18 +95,21 @@ const Register = () => {
             </Col>
           </Row>
         </Container>
-        {/* addd here below */}
-
-        <div className="login">
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Please login instead!</Form.Label>
-            {/* <Nav.Link className="text-style-color" eventKey={2} href="/login"> <button className="Log">Login</button></Nav.Link> */}
-            <Link to="/login">Login!</Link>
-          </Form.Group>
-        </div>
-
-        {/* addd here above */}
-      </div>
+        <Container fluid="md" className="center-height animate__slideOutDown">
+          <div className="option">
+            <h1 id="option">Or</h1>
+          </div>
+        </Container>
+        <Container fluid="md" className="center-height animate__slideOutDown">
+          {/* login */}
+          <div className="login">
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Please login instead!</Form.Label>
+              <Nav.Link className="text-style-color" eventKey={2} href="/login"> <button className="Log">Login</button></Nav.Link>
+            </Form.Group>
+          </div>
+        </Container>
+      </section>
     </>
   )
 }
