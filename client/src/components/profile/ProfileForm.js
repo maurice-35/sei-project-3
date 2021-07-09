@@ -15,7 +15,8 @@ const ProfileForm = () => {
     age: '',
     breed: '',
   })
-
+  
+  
   const handleSubmit = async (event) => {
     event.preventDefault()
     history.push('/pet')
@@ -34,12 +35,20 @@ const ProfileForm = () => {
     setPetData(newPet)
     console.log(newPet)
   }
-
+  const handleUpload = async () => {
+    try {
+      await axios.post('https://api.cloudinary.com/v1_1/inetab/image/upload', petData.image, {
+        headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
+      })
+    } catch (err) {
+      console.log(err)
+    }
+  }
   
   return (
     <div className="background-color">
       <div className="form-container text-monospace">
-        <Form  className="nimate__animatedanimate__zoomIn"onSubmit={handleSubmit}>
+        <Form  className="animate__animated animate__zoomIn"onSubmit={handleSubmit}>
           <h3 className="pet-form">Create your Pet Profile</h3>
           <Form.Group className="form-row">
             <Col xs={7}>
@@ -55,17 +64,19 @@ const ProfileForm = () => {
             <Col xs={2}>
               <Form.Label>Gender</Form.Label>
               <Form.Control  onChange={handleChange} name="gender" value={petData.name} as="select" defaultValue="Gender" required>
-                <option>Male</option>
-                <option>Female</option>
+                <option>Either</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
               </Form.Control>
             </Col>
             <Form.Group controlId="formGridAge">
               <Col xs={5}>
                 <Form.Label>Age</Form.Label>
-                <Form.Control onChange={handleChange} name="age" value={petData.age}/>
+                <Form.Control onChange={handleUpload} name="age" value={petData.age}/>
               </Col>
             </Form.Group>
-            {/* <Form.File onChange={handleChange} name="image" value={petData.image} id="pet-form" label="Pet photo upload" /> */}
+            <Form.File onChange={handleChange} name="image" value={petData.image} id="pet-form" label="Pet photo upload" />
+            <Button onClick={handleUpload}>Upload Image</Button>
             {/* <ImageUploader /> */}
             <Form.Group controlId="formGridAbout">
             
