@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import ProductCard from '../Popups/ProductCard'
 import MainModal from '../Popups/MainModal'
+import ProductCard from '../Popups/ProductCard'
 
 
 
@@ -24,14 +24,14 @@ const Cats = () => {
         const { data } = await axios.get('/api/products')
 
         //* Grabbing all cat products
-        const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
-        const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
-        const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
+        const catProducts = data.filter(animal => animal.typeAnimal.toLowerCase() === 'cat')
+        const catTreats = catProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
+        const catMeal = catProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
         
         //* Set products to state
-        setTreats(catTreat)
+        setProducts(data)
+        setTreats(catTreats)
         setMeal(catMeal)
-        setProducts(catsProducts)
       } catch (err) {
         console.log(err)
 
@@ -68,8 +68,6 @@ const Cats = () => {
           storage={info.storage}
           id={info._id}
           price={info.price}
-        // localStorageItem={localStorageItem}
-        // setLocalStorageItem={setLocalStorageItem}
         />)}
 
       <h1 className="dog-title">Cats Stuff</h1>
@@ -84,7 +82,7 @@ const Cats = () => {
           </div>
           <img src="https://res.cloudinary.com/doe5zwesw/image/upload/v1625585104/cats_nhqogf.jpg" alt="Cat Food" />
         </div>
-        {/* <h2 className="cat-title">Meals</h2> */}
+
         <div className="dog-meal">
           {meal.map(food =>
             <ProductCard

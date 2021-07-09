@@ -2,6 +2,16 @@
 
 $main-font: 'Montserrat';
 
+.registerPage {
+  background: url("https://res.cloudinary.com/doe5zwesw/image/upload/v1625518706/Cat_Dog_gbpdab.jpg");
+  padding: 20px 0 20px 0;
+  height: 100%;
+  background-size: cover; 
+  color: rgb(74, 102, 74);
+  margin-top: 20px;
+  height: 100vh;
+  background-image: no repeat;
+}
 
 .center-height {
   display: flex;
@@ -16,10 +26,10 @@ height: 100vh;
   font-family: '$main-font';
   text-align: center;
   margin-top: 50px;
+  color: rgb(74, 102, 74);
 }
 }
   
-
 
 
 .register-form {
@@ -31,6 +41,7 @@ height: 100vh;
   border-radius: 10px;
   padding: 30px;
   width: 500px;
+  color: rgb(74, 102, 74);
   button {
     background: #1F5E84;
     border: none;
@@ -38,13 +49,55 @@ height: 100vh;
     color: white;
     padding: 8px;
     transition: 0.7s;
-    // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   button:hover {
     background: #236791;
     transform: scale(1.02);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-decoration: rgb(12, 8, 224);
   }
+}
+
+div.login {
+  height: 15vh;
+  font-family: '$main-font';
+  text-align: center;
+  
+  
+  
+  background: white;
+  border: 1px solid #f8a9784d;
+  box-shadow: 0 8px 20px 0 #f8a97846;
+  border-radius: 10px;
+  padding: 30px;
+  width: 200px;
+
+}
+
+div.option {
+  justify-content: center;
+  color: rgb(74, 102, 74);
+}
+
+div.login {
+  color: rgb(74, 102, 74);
+  display: flex;
+}
+
+#option {
+  font-size: medium;
+}
+
+.Log:hover {
+  background: #236791;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+button.Log {
+  background-color: #1F5E84;
+  text-decoration: rgb(12, 8, 224);
+  border-radius: 10px;
 }
 
 @keyframes drop {
