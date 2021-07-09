@@ -329,7 +329,7 @@ export default [
     image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625464372/cat-treat-croutons_urkntu.jpg',
     typeAnimal: 'cat',
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
-    typeProduct: 'treats',
+    typeProduct: 'treat',
     age: 'kitten',
     price: 10.99
   },
@@ -343,7 +343,7 @@ export default [
     image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625465865/whiskas_pxyums.jpg',
     typeAnimal: 'cat',
     storage: 'Please store in a cool and dry place. Use within four weeks of opening.',
-    typeProduct: 'treats',
+    typeProduct: 'treat',
     age: 'kitten',
     price: 9.99
   },
@@ -356,7 +356,7 @@ export default [
     image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625466847/croutons_n1csoe.jpg',
     typeAnimal: 'cat',
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
-    typeProduct: 'treats',
+    typeProduct: 'treat',
     age: 'kitten',
     price: 10.99
   },
@@ -369,7 +369,7 @@ export default [
     image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625470190/birthday-treats_tz8fnf.jpg',
     typeAnimal: 'cat',
     storage: 'Your treats will come in a SEALED BAG inside the box for freshness. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
-    typeProduct: 'treats',
+    typeProduct: 'treat',
     age: 'kitten',
     price: 7.99
   },
@@ -382,7 +382,7 @@ export default [
     image: 'https://res.cloudinary.com/doe5zwesw/image/upload/v1625209920/Tasty_jellies_pz4a60.png',
     typeAnimal: 'cat',
     storage: 'Delivered freshly frozen. Store in the fridge or freezer. Once defrosted use within 7 days. Food can be gently heated.',
-    typeProduct: 'treats',
+    typeProduct: 'treat',
     age: 'kitten',
     price: 9.99
   }
