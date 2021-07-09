@@ -21,7 +21,7 @@ const About = () => {
         <div className="code-team d-flex">
           <h2 className="font-monospace">Built using MERN Stack</h2>
           <h5 className="font-monospace">(Mongo, Express, React, Node)</h5>
-          <img variant="top" src="https://res.cloudinary.com/inetab/image/upload/v1625566544/mern-stack.png" />
+          <img variant="top" className="img-fuild"src="https://res.cloudinary.com/inetab/image/upload/v1625566544/mern-stack.png" />
           <h3>Created by AAIM...</h3>
 
           <div className="team">
@@ -50,7 +50,7 @@ const About = () => {
         </Card>
 
         <Card className="luna">
-          <img className="image-border animate__animated animate__zoomIn" variant="top" src="https://i.pinimg.com/originals/a9/fb/1d/a9fb1d9cfc3d1630bf7610f871728aeb.jpg" />
+          <img className="image-border animate__animated animate__zoomIn luna-img" src="https://res.cloudinary.com/dhrxw6zhp/image/upload/c_scale,h_800,w_800/v1625828555/Image_3_vdbnxa.jpg" />
           <h3>Luna</h3>
           <p>
             Thinking of you... <span id="luna-name">Luna</span> <br />

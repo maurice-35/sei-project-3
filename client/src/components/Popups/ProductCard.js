@@ -7,7 +7,7 @@ const ProductCard = ({ id, name, image, shortDescription, openModal }) => {
         <img src={image} alt={name} />
         <div className="dog-card-body">
           <div className="dog-card-header">
-            <h3>{name}</h3>
+            <h3 className="fw-bold">{name}</h3>
           </div>
           <hr />
           <div className="dog-card-description">

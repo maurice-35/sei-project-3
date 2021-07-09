@@ -72,7 +72,7 @@ const Cats = () => {
           // setLocalStorageItem={setLocalStorageItem}
           />)}
 
-        <h1 className="dog-title">Cats Stuff</h1>
+        <h1 className="dog-title text-uppercase fw-bold text-monospace">Cats Stuff</h1>
         <div className="product-options">
           <Link
             to="treats"

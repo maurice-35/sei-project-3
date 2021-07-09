@@ -58,7 +58,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
       <Modal key={id} show={show} onHide={handleClose}
         // dialogClassName="my-modal"
         size="lg">
-        <div className="modal-body-prod">
+        <div className="modal-body-prod text-monospace">
           <img src={image} alt={name} />
           <h1>{name}</h1>
           <p>{shortDescription}</p>

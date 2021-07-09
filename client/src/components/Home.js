@@ -19,7 +19,7 @@ const Home = () => {
           </p>
         </div>
         <div className="flex-shrink-1">
-          <img src="https://res.cloudinary.com/dhrxw6zhp/image/upload/v1625768596/GettyImages-1147030350-e1589568998232_ydioiw.jpg" className="img-fluid rounded" alt="dog and cat images" />
+          <img src="https://res.cloudinary.com/dhrxw6zhp/image/upload/v1625768596/GettyImages-1147030350-e1589568998232_ydioiw.jpg" className="img-fluid" alt="dog and cat images" />
         </div>
       </div>
 
@@ -47,7 +47,7 @@ const Home = () => {
         <Carousel.Item>
           <div className="d-flex carousel justify-content-md-between align-items-md-center">
             <img
-              className="d-block w-50"
+              className="d-block w-50 img-fluid"
               src="https://res.cloudinary.com/inetab/image/upload/v1625677526/dog%20carousel%201.jpg"
               alt="First slide"
             />
@@ -57,7 +57,7 @@ const Home = () => {
         <Carousel.Item>
           <div className="d-flex carousel justify-content-md-between align-items-md-center">
             <img
-              className="d-block w-50"
+              className="d-block w-50 img-fluid"
               src="https://res.cloudinary.com/inetab/image/upload/v1625750523/0003_35_u9ozus.jpg"
               alt="Second slide"
             />
@@ -68,7 +68,7 @@ const Home = () => {
         <Carousel.Item>
           <div className="d-flex carousel justify-content-md-between align-items-md-center">
             <img
-              className="d-block w-50"
+              className="d-block w-50 img-fluid"
               src="https://res.cloudinary.com/inetab/image/upload/v1625677849/carousel%202.jpg"
               alt="Third slide"
             />
