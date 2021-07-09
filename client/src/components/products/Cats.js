@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import MainModal from '../Popups/MainModal'
+<<<<<<< HEAD
 import ProductCard from '../Popups/ProductCard'
+=======
+import { Link } from 'react-scroll'
+>>>>>>> development
 
 
 
@@ -24,10 +28,17 @@ const Cats = () => {
         const { data } = await axios.get('/api/products')
 
         //* Grabbing all cat products
+<<<<<<< HEAD
         const catProducts = data.filter(animal => animal.typeAnimal.toLowerCase() === 'cat')
         const catTreats = catProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
         const catMeal = catProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
         
+=======
+        const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
+        const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
+        const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
+
+>>>>>>> development
         //* Set products to state
         setProducts(data)
         setTreats(catTreats)
@@ -70,10 +81,28 @@ const Cats = () => {
           price={info.price}
         />)}
 
-      <h1 className="dog-title">Cats Stuff</h1>
+      <h1 id="top-page" className="dog-title">Cats Stuff</h1>
       <div className="product-options">
-        <button>Treats <i className="fas fa-bone"></i></button>
-        <button>Meals <i className="fas fa-drumstick-bite"></i></button>
+        <Link
+          activeClass="active"
+          to="treatspage"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={300}
+        >
+          <button>Treats <i className="fas fa-bone"></i></button>
+        </Link>
+        <Link
+          activeClass="active"
+          to="mealspage"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={300}
+        >
+          <button>Meals <i className="fas fa-drumstick-bite"></i></button>
+        </Link>
       </div>
       <div className="dog-wrapper">
         <div className="meals-hero">
@@ -82,8 +111,13 @@ const Cats = () => {
           </div>
           <img src="https://res.cloudinary.com/doe5zwesw/image/upload/v1625585104/cats_nhqogf.jpg" alt="Cat Food" />
         </div>
+<<<<<<< HEAD
 
         <div className="dog-meal">
+=======
+        {/* <h2 className="cat-title">Meals</h2> */}
+        <div id="mealspage" className="dog-meal">
+>>>>>>> development
           {meal.map(food =>
             <ProductCard
               key={food._id}
@@ -102,8 +136,19 @@ const Cats = () => {
           </div>
           <img id="img-two" src="https://res.cloudinary.com/doe5zwesw/image/upload/v1625261422/Best-Treats_cmfixd.jpg" alt="Cat Treats" />
         </div>
-        {/* <h2 className="cat-title">Treats</h2> */}
-        <div className="dog-meal">
+        <div id="treatspage" className="toTop">
+          <Link
+            activeClass="active"
+            to="top-page"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={300}
+          >
+            <i className="fas fa-arrow-circle-up"></i>
+          </Link>
+        </div>
+        <div id="treatspage" className="dog-meal">
           {treats.map(food =>
 
             <ProductCard

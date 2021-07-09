@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import MainModal from '../Popups/MainModal'
 import ProductCard from '../Popups/ProductCard'
+import { Link } from 'react-scroll'
 
 const Dogs = () => {
+
+  //* Smooth Scroll Properties
 
   //* Dog Products
   const [products, setProducts] = useState([])
@@ -50,6 +53,8 @@ const Dogs = () => {
     setShow(true)
   }
 
+
+
   return (
     <>
       {/* Product Info Modal */}
@@ -71,10 +76,28 @@ const Dogs = () => {
         // setLocalStorageItem={setLocalStorageItem}
         />)}
 
-      <h1 className="dog-title">Dogs Stuff</h1>
+      <h1 id="top-page" className="dog-title">Dogs Stuff</h1>
       <div className="product-options">
-        <button>Treats <i className="fas fa-bone"></i></button>
-        <button>Meals <i className="fas fa-drumstick-bite"></i></button>
+        <Link
+          activeClass="active"
+          to="treatspage"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={300}
+        >
+          <button>Treats <i className="fas fa-bone"></i></button>
+        </Link>
+        <Link
+          activeClass="active"
+          to="mealspage"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={300}
+        >
+          <button>Meals <i className="fas fa-drumstick-bite"></i></button>
+        </Link>
       </div>
       <div className="dog-wrapper">
         <div className="meals-hero">
@@ -84,7 +107,7 @@ const Dogs = () => {
           <img src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625582635/dog-2210717_cnz3vo.jpg" alt="Dog Food" />
         </div>
         {/* <h2 className="dog-title">Meals</h2> */}
-        <div className="dog-meal">
+        <div id="mealspage" className="dog-meal">
           {meal.map(food =>
             <ProductCard
               key={food._id}
@@ -104,7 +127,18 @@ const Dogs = () => {
           </div>
           <img id="img-two" src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625580751/puppy-4484296_1920_tj3rqw.jpg" alt="Dog Treats" />
         </div>
-        {/* <h2 className="dog-title">Treats</h2> */}
+        <div id="treatspage" className="toTop">
+          <Link
+            activeClass="active"
+            to="top-page"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={300}
+          >
+            <i className="fas fa-arrow-circle-up"></i>
+          </Link>
+        </div>
         <div className="dog-meal">
           {treats.map(food =>
             <ProductCard
@@ -117,7 +151,6 @@ const Dogs = () => {
             />
           )}
         </div>
-
       </div>
     </>
   )

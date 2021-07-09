@@ -9,6 +9,7 @@
 @import './navbar.scss';
 @import './customToast.scss';
 @import './thanks.scss';
+@import './petprofile.scss';
 
 * {
   box-sizing: border-box;
@@ -130,5 +131,36 @@ body {
   100% {
     opacity: 1;
     margin-top: 0px;
+  }
+}
+
+.thanks-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-image: url('https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625766285/pets-3715733_f2m663.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .thanks {
+    font-family: monospace;
+    h1 {
+      margin-top: -400px;
+    }
+    a {
+      text-decoration: none;
+    }
+    #continue {
+      font-weight: bold;
+      text-decoration: none !important;
+      color: #1F5E84;
+      font-size: 1.7rem;
+      transition: 0.7s !important;
+    }
+    #continue:hover {
+      transform: scale(1.1) !important;
+    }
   }
 }
