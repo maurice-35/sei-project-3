@@ -80,14 +80,17 @@
 }
 
 .luna.card {
+  display: flex;
+  justify-content: center;
   text-align: center;
   background-image: url('https://res.cloudinary.com/dhrxw6zhp/image/upload/v1625753698/Screenshot_2021-07-08_at_15.14.43_bs2w9t.png');
   border: 2px solid blanchedalmond;
   h3 {
     text-decoration: underline;
   }
-  img {
+  .luna-img {
     border: 2px solid blanchedalmond;
+    min-width: 300px;
   }
   p {
     border: 2px solid blanchedalmond;
@@ -108,4 +111,10 @@
   background-color: #1f5e84;
   margin: 0;
   text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  div.code-team img {
+    width: 200px;
+  }
 }
