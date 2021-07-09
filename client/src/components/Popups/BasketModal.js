@@ -6,7 +6,6 @@ import { ToastContainer, toast } from 'react-toastify'
 
 
 
-
 const BasketModal = () => {
   const [smShow, setSmShow] = useState(false)
   const [basketInfo, setBasketInfo] = useState([])
@@ -54,8 +53,9 @@ const BasketModal = () => {
       setSmShow(false)
       history.push('/thanks')
       toast.success('Success! Your order is being processed! 🐶')
-    }    
+    }
   }
+
 
   return (
     <>

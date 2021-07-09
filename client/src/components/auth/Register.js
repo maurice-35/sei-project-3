@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Nav from 'react-bootstrap/Nav'
+import emailjs from 'emailjs-com'
 
 const Register = () => {
   const history = useHistory()
@@ -52,6 +53,14 @@ const Register = () => {
       // console.log(err.response.data)
       toast.warning('oops something went wrong, please check your details and try again... If you already have an account please try loggin in')
     }
+
+    emailjs.sendForm('service_1d8nn2d', 'template_l7eixym', e.target, 'user_00iebephTHbqzTXSqRbog')
+      .then((result) => {
+        console.log(result.text)
+      }, (error) => {
+        console.log(error.text)
+      })
+
 
   }
 
