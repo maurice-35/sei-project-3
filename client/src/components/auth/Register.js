@@ -53,15 +53,13 @@ const Register = () => {
       // console.log(err.response.data)
       toast.warning('oops something went wrong, please check your details and try again... If you already have an account please try loggin in')
     }
-
+    console.log(e.target)
     emailjs.sendForm('service_1d8nn2d', 'template_l7eixym', e.target, 'user_00iebephTHbqzTXSqRbog')
       .then((result) => {
         console.log(result.text)
       }, (error) => {
         console.log(error.text)
       })
-
-
   }
 
 
