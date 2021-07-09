@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import MainModal from '../Popups/MainModal'
-<<<<<<< HEAD
 import ProductCard from '../Popups/ProductCard'
-=======
+import MainModal from '../Popups/MainModal'
 import { Link } from 'react-scroll'
->>>>>>> development
 
 
 
@@ -28,21 +25,14 @@ const Cats = () => {
         const { data } = await axios.get('/api/products')
 
         //* Grabbing all cat products
-<<<<<<< HEAD
-        const catProducts = data.filter(animal => animal.typeAnimal.toLowerCase() === 'cat')
-        const catTreats = catProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
-        const catMeal = catProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
-        
-=======
         const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
         const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
         const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
 
->>>>>>> development
         //* Set products to state
-        setProducts(data)
-        setTreats(catTreats)
+        setTreats(catTreat)
         setMeal(catMeal)
+        setProducts(catsProducts)
       } catch (err) {
         console.log(err)
 
@@ -79,6 +69,8 @@ const Cats = () => {
           storage={info.storage}
           id={info._id}
           price={info.price}
+        // localStorageItem={localStorageItem}
+        // setLocalStorageItem={setLocalStorageItem}
         />)}
 
       <h1 id="top-page" className="dog-title">Cats Stuff</h1>
@@ -111,13 +103,8 @@ const Cats = () => {
           </div>
           <img src="https://res.cloudinary.com/doe5zwesw/image/upload/v1625585104/cats_nhqogf.jpg" alt="Cat Food" />
         </div>
-<<<<<<< HEAD
-
-        <div className="dog-meal">
-=======
         {/* <h2 className="cat-title">Meals</h2> */}
         <div id="mealspage" className="dog-meal">
->>>>>>> development
           {meal.map(food =>
             <ProductCard
               key={food._id}
