@@ -57,25 +57,32 @@ const Dogs = () => {
 
   return (
     <>
-      {/* Product Info Modal */}
+      <div className="dog-page">
+        {/* Product Info Modal */}
 
-      {modalInfo.map(info =>
-        <MainModal
-          show={show}
-          handleClose={handleClose}
-          key={info._id}
-          name={info.name}
-          image={info.image}
-          shortDescription={info.shortDescription}
-          description={info.description}
-          ingredient={info.ingredient}
-          storage={info.storage}
-          price={info.price}
-          id={info._id}
-        // localStorageItem={localStorageItem}
-        // setLocalStorageItem={setLocalStorageItem}
-        />)}
+        {modalInfo.map(info =>
+          <MainModal
+            show={show}
+            handleClose={handleClose}
+            key={info._id}
+            name={info.name}
+            image={info.image}
+            shortDescription={info.shortDescription}
+            description={info.description}
+            ingredient={info.ingredient}
+            storage={info.storage}
+            price={info.price}
+            id={info._id}
+          // localStorageItem={localStorageItem}
+          // setLocalStorageItem={setLocalStorageItem}
+          />)}
 
+<<<<<<< HEAD
+        <h1 className="dog-title">Dogs Stuff</h1>
+        <div className="product-options">
+          <button>Treats <i className="fas fa-bone"></i></button>
+          <button>Meals <i className="fas fa-drumstick-bite"></i></button>
+=======
       <h1 id="top-page" className="dog-title">Dogs Stuff</h1>
       <div className="product-options">
         <Link
@@ -118,13 +125,51 @@ const Dogs = () => {
               openModal={openModal}
             />
           )}
+>>>>>>> development
         </div>
-
-        {/* Treats */}
-        <div className="meals-hero">
-          <div className="hero-text">
-            <h3>The best of the best treaties for your doggo!</h3>
+        <div className="dog-wrapper">
+          <div className="meals-hero">
+            <div className="hero-text">
+              <h3>Check out our curated selection of seasonal meals...</h3>
+            </div>
+            <img src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625582635/dog-2210717_cnz3vo.jpg" alt="Dog Food" />
           </div>
+          {/* <h2 className="dog-title">Meals</h2> */}
+          <div className="dog-meal">
+            {meal.map(food =>
+              <ProductCard
+                key={food._id}
+                name={food.name}
+                image={food.image}
+                id={food._id}
+                shortDescription={food.shortDescription}
+                openModal={openModal}
+              />
+            )}
+          </div>
+
+          {/* Treats */}
+          <div className="meals-hero">
+            <div className="hero-text">
+              <h3>The best of the best treaties for your doggo!</h3>
+            </div>
+            <img id="img-two" src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625580751/puppy-4484296_1920_tj3rqw.jpg" alt="Dog Treats" />
+          </div>
+          {/* <h2 className="dog-title">Treats</h2> */}
+          <div className="dog-meal">
+            {treats.map(food =>
+              <ProductCard
+                key={food._id}
+                name={food.name}
+                image={food.image}
+                id={food._id}
+                shortDescription={food.shortDescription}
+                openModal={openModal}
+              />
+            )}
+          </div>
+<<<<<<< HEAD
+=======
           <img id="img-two" src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625580751/puppy-4484296_1920_tj3rqw.jpg" alt="Dog Treats" />
         </div>
         <div id="treatspage" className="toTop">
@@ -150,6 +195,7 @@ const Dogs = () => {
               openModal={openModal}
             />
           )}
+>>>>>>> development
         </div>
       </div>
     </>

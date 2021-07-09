@@ -112,7 +112,24 @@ body {
     }
   }
 }
-
+.modal-button {
+  background-color: #707477;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+}
+.buy {
+  background-color: #1f5e84;
+}
+.dog-page {
+  padding-top: 10px;
+  background-color: #f8a978;
+}
+.cat-page {
+  padding-top: 10px;
+  background-color: #f2c4c4;
+}
 // form {
 //   display: flex;
 //   align-items: center;

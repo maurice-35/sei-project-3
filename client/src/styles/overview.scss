@@ -2,9 +2,12 @@ h1.title {
   color: #1f5e84;
   background: blanchedalmond;
   max-width: fit-content;
-  margin: 0 auto;
+  margin: 0 auto 10px auto;
   text-align: center;
-  margin-top: 15px;
+  font-size: 50px;
+  text-decoration: underline;
+  font-family: monospace;
+  padding: 10px 30px;
 }
 .overview-title {
   background: blanchedalmond;
@@ -12,6 +15,7 @@ h1.title {
   max-width: fit-content;
   margin: 0 auto;
   text-align: center;
+  font-size: 35px;
 }
 .hero-overview {
   display: flex;
@@ -25,7 +29,45 @@ h1.title {
     color: rgb(123, 94, 51);
   }
 }
+.navy-banner {
+  min-height: 10px;
+  background-color: #1f5e84;
+}
 
+.cat-link {
+  background-color: rgb(123, 94, 51);
+  color: #f2c4c4;
+  padding: 5px;
+  font-size: 35px;
+}
+.dog-link {
+  background-color: rgb(123, 94, 51);
+  color: #f8a978;
+  padding: 5px;
+  font-size: 35px;
+}
+.cat-section {
+  padding-top: 50px;
+}
+.dog-section {
+  padding-top: 30px;
+}
+
+<<<<<<< HEAD
+@media only screen and (max-width: 650px) {
+  .dog-wrapper {
+    img {
+      display: none;
+    }
+    h3 {
+      text-align: center;
+    }
+    p {
+      display: none;
+    }
+  }
+}
+=======
 // @media only screen and (max-width: 650px) {
 //   .dog-wrapper {
 //     img {
@@ -33,3 +75,4 @@ h1.title {
 //     }
 //   }
 // }
+>>>>>>> development
