@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import nextId from 'react-id-generator'
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
 import useLocalStorage from '../hooks/useLocalStorage'
 import { useHistory } from 'react-router'
 import { ToastContainer, toast } from 'react-toastify'
@@ -13,7 +12,7 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   //* Show Modal Lists - Ingredients & Storage
   const [showIngred, setShowIngred] = useState(false)
   const [showStorage, setShowStorage] = useState(false)
-  const [localStorageItem, setLocalStorageItem] = useLocalStorage('items',[])
+  const [localStorageItem, setLocalStorageItem] = useLocalStorage('items', [])
   const history = useHistory()
 
 
@@ -38,11 +37,11 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
   }
 
   //* Add to basket
-  const saveEventIDToLocalStorage = e => { 
+  const saveEventIDToLocalStorage = e => {
     if (!window.localStorage.getItem('token')) {
       console.log('your are not logged in')
       history.push('/login')
-    } else { 
+    } else {
       const newID = nextId()
       const newLocalStorageItems = [...localStorageItem, { name: e.target.name, price: e.target.value, id: e.target.id, itemId: newID }]
       setLocalStorageItem(newLocalStorageItems)
@@ -97,12 +96,12 @@ const MainModal = ({ id, image, name, shortDescription, description, ingredient,
               <p>£ {price}</p>
             </div>
             <div className="right-btn">
-              <Button variant="secondary" onClick={handleClose}>
+              <button className="modal-button" onClick={handleClose}>
                 Close
-              </Button>
-              <button id={id} name={name} value={price} onClick={saveEventIDToLocalStorage}>
+              </button>
+              <button className="modal-button buy" id={id} name={name} value={price} onClick={saveEventIDToLocalStorage}>
                 {/* <i className="fas fa-shopping-basket" ></i> */}
-                buy me
+                Buy me
               </button>
             </div>
           </div>
