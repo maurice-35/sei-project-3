@@ -18,13 +18,8 @@ const Home = () => {
             Delivering fresh, tasty meals to your door.
           </p>
         </div>
-<<<<<<< HEAD
         <div className="flex-shrink-1">
           <img src="https://res.cloudinary.com/dhrxw6zhp/image/upload/v1625768596/GettyImages-1147030350-e1589568998232_ydioiw.jpg" className="img-fluid rounded" alt="dog and cat images" />
-=======
-        <div className="flex-shrink-1 animate__animated animate__zoomIn">
-          <img src="https://www.rd.com/wp-content/uploads/2020/05/GettyImages-1147030350-e1589568998232.jpg" className="img-fluid rounded" alt="dog and cat images" />
->>>>>>> development
         </div>
       </div>
 

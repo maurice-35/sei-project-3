@@ -91,6 +91,8 @@ const Register = () => {
             </Col>
           </Row>
         </Container>
+        {/* addd here below */}
+
         <div className="login">
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Please login instead!</Form.Label>
@@ -98,6 +100,8 @@ const Register = () => {
             <Link to="/login">Login!</Link>
           </Form.Group>
         </div>
+
+        {/* addd here above */}
       </div>
     </>
   )
