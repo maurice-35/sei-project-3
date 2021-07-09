@@ -13,7 +13,7 @@
   justify-content: center;
   margin-top: 40px;
   button {
-    padding: 10px;
+    padding: 15px;
     margin: 20px;
     border-radius: 10px;
     border: none;
@@ -56,9 +56,10 @@
     }
     @media only screen and (max-width: 500px) {
       .hero-text {
-        display: none;
+        display: block;
       }
       img {
+        display: none;
         width: 100%;
         border-radius: 5px;
       }
@@ -69,13 +70,16 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+<<<<<<< HEAD
     margin: 0px 30px;
 
+=======
+>>>>>>> development
     .dog-card {
       display: flex;
       flex-direction: column;
       width: 300px;
-      height: 450px;
+      height: 470px;
       border: 1px solid blanchedalmond;
       box-shadow: 0 2px 4px 0 #f8a97846;
       border-radius: 10px;
@@ -109,6 +113,24 @@
         }
       }
     }
+    @media only screen and (max-width: 500px) {
+      .dog-card {
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+  .toTop {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 3rem;
+    color: #1f5e84;
+    transition: 0.7s;
+  }
+  .toTop:hover {
+    transform: scale(1.1);
   }
 }
 
