@@ -29,7 +29,7 @@ const BasketModal = () => {
     const userInput = e.target.id
     const newLocalStore = basketInfo.filter(ite => ite.itemId !== userInput)
     setBasketInfo(newLocalStore)
-    window.localStorage.setItem('items',JSON.stringify(newLocalStore))
+    window.localStorage.setItem('items', JSON.stringify(newLocalStore))
     toast.warning('Item has been removed')
   }
 
@@ -37,7 +37,7 @@ const BasketModal = () => {
   //* Calculcate Totals
   useEffect(() => {
     const getNumbers = basketInfo.map(ite => parseFloat(ite.price))
-    const subTotalArray = getNumbers.reduce((a,b) => a + b ,0)
+    const subTotalArray = getNumbers.reduce((a, b) => a + b, 0)
     setSubtotal(subTotalArray.toFixed(2))
   }, [basketInfo])
 
@@ -49,18 +49,17 @@ const BasketModal = () => {
     if (basketInfo.length === 0) {
       toast.warning('oops you have nothing in your basket..')
     } else {
-      window.localStorage.setItem('items',JSON.stringify(blank))
+      window.localStorage.setItem('items', JSON.stringify(blank))
       setBasketInfo(blank)
       setSmShow(false)
       history.push('/thanks')
       toast.success('Success! We are processing your order now 🐶')
-    }    
+    }
   }
 
   return (
     <>
       <ToastContainer />
-      <Nav.Item><span>()</span></Nav.Item>
       <Nav.Link onClick={handleBasketChange}><i className="fas fa-shopping-bag"></i></Nav.Link>
       <Modal
         className="bg-transparent"

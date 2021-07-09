@@ -53,8 +53,8 @@ const About = () => {
           <img className="image-border" variant="top" src="https://i.pinimg.com/originals/a9/fb/1d/a9fb1d9cfc3d1630bf7610f871728aeb.jpg" />
           <h3>Luna</h3>
           <p>
-            Thinking of you... <span>LUNA</span> <br />
-            Forever in our thoughs and hearts, rest in peace. <br />
+            Thinking of you... <span id="luna-name">Luna</span> <br />
+            Forever in our thoughts and hearts, rest in peace. <br />
             Loved and remembered by all 🤍 <br />
             <div>
               - From Aya 💗
