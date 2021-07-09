@@ -49,6 +49,8 @@ const Register = () => {
     } catch (err) {
       console.log(err)
       setErrors(err.response.data.errors)
+      // console.log(err.response.data)
+      toast.warning('oops something went wrong, please check your details and try again... If you already have an account please try loggin in')
     }
 
   }
@@ -69,25 +71,25 @@ const Register = () => {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Username</Form.Label>
                   <Form.Control name="username" type="text" placeholder="Enter username" value={formData.username} onChange={handleUserData} />
-                  {errors.username && <Form.Text className="text-danger">{errors.username.message}</Form.Text>}
+                  {/* {errors && <Form.Text className="text-danger">{errors.username.message}</Form.Text>} */}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email</Form.Label>
                   <Form.Control name="email" type="email" placeholder="Enter email" value={formData.email} onChange={handleUserData} />
-                  {errors.email && <Form.Text className="text-danger">{errors.email.message}</Form.Text>}
+                  {/* {errors && <Form.Text className="text-danger">{errors.email.message}</Form.Text>} */}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
                   <Form.Control name="password" type="password" placeholder="Password" value={formData.password} onChange={handleUserData} />
-                  {errors.password && <Form.Text className="text-danger">{errors.password.message}</Form.Text>}
+                  {/* {errors && <Form.Text className="text-danger">{errors.password.message}</Form.Text>} */}
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Please confirm your password</Form.Label>
                   <Form.Control name="passwordConfirmation" type="password" placeholder="Password Confirmation" value={formData.passwordConfirmation} onChange={handleUserData} />
-                  {errors.passwordConfirmation && <Form.Text className="text-danger">{errors.passwordConfirmation.message}</Form.Text>}
+                  {/* {errors && <Form.Text className="text-danger">{errors.passwordConfirmation.message}</Form.Text>} */}
                 </Form.Group>
 
                 <button type="submit">Submit</button>
