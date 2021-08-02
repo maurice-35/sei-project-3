@@ -72,7 +72,7 @@ const Home = () => {
               src="https://res.cloudinary.com/inetab/image/upload/v1625677849/carousel%202.jpg"
               alt="Third slide"
             />
-            <p className="text-monospace"><q>Great customer service and my kat loves the Cosmic Catnip!</q> - AJ</p>
+            <p className="text-monospace"><q>Great customer service and my cat loves the Cosmic Catnip!</q> - AJ</p>
           </div>
         </Carousel.Item>
       </Carousel>
