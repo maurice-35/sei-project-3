@@ -36,7 +36,7 @@ const Navigation = () => {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" className="nav-style">
-        <Navbar.Brand href="/" ><Image src="https://res.cloudinary.com/inetab/image/upload/c_scale,q_100,r_0,w_60/a_0/v1625566335/logo_size_vfeyuq.jpg" roundedCircle/></Navbar.Brand>
+        <Navbar.Brand href="/" ><Image src="https://res.cloudinary.com/inetab/image/upload/c_scale,w_50/v1625579736/SEI-Project-3/logo_size_invert_ejdrzn.jpg" roundedCircle/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

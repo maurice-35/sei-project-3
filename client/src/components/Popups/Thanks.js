@@ -13,7 +13,7 @@ const Thanks = () => {
           <Link to="/products"><p id="continue">Continue Shopping...</p></Link>
         </div>
       </div>
-      {/* <img className="party" src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625766285/pets-3715733_f2m663.jpg" alt="dog and pet party" /> */}
+      <img className="party" src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625766285/pets-3715733_f2m663.jpg" alt="dog and pet party" />
     </>
   )
 }

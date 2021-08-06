@@ -108,7 +108,7 @@ const Dogs = () => {
             <div className="hero-text">
               <h3>Check out our curated selection of seasonal meals...</h3>
             </div>
-            <img src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625582635/dog-2210717_cnz3vo.jpg" alt="Dog Food" />
+            <img src="https://res.cloudinary.com/inetab/image/upload/v1625750523/SEI-Project-3/0003_35_u9ozus.jpg" alt="Dog Food" />
           </div>
           {/* <h2 className="dog-title">Meals</h2> */}
           <div id="meals" className="dog-meal">
@@ -128,7 +128,7 @@ const Dogs = () => {
             <div className="hero-text">
               <h3>The best of the best treaties for your doggo!</h3>
             </div>
-            <img id="img-two" src="https://res.cloudinary.com/dlj1sbbtb/image/upload/v1625580751/puppy-4484296_1920_tj3rqw.jpg" alt="Dog Treats" />
+            <img id="img-two" src="https://res.cloudinary.com/inetab/image/upload/v1625750523/SEI-Project-3/0003_35_u9ozus.jpg" alt="Dog Treats" />
           </div>
           <div id="treats" className="toTop">
             <Link
