@@ -37,7 +37,7 @@ const Login = () => {
       console.log(loginData)
       setTokenToLocalStorage(data.token)
       history.push('/products')
-      toast.success('Welcome Back! 😻')
+      toast.success(`${data.message}`)
     } catch (err) {
       setError(true)
     }
@@ -46,7 +46,17 @@ const Login = () => {
 
   return (
     <>
-      <ToastContainer />
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <section className="loginPage">
 
         <h1 className="login">Login To See More!</h1>
