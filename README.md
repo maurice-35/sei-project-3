@@ -1,8 +1,3 @@
 # sei-project-3
 
-Ineta
-Arjun
-Aya
-Maurice
-
-test
+https://tails-whiskers.herokuapp.com/
