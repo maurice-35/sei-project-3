@@ -6,7 +6,8 @@ https://tails-whiskers.herokuapp.com/
 Project 3 Readme - Tails & Whiskers 
 
 Click 👉🏽 🦮🐈
-Table of Contents
+
+- Table of Contents
 
 
 - Brief & Timeframe
