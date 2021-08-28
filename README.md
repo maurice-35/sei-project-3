@@ -10,18 +10,18 @@ Click 👉🏽 🦮🐈
 - Table of Contents
 
 
-- Brief & Timeframe
 - Overview
+- Brief & Timeframe
 - Technologies
 - Installing
 - How-To-Use Tails & Whiskers
-- Project Development
-- Other Models
-- Pet’s profile
-- Division of Work
-- Schema
-- Controllers and Route
-- Front End
+- Approach
+    - Other Models
+    - Pet’s profile
+    - Division of Work
+    - Schema
+    - Controllers and Route
+    - Front End
 - Final Thoughts & Project Wrap
 - Wins
 - Challenges / Bugs
