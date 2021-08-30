@@ -137,7 +137,7 @@ We worked together by pair-coding, overcoming any blockers we had and trouble-sh
 We had every awareness that the workload would be bigger than anything that we had built before. 
 
 Most of the time we worked as a team in the front and back ends, pair-coding and resolving errors. 
-I pair-coded with Arjun when writing the ‘BasketModal’ and the ‘MainModal’.
+I pair-coded with Arjun when writing the `BasketModal` and the `MainModal`.
 
 We decided later to split the front end into sections. We worked in pairs and in my pair with Arjun, we had individual responsibilities. This way, we were able to work effectively given the timeframe. We were also able to resolve individual hurdles at any point in the process. 
 I was mainly responsible for the cat products, register and login pages. 
