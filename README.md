@@ -117,5 +117,7 @@ We also used Trello Board to plan our work and daily activities as shown below:
 By day 2, we were working on the back-end creating models, controllers and routes.
 We worked together by pair-coding, overcoming any blockers we had and trouble-shooting to solve them out as effectively as possible.
 
-#  Other Models
+##  Other Models
+
+##  Pet’s Profile
 
