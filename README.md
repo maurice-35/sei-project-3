@@ -60,3 +60,14 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 - Styled-components
 - Node.js
 
+## Dependencies & Components
+- Axios
+- Bcrypt
+- Cloudinary
+- Express
+- JSONWebToken
+- Nodemon
+- Mongoose
+- MongoDB
+
+
