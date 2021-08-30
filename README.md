@@ -47,12 +47,12 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 
 
 #  Technologies
-- Languages
+## Languages
 - JavaScript (ES6)
 - HTML
 - SASS
 - Bootstrap
-- Frameworks & Libraries
+## Frameworks & Libraries
 - React
 - React-Router-Dom
 - React-Icons
