@@ -107,3 +107,9 @@ Using Figma.com, we sketched the wireframe.
 We also used Trello Board to plan our work and daily activities as shown below:
 
 
+![Trello P3-1](https://user-images.githubusercontent.com/84001897/131376082-5fbb813e-27ee-4b2a-a5db-a3f595dc457e.png)
+
+
+![Trello P3-2](https://user-images.githubusercontent.com/84001897/131376134-71d37215-4610-407f-b49c-96d51e392af2.png)
+
+
