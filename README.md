@@ -155,3 +155,20 @@ We built a user interaction in a one to many relationship with comments and prod
           timestamps: true // Create timestamps automatically on creation and update
         })
 
+
+        // productSchema
+        const productSchema = new mongoose.Schema({
+          name: { type: String, required: true, unique: true },
+          shortDescription: { type: String, required: true, maxlength: 500 },
+          description: { type: String, required: true, maxlength: 1000 },
+          ingredient: [{ type: String, required: true }],
+          image: { type: String, required: true },
+          typeAnimal: { type: String, required: true },
+          storage: { type: String, required: true },
+          typeProduct: { type: String, required: true },
+          age: { type: String, required: true },
+          price: { type: Number, required: true },
+          onDisplay: { type: Boolean },
+          comments: [commentSchema],
+          owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+        })
