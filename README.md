@@ -97,3 +97,6 @@ We structured the various models using Miro.com as shown below:
 
 ![The DB](https://user-images.githubusercontent.com/84001897/131374923-3c77381d-c545-4734-bcf6-8de8b86866ee.png)
 
+![Flow-chart](https://user-images.githubusercontent.com/84001897/131375281-5849474e-2219-4783-a479-511009c681ec.png)
+
+
