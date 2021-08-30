@@ -89,3 +89,8 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 - Home page / Index page
 - Pics
 
+
+#  Approach
+General approach: We started by brainstorming on the type of project to build. We took each person’s idea of what can potentially be done, discussing in detail and voting on each element of the idea (from how challenging it would be to build the front and back end, to populating the database and the overall app). We selected the project idea with the highest score. We used agile methodology, and set up a Trello board to keep track of our work. We also had stand-ups every morning and communicated on Slack since we were working remotely. We had pair-coding sessions on Zoom and shared live screens. We found all these to be effective means of communication.
+To better understand how our app would work at the fundamental level, we had to set out our models and functionality:
+We structured the various models using Miro.com as shown below:
