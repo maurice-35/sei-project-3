@@ -65,9 +65,16 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 - Bcrypt
 - Cloudinary
 - Express
-- JSONWebToken
+- JsonWebToken
 - Nodemon
 - Mongoose
 - MongoDB
+
+#  Install
+- Set-up the development folder on GitHub.
+- Create branches of the development folder.
+- Install dependencies in the root of the project yarn.
+- Install dependencies in the client folder cd client && yarn.
+- Start the database mongod --dbpath ~/data/db.
 
 
