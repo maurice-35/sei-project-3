@@ -172,3 +172,9 @@ We built a user interaction in a one to many relationship with comments and prod
           comments: [commentSchema],
           owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
         })
+
+###  Controllers and Routes
+
+We created the controllers and the router, using Insomnia to make API requests, testing each controller as it was created.
+Here are the routes our app is using, along with notes about access information:
+
