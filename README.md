@@ -141,3 +141,10 @@ I pair-coded with Arjun when writing the `BasketModal` and the `MainModal`.
 
 We decided later to split the front end into sections. We worked in pairs and in my pair with Arjun, we had individual responsibilities. This way, we were able to work effectively given the timeframe. We were also able to resolve individual hurdles at any point in the process. 
 I was mainly responsible for the cat products, register and login pages. 
+
+###  Schemas
+
+We built a user interaction in a one to many relationship with comments and product schemas.
+
+
+
