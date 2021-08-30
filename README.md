@@ -100,7 +100,10 @@ We structured the various models using Miro.com as shown below:
 ![Flow-chart](https://user-images.githubusercontent.com/84001897/131375281-5849474e-2219-4783-a479-511009c681ec.png)
 
 
-Using Figma.com, we sketched the wireframe as shown below:
+Using Figma.com, we sketched the wireframe.
 
-![Trello project3](https://user-images.githubusercontent.com/84001897/131375594-f87905ba-1b67-474d-b78d-66f62e5b872c.png)
+![figma-project3](https://user-images.githubusercontent.com/84001897/131375939-1de9eff8-b7cd-48c9-85eb-419c8571289f.png)
+
+We also used Trello Board to plan our work and daily activities as shown below:
+
 
