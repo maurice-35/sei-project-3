@@ -121,3 +121,10 @@ We worked together by pair-coding, overcoming any blockers we had and trouble-sh
 
 ##  Pet’s Profile
 
+        const [petData, setPetData] = useState({
+            name: '',
+            image: '',
+            gender: '',
+            age: '',
+            breed: '',
+          })
