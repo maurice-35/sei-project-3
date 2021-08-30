@@ -45,3 +45,18 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 - Be deployed online so it's publicly accessible.
 - Timeframe: 8 days.
 
+
+#  Technologies
+- Languages
+- JavaScript (ES6)
+- HTML
+- SASS
+- Bootstrap
+- Frameworks & Libraries
+- React
+- React-Router-Dom
+- React-Icons
+- React-Select
+- Styled-components
+- Node.js
+
