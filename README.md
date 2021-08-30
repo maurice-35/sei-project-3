@@ -29,3 +29,8 @@ Click 👉🏽 🦮🐈
 - Key Learnings
 - License & copyright
 
+#  Overview
+Inspired by the Butler & butter  website, Tails & Whiskers is an e-commerce website that enables pet lovers (cat & dog) to navigate and choose the type of food appropriate for their pet. 
+This is the third project in the General Assembly Software Engineering Immersive course.
+
+
