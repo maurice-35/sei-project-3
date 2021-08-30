@@ -20,7 +20,7 @@ Click 👉🏽 🦮🐈
     - Pet’s profile
     - Division of Work
     - Schema
-    - Controllers and Route
+    - Controllers and Routes
     - Front End
 - Final Thoughts & Project Wrap
 - Wins
