@@ -119,7 +119,7 @@ We worked together by pair-coding, overcoming any blockers we had and trouble-sh
 
 ##  Other Models
 
-##  Pet’s Profile
+###  Pet’s Profile
 
         const [petData, setPetData] = useState({
             name: '',
