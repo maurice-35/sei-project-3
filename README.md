@@ -146,12 +146,12 @@ I was mainly responsible for the cat products, register and login pages.
 
 We built a user interaction in a one to many relationship with comments and product schemas.
 
-// commentSchema
-const commentSchema = new mongoose.Schema({
-  text: { type: String, required: true, maxlength: 300 },
-  rating: { type: Number, required: true, min: 1, max: 5 },
-  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
-}, {
-  timestamps: true // Create timestamps automatically on creation and update
-})
+        // commentSchema
+        const commentSchema = new mongoose.Schema({
+          text: { type: String, required: true, maxlength: 300 },
+          rating: { type: Number, required: true, min: 1, max: 5 },
+          owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+        }, {
+          timestamps: true // Create timestamps automatically on creation and update
+        })
 
