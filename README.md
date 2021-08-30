@@ -78,3 +78,8 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 - Start the database mongod --dbpath ~/data/db.
 
 
+#  How to use Tails & Whiskers
+Landing page where users can register or login. 
+Users can also add products on pet profiles.
+
+
