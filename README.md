@@ -51,10 +51,10 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 - [SASS](https://sass-lang.com/documentation/syntax)
 - [Bootstrap](https://react-bootstrap.github.io/)
 ## Frameworks and Libraries
-- React
-- React-Router-Dom
-- React-Icons
-- React-Select
+- [React](https://reactjs.org/docs/getting-started.html)
+- [React-Router-Dom](https://reactrouter.com/web/example/modal-gallery)
+- [React-Icons](https://react-icons.github.io/react-icons/)
+- [React-Select](React Slick Documentation)
 - Styled-components
 - Node.js
 
