@@ -223,3 +223,6 @@ Below are the controllers which handle requests made to the server.
 - `products.js` deals with product and comment requests.
 - `users.js` deals with user requests.
 
+
+The code below is from `Products Controllers`.
+
