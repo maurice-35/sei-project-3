@@ -10,10 +10,10 @@
 - [Brief](#brief) 
 - [Technologies](#technologies)
    - [Languages](#languages)
-   - [Frameworks & Libraries](#frameworks-and-libraries)
-   - [Dependencies & Components](#dependencies-and-components)
+   - [Frameworks and Libraries](#frameworks-and-libraries)
+   - [Dependencies and Components](#dependencies-and-components)
 - [Install](#install)
-- [How-To-Use Tails & Whiskers](#how-to-use-tails-and-whiskers)
+- [How-To-Use Tails and Whiskers](#how-to-use-tails-and-whiskers)
 - Approach
     - Other Models
     - Pet’s profile
@@ -51,7 +51,7 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 - HTML
 - SASS
 - Bootstrap
-## Frameworks & Libraries
+## Frameworks and Libraries
 - React
 - React-Router-Dom
 - React-Icons
@@ -59,7 +59,7 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 - Styled-components
 - Node.js
 
-## Dependencies & Components
+## Dependencies and Components
 - Axios
 - Bcrypt
 - Cloudinary
@@ -77,7 +77,7 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 - Start the database mongod --dbpath ~/data/db.
 
 
-#  How to use Tails & Whiskers
+#  How to use Tails and Whiskers
 - Landing page where users can register or login. 
 - Users can also add products on pet profiles.
 
