@@ -16,11 +16,11 @@
 - [How-To-Use Tails and Whiskers](#how-to-use-tails-and-whiskers)
 - [Approach](#approach)
     - [Other Models](#other-models)
-    - [Pet's Profile](#pets-profile)
-    - Division of Work
-    - Schema
-    - Controllers and Routes
-    - Front End
+      - [Pet's Profile](#pets-profile)
+    - [Division of Work](#division-of-work)
+    - [Schema](#schema)
+    - [Controllers and Routes](#controllers-and-routes)
+    - [Front End](#front-end)
 - Final Thoughts & Project Wrap
 - Wins
 - Challenges / Bugs
