@@ -30,7 +30,7 @@
 #  Overview
 Inspired by the `Butler & butter`  website, Tails & Whiskers is an e-commerce website that enables pet lovers (cat & dog) to navigate and choose the type of food appropriate for their pet. 
 This is the third project in the General Assembly Software Engineering Immersive course.
-Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to develop a full stack MERN application using an Express API to serve data from a Mongo database, and a separate front end built with React.
+Working with three other colleagues ([Arjun](https://github.com/arjun-doel), Ineta  & Aya), we had 10 days to develop a full stack MERN application using an Express API to serve data from a Mongo database, and a separate front end built with React.
 
 
 #  Brief 
