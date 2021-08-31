@@ -1,7 +1,5 @@
 # sei-project-3
 
-https://tails-whiskers.herokuapp.com/
-
 
 Project 3 Readme - Tails & Whiskers 
 
