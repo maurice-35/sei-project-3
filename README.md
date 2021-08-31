@@ -11,7 +11,7 @@ Click 👉🏽 🦮🐈
 
 
 - Overview
-- Brief & Timeframe
+- Brief 
 - Technologies
 - Installing
 - How-To-Use Tails & Whiskers
@@ -35,7 +35,7 @@ This is the third project in the General Assembly Software Engineering Immersive
 Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to develop a full stack MERN application using an Express API to serve data from a Mongo database, and a separate front end built with React.
 
 
-#  Brief & Timeframe
+#  Brief 
 
 - Use an Express API to serve your data from a Mongo database.
 - Consume your API with a separate front-end built with React.
@@ -43,7 +43,7 @@ Working with three other colleagues (Arjun, Ineta  & Aya), we had 10 days to dev
 - Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut.
 - Have a visually impressive design.
 - Be deployed online so it's publicly accessible.
-- Timeframe: 8 days.
+
 
 
 #  Technologies
