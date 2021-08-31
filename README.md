@@ -328,3 +328,6 @@ This final output does not cover all  intentions and plan for the project. As a 
 - Building our own RESTFul framework from the back-end and moving to the front-end was a great experience. 
 - Working with MongoDB and Express on a Full-Stack project was a positive challenge which has helped to increase my understanding of these frameworks.
 - The transition from back-end to front-end was not immediate. I had the impression that I had forgotten everything I knew on the front-end but gradually, as I switched from back-end to front-end to check on the models and permissions, I regained full knowledge of what we had to do on the front-end.
+
+#  Contribution to the project
+We welcome any contribution or suggestions to improve on this project.
