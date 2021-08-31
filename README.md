@@ -316,3 +316,9 @@ I created the cat page and grabbed all the cats products, meals and treats using
 #  Challenges
 The major challenge was during deployment. As we had a separate folder for the back and front ends, it was not possible to deploy in this state. We had to refactor the back-end folder. This was done by removing the main folder and making each sub-folder completely independent.
 
+
+#  Future Features
+
+This final output does not cover all  intentions and plan for the project. As a result, I intend to make some improvements on this project particularly on:
+- Adding the comment section.
+- Replacing the images that are not appearing on the site because they have been taken off from cloudinary.
