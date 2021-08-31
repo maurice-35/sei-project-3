@@ -274,4 +274,4 @@ The code below is from the `products file` in the `controllers folder`.
           }
         }
 
-We implemented a secure route once it was established the API requests were working correctly. This would check if a user had the correct credentials before fulfilling the request. 
+We implemented a `secure route` once it was established that the API requests were working correctly. This would check if a user had the correct credentials before fulfilling the request. 
