@@ -9,10 +9,10 @@
 - [Overview](#overview)
 - [Brief](#brief) 
 - [Technologies](#technologies)
- - Languages
- - Frameworks & 
- - Dependencies & Components
-- [Installing](#installing)
+   - [Languages](#languages)
+   - [Frameworks & Libraries](#frameworks-and-libraries)
+   - [Dependencies & Components](#dependencies-and-components)
+- [Install](#install)
 - [How-To-Use Tails & Whiskers](#how-to-use-tails-and-whiskers)
 - Approach
     - Other Models
