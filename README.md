@@ -16,7 +16,7 @@
 - [How-To-Use Tails and Whiskers](#how-to-use-tails-and-whiskers)
 - [Approach](#approach)
     - [Other Models](#other-models)
-    - [Pet’s Profile](#pet's-profile)
+    - [Pet's Profile](#pets-profile)
     - Division of Work
     - Schema
     - Controllers and Routes
