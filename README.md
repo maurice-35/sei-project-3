@@ -54,9 +54,9 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 - [React](https://reactjs.org/docs/getting-started.html)
 - [React-Router-Dom](https://reactrouter.com/web/example/modal-gallery)
 - [React-Icons](https://react-icons.github.io/react-icons/)
-- [React-Select](React Slick Documentation)
-- Styled-components
-- Node.js
+- [React-Select](https://react-slick.neostack.com/)
+- [Styled-components](https://styled-components.com/)
+- [Node.js](https://nodejs.org/en/)
 
 ## Dependencies and Components
 - Axios
