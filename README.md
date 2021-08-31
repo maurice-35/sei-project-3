@@ -322,3 +322,9 @@ The major challenge was during deployment. As we had a separate folder for the b
 This final output does not cover all  intentions and plan for the project. As a result, I intend to make some improvements on this project particularly on:
 - Adding the comment section.
 - Replacing the images that are not appearing on the site because they have been taken off from cloudinary.
+
+
+#  Key learnings
+- Building our own RESTFul framework from the back-end and moving to the front-end was a great experience. 
+- Working with MongoDB and Express on a Full-Stack project was a positive challenge which has helped to increase my understanding of these frameworks.
+- The transition from back-end to front-end was not immediate. I had the impression that I had forgotten everything I knew on the front-end but gradually, as I switched from back-end to front-end to check on the models and permissions, I regained full knowledge of what we had to do on the front-end.
