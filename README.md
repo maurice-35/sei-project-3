@@ -71,7 +71,7 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 - Set-up the development folder on GitHub.
 - Create branches of the development folder.
 - Install dependencies in the root of the project `yarn`.
-- Install dependencies in the client folder **cd client && yarn**.
+- Install dependencies in the client folder `cd client && yarn`.
 - Start the database `mongod --dbpath ~/data/db`.
 
 
@@ -90,7 +90,7 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 #  Approach
 General approach: We started by brainstorming on the type of project to build. We took each person’s idea of what can potentially be done, discussing in detail and voting on each element of the idea (from how challenging it would be to build the front and back end, to populating the database and the overall app). We selected the project idea with the highest score. We used agile methodology, and set up a Trello board to keep track of our work. We also had stand-ups every morning and communicated on Slack since we were working remotely. We had pair-coding sessions on Zoom and shared live screens. We found all these to be effective means of communication.
 To better understand how our app would work at the fundamental level, we had to set out our models and functionality:
-We structured the various models using Miro.com as shown below:
+We structured the various models using [Miro.com](https://www.miro.com/) as shown below:
 
 ![The DB](https://user-images.githubusercontent.com/84001897/131374923-3c77381d-c545-4734-bcf6-8de8b86866ee.png)
 
@@ -101,7 +101,7 @@ Using Figma.com, we sketched the wireframe.
 
 ![figma-project3](https://user-images.githubusercontent.com/84001897/131375939-1de9eff8-b7cd-48c9-85eb-419c8571289f.png)
 
-We also used Trello Board to plan our work and daily activities as shown below:
+We also used [Trello Board](https://www.trello.com/) to plan our work and daily activities as shown below:
 
 
 ![Trello P3-1](https://user-images.githubusercontent.com/84001897/131376082-5fbb813e-27ee-4b2a-a5db-a3f595dc457e.png)
