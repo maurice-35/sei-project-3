@@ -70,9 +70,9 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 #  Install
 - Set-up the development folder on GitHub.
 - Create branches of the development folder.
-- Install dependencies in the root of the project yarn.
-- Install dependencies in the client folder cd client && yarn.
-- Start the database mongod --dbpath ~/data/db.
+- Install dependencies in the root of the project `yarn`.
+- Install dependencies in the client folder `cd client && yarn`.
+- Start the database `mongod --dbpath ~/data/db`.
 
 
 #  How to use Tails and Whiskers
