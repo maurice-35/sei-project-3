@@ -46,7 +46,7 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 
 #  Technologies
 ## Languages
-- JavaScript (ES6)
+- [JavaScript (ES6)](JavaScript.com)
 - HTML
 - SASS
 - Bootstrap
