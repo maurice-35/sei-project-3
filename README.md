@@ -331,3 +331,6 @@ This final output does not cover all  intentions and plan for the project. As a 
 
 #  Contribution to the project
 We welcome any contribution or suggestions to improve on this project.
+
+#  License and copyright
+This project was built for educational purposes only. All the information on the website may not be accurate (including some names, contact details and pet information). No copyright infringement is intended and all content is used under educational license.
