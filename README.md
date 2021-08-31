@@ -21,12 +21,11 @@
     - [Schema](#schema)
     - [Controllers and Routes](#controllers-and-routes)
     - [The Front End](#the-front-end)
-- Final Thoughts & Project Wrap
-- Wins
-- Challenges / Bugs
-- Project's Future
-- Key Learnings
-- License & copyright
+- [Wins](#wins)
+- [Challenges](#challenges)
+- [Future Features](#future-features)
+- [Key Learnings](#key-learnings)
+- [License & copyright](#license-and-copyright)
 
 #  Overview
 Inspired by the `Butler & butter`  website, Tails & Whiskers is an e-commerce website that enables pet lovers (cat & dog) to navigate and choose the type of food appropriate for their pet. 
