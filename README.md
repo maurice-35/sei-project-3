@@ -5,7 +5,7 @@ https://tails-whiskers.herokuapp.com/
 
 Project 3 Readme - Tails & Whiskers 
 
-Click 👉🏽 🦮🐈
+- [Click](#click) 👉<b>🏽 🦮🐈(#https://tails-whiskers.herokuapp.com/)
 
 - Table of Contents
 
