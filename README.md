@@ -226,3 +226,50 @@ Below are the controllers which handle requests made to the server.
 
 The code below is from the `products file` in the `controllers folder`.
 
+
+        // INDEX ROUTE
+        export const getAllProducts = async (_req, res) => {
+          const products = await Product.find()
+          return res.status(200).json(products)
+        }
+        //Add product
+        export const addProduct = async (req, res) => {
+          try {
+            const productWithOwner = { ...req.body, owner: req.currentUser._id }
+            const addProduct = await Product.create(productWithOwner)
+            return res.status(201).json(addProduct)
+
+          } catch (err) {
+            console.log(err)
+            return res.status(422).json(err)
+          }
+        }
+
+        //Remove Product
+        export const deleteProduct = async (req, res) => {
+          try {
+            const { id } = req.params
+            const productToDelete = await Product.findById(id)
+            if (!productToDelete) throw new Error()
+            if (!productToDelete.owner.equals(req.currentUser._id)) throw new Error('Unauthorized')
+            await productToDelete.remove()
+            return res.sendStatus(204)
+          } catch (err) {
+            console.log(err)
+            return res.status(404).json({ message: err.message })
+          }
+        }
+
+        //Update Product 
+
+        export const updateProduct = async (req, res) => {
+          try {
+            const { id } = req.params
+            const productToUpdate = await Product.findByIdAndUpdate(id, req.body, { new: true })
+            if (!productToUpdate) throw new Error()
+            return res.status(200).json(productToUpdate)
+          } catch (err) {
+            console.log(err)
+            return res.status(404).json({ message: 'Not found' })
+          }
+        }
