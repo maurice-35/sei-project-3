@@ -55,18 +55,17 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 - [React-Router-Dom](https://reactrouter.com/web/example/modal-gallery)
 - [React-Icons](https://react-icons.github.io/react-icons/)
 - [React-Select](https://react-slick.neostack.com/)
-- [Styled-components](https://styled-components.com/)
 - [Node.js](https://nodejs.org/en/)
 
 ## Dependencies and Components
-- Axios
-- Bcrypt
-- Cloudinary
-- Express
-- JsonWebToken
-- Nodemon
-- Mongoose
-- MongoDB
+- [Axios](https://github.com/axios/axios)
+- [Bcrypt](https://pypi.org/project/bcrypt/)
+- [Cloudinary](https://cloudinary.com/documentation)
+- [Express](https://www.react.express/)
+- [JsonWebToken](https://jwt.io/introduction)
+- [Nodemon](https://nodemon.io/)
+- [Mongoose](https://mongoosejs.com/)
+- [MongoDB](https://www.mongodb.com/)
 
 #  Install
 - Set-up the development folder on GitHub.
