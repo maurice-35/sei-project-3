@@ -295,4 +295,6 @@ Since we are using nodemon to help with automatically restarting the node applic
         }
 
 
+I created the cat page and grabbed all the cats products, meals and treats using filters.
+
 
