@@ -337,4 +337,3 @@ This project was built for educational purposes only. All the information on the
 
 © Arjun,  Aya, Ineta and Maurice (AAIM)	
 
-© 2021 GitHub, Inc.
