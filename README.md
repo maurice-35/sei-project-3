@@ -3,7 +3,7 @@
 
 - [Click](#click)👉🏽 [<b>🦮🐈](https://tails-whiskers.herokuapp.com/)
 
-- Table of Contents
+# Table of Contents
 
 
 - [Overview](#overview)
