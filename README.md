@@ -280,3 +280,11 @@ We implemented a `secure route` once it was established that the API requests we
 To begin the front-end, we created a React app based on a custom template, scaffolding to the back end using the command `npx create_react_app client --template cra-template-ga-ldn-projects`.
 This followed by creating the `setupProxy.js` file to have a matching local host address to the back end, and updated the back end `index.js` to route all routes via `'/api'`:
 
+
+        // add router
+
+
+           app.use('/api', router)
+
+
+
