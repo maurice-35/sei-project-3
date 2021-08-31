@@ -9,8 +9,8 @@
 - [Overview](#overview)
 - [Brief](#brief) 
 - [Technologies](#technologies)
-- Installing
-- How-To-Use Tails & Whiskers
+- [Installing](#installing)
+- [How-To-Use Tails & Whiskers](#how-to-use-tails-and-whiskers)
 - Approach
     - Other Models
     - Pet’s profile
