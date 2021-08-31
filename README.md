@@ -20,7 +20,7 @@
     - [Division of Work](#division-of-work)
     - [Schema](#schema)
     - [Controllers and Routes](#controllers-and-routes)
-    - [Front End](#front-end)
+    - [The Front End](#the-front-end)
 - Final Thoughts & Project Wrap
 - Wins
 - Challenges / Bugs
@@ -275,7 +275,7 @@ The code below is from the `products file` in the `controllers folder`.
 
 We implemented a `secure route` once it was established that the API requests were working correctly. This would check if a user had the correct credentials before fulfilling the request. 
 
-#  The front-end
+#  The Front-End
 To begin the front-end, we created a React app based on a custom template, scaffolding to the back end using the command `npx create_react_app client --template cra-template-ga-ldn-projects`.
 This followed by creating the `setupProxy.js` file to have a matching local host address to the back end, and updated the back end `index.js` to route all routes via `'/api'`:
 
