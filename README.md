@@ -298,3 +298,9 @@ Since we are using nodemon to help with automatically restarting the node applic
 I created the cat page and grabbed all the cats products, meals and treats using filters.
 
 
+         //* Grabbing all cat products
+                const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
+                 //* Filter to get treats and save to new array
+                const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
+                //* Filter to get meals and save to new array
+                const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
