@@ -273,3 +273,5 @@ The code below is from the `products file` in the `controllers folder`.
             return res.status(404).json({ message: 'Not found' })
           }
         }
+
+We implemented a secure route once it was established the API requests were working correctly. This would check if a user had the correct credentials before fulfilling the request. 
