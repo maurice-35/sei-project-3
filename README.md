@@ -224,5 +224,5 @@ Below are the controllers which handle requests made to the server.
 - `users.js` deals with user requests.
 
 
-The code below is from `Products Controllers`.
+The code below is from the `products file` in the `controllers folder`.
 
