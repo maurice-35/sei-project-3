@@ -335,5 +335,5 @@ We welcome any contribution or suggestions to improve on this project.
 #  License and copyright
 This project was built for educational purposes only. All the information on the website may not be accurate (including some names, contact details and pet information). No copyright infringement is intended and all content is used under educational license.
 
-© Arjun,  Aya, Ineta and Maurice (AAIM)	
+### © Arjun,  Aya, Ineta and Maurice (AAIM)	
 
