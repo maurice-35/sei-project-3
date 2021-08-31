@@ -178,3 +178,7 @@ We built a user interaction in a one to many relationship with comments and prod
 We created the controllers and the router, using Insomnia to make API requests, testing each controller as it was created.
 Here are the routes our app is using, along with notes about access information:
 
+
+        router.route('/products')
+          .get(getAllProducts)
+          .post(secureRoute, addProduct)
