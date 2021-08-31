@@ -304,3 +304,12 @@ I created the cat page and grabbed all the cats products, meals and treats using
                 const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
                 //* Filter to get meals and save to new array
                 const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
+               
+               
+               
+#  Wins
+
+- Teamwork: Most of the time we worked by pair-coding and screen-sharing. As a result, we learnt a lot from each other and worked together towards resolving any issues we ran into. We got on very well, had a good workflow and managed to reach our MVP in time.  
+- Basket setting: We struggled with setting-up the basket on the back-end but were finally pleased to have it functioning normally.
+               
+
