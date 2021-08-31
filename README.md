@@ -9,6 +9,9 @@
 - [Overview](#overview)
 - [Brief](#brief) 
 - [Technologies](#technologies)
+ - Languages
+ - Frameworks & 
+ - Dependencies & Components
 - [Installing](#installing)
 - [How-To-Use Tails & Whiskers](#how-to-use-tails-and-whiskers)
 - Approach
