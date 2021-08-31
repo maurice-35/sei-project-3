@@ -217,3 +217,9 @@ Here are the routes our app is using, along with notes about access information:
         router.route('/profile/basket/:id')
           .delete(secureRoute, deleteBasket)
 
+
+Below are the controllers which handle requests made to the server.
+- `auth.js` registers new users and login.
+- `products.js` dealing with product and comment requests.
+- `users.js` dealing with user requests.
+
