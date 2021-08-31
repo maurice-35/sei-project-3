@@ -47,9 +47,9 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 #  Technologies
 ## Languages
 - [JavaScript (ES6)](https://www.javascript.com/)
-- HTML
-- SASS
-- Bootstrap
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [SASS](https://sass-lang.com/documentation/syntax)
+- [Bootstrap](https://react-bootstrap.github.io/)
 ## Frameworks and Libraries
 - React
 - React-Router-Dom
