@@ -1,16 +1,14 @@
-# sei-project-3
-
-
-Project 3 Readme - Tails & Whiskers 
+# SEI-Project-3: Tails & Whiskers
+ 
 
 - [Click](#click)👉🏽 [<b>🦮🐈](https://tails-whiskers.herokuapp.com/)
 
 - Table of Contents
 
 
-- Overview
-- Brief 
-- Technologies
+- [Overview](#overview)
+- [Brief](#brief) 
+- [Technologies](#technologies)
 - Installing
 - How-To-Use Tails & Whiskers
 - Approach
