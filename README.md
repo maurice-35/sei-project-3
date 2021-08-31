@@ -291,10 +291,7 @@ Since we are using nodemon to help with automatically restarting the node applic
 
 
         {
-
-
          "ignore": [ "client" ]
-
         }
 
 
