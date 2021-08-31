@@ -14,7 +14,7 @@
    - [Dependencies and Components](#dependencies-and-components)
 - [Install](#install)
 - [How-To-Use Tails and Whiskers](#how-to-use-tails-and-whiskers)
-- Approach
+- [Approach](#approach)
     - Other Models
     - Pet’s profile
     - Division of Work
