@@ -28,7 +28,7 @@
 - [License & copyright](#license-and-copyright)
 
 #  Overview
-Inspired by the `Butler & butter`  website, Tails & Whiskers is an e-commerce website that enables pet lovers (cat & dog) to navigate and choose the type of food appropriate for their pet. 
+Inspired by the [Butternut Box](https://butternutbox.com/?utm_source=google&utm_medium=cpc&utm_campaign=GB_GSN_FIRS_BRND_EXT_Butternut%20Box&adgroup={BB_Pure}&gclid=CjwKCAjwybyJBhBwEiwAvz4G73Yu7SOjk03b2T7v-sIxcs5PYeMteOUoUoZzCCPJzY0_0w0PLR1fAxoCWAQQAvD_BwE)  website, Tails & Whiskers is an e-commerce website that enables pet lovers (cat & dog) to navigate and choose the type of food appropriate for their pet. 
 This is the third project in the General Assembly Software Engineering Immersive course.
 Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [Ineta](https://github.com/inetabliu)  & [Aya](https://github.com/Ayamallahx)), we had 10 days to develop a full stack MERN application using an Express API to serve data from a Mongo database, and a separate front end built with React.
 
