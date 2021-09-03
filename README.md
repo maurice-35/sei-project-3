@@ -13,7 +13,6 @@
    - [Frameworks and Libraries](#frameworks-and-libraries)
    - [Dependencies and Components](#dependencies-and-components)
 - [Install](#install)
-- [How-To-Use Tails and Whiskers](#how-to-use-tails-and-whiskers)
 - [Approach](#approach)
     - [Other Models](#other-models)
       - [Pet's Profile](#pets-profile)
@@ -73,18 +72,6 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 - Install dependencies in the root of the project `yarn`.
 - Install dependencies in the client folder `cd client && yarn`.
 - Start the database `mongod --dbpath ~/data/db`.
-
-
-#  How to use Tails and Whiskers
-- Landing page where users can register or login. 
-- Users can also add products on pet profiles.
-
-
-- Gif
- 
- 
-- Home page / Index page
-- Pics
 
 
 #  Approach
