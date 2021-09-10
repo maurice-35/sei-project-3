@@ -45,26 +45,26 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 
 #  Technologies
 ## Languages
-- [JavaScript (ES6)](https://www.javascript.com/)
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [SASS](https://sass-lang.com/documentation/syntax)
-- [Bootstrap](https://react-bootstrap.github.io/)
+- JavaScript (ES6)
+- HTML
+- SASS
+- Bootstrap
 ## Frameworks and Libraries
-- [React](https://reactjs.org/docs/getting-started.html)
-- [React-Router-Dom](https://reactrouter.com/web/example/modal-gallery)
-- [React-Icons](https://react-icons.github.io/react-icons/)
-- [React-Select](https://react-slick.neostack.com/)
-- [Node.js](https://nodejs.org/en/)
+- React
+- React-Router-Dom
+- React-Icons
+- React-Select
+- Node.js
 
 ## Dependencies and Components
-- [Axios](https://github.com/axios/axios)
-- [Bcrypt](https://pypi.org/project/bcrypt/)
-- [Cloudinary](https://cloudinary.com/documentation)
-- [Express](https://www.react.express/)
-- [JsonWebToken](https://jwt.io/introduction)
-- [Nodemon](https://nodemon.io/)
-- [Mongoose](https://mongoosejs.com/)
-- [MongoDB](https://www.mongodb.com/)
+- Axios
+- Bcrypt
+- Cloudinary
+- Express
+- JsonWebToken
+- Nodemon
+- Mongoose
+- MongoDB
 
 #  Install
 - Set-up the development folder on GitHub.
