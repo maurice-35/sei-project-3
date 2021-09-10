@@ -314,7 +314,7 @@ This final output does not cover all  intentions and plan for the project. As a 
 - The transition from back-end to front-end was not immediate. I had the impression that I had forgotten everything I knew on the front-end but gradually, as I switched from back-end to front-end to check on the models and permissions, I regained full knowledge of what we had to do on the front-end.
 
 #  Contribution to the project
-We welcome any contribution or suggestions to improve on this project.
+We welcome any contribution or suggestions to improve this project.
 
 #  License and copyright
 This project was built for educational purposes only. All the information on the website may not be accurate (including some names, contact details and pet information). No copyright infringement is intended and all content is used under educational license.
