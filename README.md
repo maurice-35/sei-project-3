@@ -1,11 +1,6 @@
 # SEI-Project-3: Tails & Whiskers
- 
-
  [Click](#click)👉🏽 [<b>🦮🐈](https://tails-whiskers.herokuapp.com/)
-
 # Table of Contents
-
-
 - [Overview](#overview)
 - [Brief](#brief) 
 - [Technologies](#technologies)
@@ -25,24 +20,17 @@
 - [Future Features](#future-features)
 - [Key Learnings](#key-learnings)
 - [License & copyright](#license-and-copyright)
-
 #  Overview
 Inspired by the [Butternut Box](https://butternutbox.com/?utm_source=google&utm_medium=cpc&utm_campaign=GB_GSN_FIRS_BRND_EXT_Butternut%20Box&adgroup={BB_Pure}&gclid=CjwKCAjwybyJBhBwEiwAvz4G73Yu7SOjk03b2T7v-sIxcs5PYeMteOUoUoZzCCPJzY0_0w0PLR1fAxoCWAQQAvD_BwE)  website, Tails & Whiskers is an e-commerce website that enables pet lovers (cat & dog) to navigate and choose the type of food appropriate for their pet. 
 This is the third project in the General Assembly Software Engineering Immersive course.
 Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [Ineta](https://github.com/inetabliu)  & [Aya](https://github.com/Ayamallahx)), we had 10 days to develop a full stack MERN application using an Express API to serve data from a Mongo database, and a separate front end built with React.
-
-
 #  Brief 
-
 - Use an Express API to serve your data from a Mongo database.
 - Consume your API with a separate front-end built with React.
 - Be a complete product which most likely means multiple relationships and CRUD functionality for at least a couple of models.
 - Implement thoughtful user stories/wireframes that are significant enough to help you know which features are core MVP and which you can cut.
 - Have a visually impressive design.
 - Be deployed online so it's publicly accessible.
-
-
-
 #  Technologies
 ## Languages
 - JavaScript (ES6)
@@ -55,7 +43,6 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 - React-Icons
 - React-Select
 - Node.js
-
 ## Dependencies and Components
 - Axios
 - Bcrypt
@@ -65,44 +52,26 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 - Nodemon
 - Mongoose
 - MongoDB
-
 #  Install
 - Set-up the development folder on GitHub.
 - Create branches of the development folder.
 - Install dependencies in the root of the project `yarn`.
 - Install dependencies in the client folder `cd client && yarn`.
 - Start the database `mongod --dbpath ~/data/db`.
-
-
 #  Approach
 We started by brainstorming on the type of project to build. We took each person’s idea of what can potentially be done, discussing in detail and voting on each element of the idea (from how challenging it would be to build the front and back end, to populating the database and the overall app). We selected the project idea with the highest score. We used agile methodology, and set up a `Trello board` to keep track of our work. We also had stand-ups every morning and communicated on Slack since we were working remotely. We had pair-coding sessions on Zoom and shared live screens. We found all these to be effective means of communication.
 To better understand how our app would work at the fundamental level, we had to set out our models and functionality:
 We structured the various models using [Miro.com](https://www.miro.com/) as shown below:
-
 ![The DB](https://user-images.githubusercontent.com/84001897/131374923-3c77381d-c545-4734-bcf6-8de8b86866ee.png)
-
 ![Flow-chart](https://user-images.githubusercontent.com/84001897/131375281-5849474e-2219-4783-a479-511009c681ec.png)
-
-
 Using [Figma.com](https://www.figma.com/), we sketched the wireframe.
-
 ![figma-project3](https://user-images.githubusercontent.com/84001897/131375939-1de9eff8-b7cd-48c9-85eb-419c8571289f.png)
-
 We also used [Trello Board](https://www.trello.com/) to plan our work and daily activities as shown below:
-
-
 ![Trello P3-1](https://user-images.githubusercontent.com/84001897/131376082-5fbb813e-27ee-4b2a-a5db-a3f595dc457e.png)
-
-
 ![Trello P3-2](https://user-images.githubusercontent.com/84001897/131376134-71d37215-4610-407f-b49c-96d51e392af2.png)
-
-
- 
 By day 2, we were working on the back-end creating models, controllers and routes.
 We worked together by pair-coding, overcoming any blockers we had and trouble-shooting to solve them out as effectively as possible.
-
 ##  Other Models
-
 ###  Pet’s Profile
 
         const [petData, setPetData] = useState({
@@ -113,21 +82,13 @@ We worked together by pair-coding, overcoming any blockers we had and trouble-sh
             breed: '',
           })
 
-
-
 ###  Division of work
-
- 
 We had every awareness that the workload would be bigger than anything that we had built before. 
-
 Most of the time we worked as a team in the front and back ends, pair-coding and resolving errors. 
 I pair-coded with Arjun when writing the `BasketModal` and the `MainModal`.
-
 We decided later to split the front end into sections. We worked in pairs and in my pair with Arjun, we had individual responsibilities. This way, we were able to work effectively given the timeframe. We were also able to resolve individual hurdles at any point in the process. 
 I was mainly responsible for the cat products, register and login pages. 
-
 ###  Schemas
-
 We built a user interaction in a one to many relationship with comments and product schemas.
 
         // commentSchema
@@ -138,7 +99,6 @@ We built a user interaction in a one to many relationship with comments and prod
         }, {
           timestamps: true // Create timestamps automatically on creation and update
         })
-
 
         // productSchema
         const productSchema = new mongoose.Schema({
@@ -158,11 +118,8 @@ We built a user interaction in a one to many relationship with comments and prod
         })
 
 ###  Controllers and Routes
-
 We created the controllers and the router, using Insomnia to make API requests, testing each controller as it was created.
 Here are the routes our app is using, along with notes about access information:
-
-
         router.route('/products')
           .get(getAllProducts)
           .post(secureRoute, addProduct)
@@ -201,16 +158,12 @@ Here are the routes our app is using, along with notes about access information:
         router.route('/profile/basket/:id')
           .delete(secureRoute, deleteBasket)
 
-
 Below are the controllers which handle requests made to the server.
 - `auth.js` registers new users and login.
 - `products.js` deals with product and comment requests.
 - `users.js` deals with user requests.
-
-
 The code below is from the `products file` in the `controllers folder`.
-
-
+ 
         // INDEX ROUTE
         export const getAllProducts = async (_req, res) => {
           const products = await Product.find()
@@ -259,28 +212,22 @@ The code below is from the `products file` in the `controllers folder`.
         }
 
 We implemented a `secure route` once it was established that the API requests were working correctly. This would check if a user had the correct credentials before fulfilling the request. 
-
 #  The Front-End
 To begin the front-end, we created a React app based on a custom template, scaffolding to the back end using the command `npx create_react_app client --template cra-template-ga-ldn-projects`.
 This followed by creating the `setupProxy.js` file to have a matching local host address to the back end, and updated the back end `index.js` to route all routes via `'/api'`:
-
 
         // add router
 
 
            app.use('/api', router)
 
-
 Since we are using nodemon to help with automatically restarting the node application when file changes in the directory are detected, we created a new file `nodemon.json` in the root of my project and set it to ignore client directory changes:
-
 
         {
          "ignore": [ "client" ]
         }
 
-
 I created the cat page and grabbed all the cats products, meals and treats using filters.
-
 
          //* Grabbing all cat products
                 const catsProducts = data.filter(cat => cat.typeAnimal.toLowerCase() === 'cat')
@@ -288,34 +235,22 @@ I created the cat page and grabbed all the cats products, meals and treats using
                 const catTreat = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'treat')
                 //* Filter to get meals and save to new array
                 const catMeal = catsProducts.filter(food => food.typeProduct.toLowerCase() === 'meal')
-               
-               
-               
+                                   
 #  Wins
-
 - Teamwork: Most of the time we worked by pair-coding and screen-sharing. As a result, we learnt a lot from each other and worked together towards resolving any issues we ran into. We got on very well, had a good workflow and managed to reach our MVP in time.  
 - Basket setting: We struggled with setting-up the basket on the back-end but were finally pleased to have it functioning normally.
-               
-
 #  Challenges
 The major challenge was during deployment. As we had a separate folder for the back and front ends, it was not possible to deploy in this state. We had to refactor the back-end folder. This was done by removing the main folder and making each sub-folder completely independent.
-
-
 #  Future Features
-
 This final output does not cover all  intentions and plan for the project. As a result, I intend to make some improvements on this project particularly on:
 - Adding the comment section.
 - Replacing the images that are not appearing on the site because they have been taken off from cloudinary.
-
-
 #  Key learnings
 - Building our own RESTFul framework from the back-end and moving to the front-end was a great experience. 
 - Working with MongoDB and Express on a Full-Stack project was a positive challenge which has helped to increase my understanding of these frameworks.
 - The transition from back-end to front-end was not immediate. I had the impression that I had forgotten everything I knew on the front-end but gradually, as I switched from back-end to front-end to check on the models and permissions, I regained full knowledge of what we had to do on the front-end.
-
 #  Contribution to the project
 We welcome any contribution or suggestions to improve this project.
-
 #  License and copyright
 This project was built for educational purposes only. All the information on the website may not be accurate (including some names, contact details and pet information). No copyright infringement is intended and all content is used under educational license.
 
