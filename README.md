@@ -71,8 +71,10 @@ Using [Figma.com](https://www.figma.com/), we sketched the wireframe.
 ![figma-project3](https://user-images.githubusercontent.com/84001897/131375939-1de9eff8-b7cd-48c9-85eb-419c8571289f.png)
  
 We also used [Trello Board](https://www.trello.com/) to plan our work and daily activities as shown below:
+ 
 ![Trello P3-1](https://user-images.githubusercontent.com/84001897/131376082-5fbb813e-27ee-4b2a-a5db-a3f595dc457e.png)
 ![Trello P3-2](https://user-images.githubusercontent.com/84001897/131376134-71d37215-4610-407f-b49c-96d51e392af2.png)
+ 
 By day 2, we were working on the back-end creating models, controllers and routes.
 We worked together by pair-coding, overcoming any blockers we had and trouble-shooting to solve them out as effectively as possible.
 ##  Other Models
