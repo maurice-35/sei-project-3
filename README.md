@@ -223,8 +223,6 @@ To begin the front-end, we created a React app based on a custom template, scaff
 This followed by creating the `setupProxy.js` file to have a matching local host address to the back end, and updated the back end `index.js` to route all routes via `'/api'`:
 
         // add router
-
-
            app.use('/api', router)
 
 Since we are using nodemon to help with automatically restarting the node application when file changes in the directory are detected, we created a new file `nodemon.json` in the root of my project and set it to ignore client directory changes:
