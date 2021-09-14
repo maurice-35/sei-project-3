@@ -48,7 +48,7 @@ Working with three other colleagues ([Arjun](https://github.com/arjun-doel), [In
 - Bcrypt
 - Cloudinary
 - Express
-- JsonWebToken
+- JSON Web Token
 - Nodemon
 - Mongoose
 - MongoDB
